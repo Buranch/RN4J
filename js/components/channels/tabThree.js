@@ -1,9 +1,5 @@
 import React, { Component } from "react";
 import { Image, View, TouchableOpacity, Platform } from "react-native";
-import { connect } from "react-redux";
-import { Actions } from "react-native-router-flux";
-
-import { openDrawer } from "../../actions/drawer";
 
 import { Container, Content, Text } from "native-base";
 import { Grid, Col, Row } from "react-native-easy-grid";

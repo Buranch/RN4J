@@ -1,8 +1,5 @@
 import React, { Component } from "react";
 import { Image, View } from "react-native";
-import { connect } from "react-redux";
-
-import { Actions } from "react-native-router-flux";
 import ScrollableTabView from "react-native-scrollable-tab-view";
 
 import { Container, Header, Text, Input, Button, Icon, Body, Item } from "native-base";
@@ -22,9 +19,6 @@ class Comments extends Component {
 				x: 0,
 				y: 0,
 			},
-		};
-		this.constructor.childContextTypes = {
-			theme: React.PropTypes.object,
 		};
 	}
 

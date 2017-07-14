@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import { Platform, Dimensions, StatusBar } from "react-native";
-import { connect } from "react-redux";
-import { Actions } from "react-native-router-flux";
 import { Container, Content, Text, Button, Icon, View } from "native-base";
 import Swiper from "react-native-swiper";
 

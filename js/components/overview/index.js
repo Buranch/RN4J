@@ -1,10 +1,6 @@
 import React, { Component } from "react";
-import { connect } from "react-redux";
 import { Image, Platform } from "react-native";
-
-import { Container, Header, Content, Text, Left, Right, Body, Button, Icon, View } from "native-base";
-import { Grid, Col } from "react-native-easy-grid";
-
+import { Container, Header, Content, Text, Left, Right, Body, Button, Icon, View, Grid, Col } from "native-base";
 import ProgressBar from "./../loaders/ProgressBar";
 
 import styles from "./styles";

@@ -1,10 +1,8 @@
 import React, { Component } from "react";
 import { Image, View } from "react-native";
 import { connect } from "react-redux";
-import { Actions } from "react-native-router-flux";
 import ScrollableTabView from "react-native-scrollable-tab-view";
 import { Container, Header, Left, Body, Right, Button, Icon } from "native-base";
-import { openDrawer } from "../../actions/drawer";
 
 import styles from "./styles";
 

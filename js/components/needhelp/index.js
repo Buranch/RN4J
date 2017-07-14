@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import { Image, TouchableOpacity, StatusBar } from "react-native";
-import { connect } from "react-redux";
-import { Actions } from "react-native-router-flux";
 import { Container, Content, Text, Button, Icon, Item, Input, View } from "native-base";
 
 import styles from "./styles";
@@ -15,9 +13,6 @@ class NeedHelp extends Component {
 				x: 0,
 				y: 0,
 			},
-		};
-		this.constructor.childContextTypes = {
-			theme: React.PropTypes.object,
 		};
 	}
 
@@ -59,4 +54,4 @@ class NeedHelp extends Component {
 	}
 }
 
-export default connect()(NeedHelp);
+export default NeedHelp;

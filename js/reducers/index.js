@@ -1,8 +1,9 @@
+import { combineReducers } from "redux";
 
-import { combineReducers } from 'redux';
-
-import drawer from './drawer';
+import { items, itemsHasErrored, itemsIsLoading } from "./dataFetch";
 
 export default combineReducers({
-  drawer,
+	items,
+	itemsHasErrored,
+	itemsIsLoading,
 });

@@ -5,7 +5,6 @@ import { connect } from "react-redux";
 import { NavigationActions } from "react-navigation";
 import { Container, Content, Text, Icon, List, ListItem, Thumbnail } from "native-base";
 import { Grid, Col } from "react-native-easy-grid";
-import { closeDrawer } from "../../actions/drawer";
 
 import styles from "./style";
 const resetAction = NavigationActions.reset({

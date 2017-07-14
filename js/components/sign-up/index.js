@@ -1,8 +1,5 @@
 import React, { Component } from "react";
 import { Image, TouchableOpacity, StatusBar } from "react-native";
-import { connect } from "react-redux";
-
-import { Actions } from "react-native-router-flux";
 
 import { Container, Content, Text, Button, Icon, Item, Input, View } from "native-base";
 
@@ -69,4 +66,4 @@ class SignUp extends Component {
 	}
 }
 
-export default connect()(SignUp);
+export default SignUp;
