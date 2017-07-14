@@ -159,10 +159,4 @@ class Widgets extends Component {
 	}
 }
 
-function bindAction(dispatch) {
-	return {
-		openDrawer: () => dispatch(openDrawer()),
-	};
-}
-
-export default connect(null, bindAction)(Widgets);
+export default connect()(Widgets);

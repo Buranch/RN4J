@@ -252,10 +252,4 @@ class Timeline extends Component {
 	}
 }
 
-function bindAction(dispatch) {
-	return {
-		openDrawer: () => dispatch(openDrawer()),
-	};
-}
-
-export default connect(null, bindAction)(Timeline);
+export default connect()(Timeline);
