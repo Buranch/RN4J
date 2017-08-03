@@ -7,7 +7,7 @@ exec("node " + path.join("node_modules", ".bin", "eslint js/setup.js"), (error, 
 		);
 		process.exit(1);
 	}
-	console.log(error, "Some");
+	console.log(stdout, "Some");
 	console.log("There are no errors.");
 	process.exit(0);
 });
