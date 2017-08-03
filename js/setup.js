@@ -28,8 +28,6 @@ export default class Setup extends Component {
 	}
 
 	render() {
-		console.log("gejj");
-		console.log("gejj");
 		if (!this.state.isReady) {
 			return <Expo.AppLoading />;
 		}
