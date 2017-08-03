@@ -7,22 +7,24 @@
 		"babel-jest": "16.0.0",
 		"babel-preset-react-native": "1.9.0",
 		"chai": "^3.5.0",
-		"eslint": "^3.5.0",
+		"eslint": "^3.19.0",
 		"eslint-plugin-flowtype": "^2.35.0",
 		"eslint-plugin-import": "^1.14.0",
 		"eslint-plugin-jsx-a11y": "^2.2.1",
 		"eslint-plugin-prettier": "^2.1.2",
-		"eslint-plugin-react": "^6.2.0",
+		"eslint-plugin-react": "^7.1.0",
 		"eslint-plugin-react-native": "^2.0.0",
 		"jest": "16.0.2",
 		"jest-expo": "^0.4.0",
 		"jest-react-native": "18.0.0",
+		"pre-commit": "^1.2.2",
 		"prettier": "^1.5.3",
 		"react-native-scripts": "1.1.0",
 		"react-test-renderer": "16.0.0-alpha.12"
 	},
 	"main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
 	"scripts": {
+		"eslint-test": "node eslintTest.js",
 		"postinstall": "remotedev-debugger",
 		"start": "react-native-scripts start",
 		"eject": "react-native-scripts eject",
@@ -30,6 +32,7 @@
 		"ios": "react-native-scripts ios",
 		"test": "node node_modules/jest/bin/jest.js --watch"
 	},
+	"pre-commit": "eslint-test",
 	"jest": {
 		"preset": "jest-expo"
 	},
