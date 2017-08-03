@@ -3,7 +3,8 @@ import Setup from "./js/setup";
 
 export default class App extends React.Component {
 	render() {
-		// console.log("hello");
+		console.log("hello");
+		console.log("hello");
 		return <Setup />;
 	}
 }
