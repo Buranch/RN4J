@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { Image, View } from "react-native";
-import { connect } from "react-redux";
+import { Image } from "react-native";
 import { Icon, Button, Left, Right, Body, Header } from "native-base";
 
 import styles from "./styles";

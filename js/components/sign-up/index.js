@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Image, TouchableOpacity, StatusBar } from "react-native";
+import { Image, StatusBar } from "react-native";
 
 import { Container, Content, Text, Button, Icon, Item, Input, View } from "native-base";
 

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Image, View, Platform } from "react-native";
+import { Image, View } from "react-native";
 import { connect } from "react-redux";
 
 import { Container, Content, Text, Icon } from "native-base";

@@ -1,27 +1,16 @@
 import React, { Component } from "react";
 import { Image, View, TouchableOpacity, Platform, Slider, Dimensions } from "react-native";
-import { connect } from "react-redux";
 
 import { Container, Header, Content, Text, Button, Icon, Body } from "native-base";
 import { Grid, Col } from "react-native-easy-grid";
 
-import Lightbox from "react-native-lightbox";
 import Modal from "react-native-simple-modal";
 import Swiper from "react-native-swiper";
 
-import theme from "../../themes/base-theme";
 import styles from "./styles";
 
 const deviceWidth = Dimensions.get("window").width;
 const primary = require("../../themes/variable").brandPrimary;
-
-const renderPagination = (index, total, context) =>
-	<View style={{ position: "absolute", bottom: -25, right: 10 }}>
-		<Text>
-			<Text style={{ color: "#007aff", fontSize: 20 }}>{index + 1}</Text>
-			/{total}
-		</Text>
-	</View>;
 
 class Story extends Component {
 	constructor(props) {
@@ -183,7 +172,7 @@ class Story extends Component {
 					<Modal
 						offset={this.state.offset}
 						open={this.state.open}
-						modalDidOpen={() => console.log("modal did open")}
+						modalDidOpen={() => this.setState({ open: true })}
 						modalDidClose={() => this.setState({ open: false })}
 						onRequestClose={() => this.setState({ open: false })}
 						style={styles.modal}

@@ -1,6 +1,3 @@
-import type { Action } from "../actions/types";
-import { ITEMS_HAS_ERRORED, ITEMS_IS_LOADING, ITEMS_FETCH_DATA_SUCCESS } from "../actions/dataFetch";
-
 export function itemsHasErrored(state = false, action) {
 	switch (action.type) {
 		case "ITEMS_HAS_ERRORED":

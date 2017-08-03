@@ -1,5 +1,3 @@
-import type { Action } from "./types";
-
 export function itemsHasErrored(bool) {
 	return {
 		type: "ITEMS_HAS_ERRORED",

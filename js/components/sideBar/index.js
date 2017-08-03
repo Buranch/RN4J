@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import { Image, TouchableOpacity, View } from "react-native";
-import { connect } from "react-redux";
 
 import { NavigationActions } from "react-navigation";
-import { Container, Content, Text, Icon, List, ListItem, Thumbnail } from "native-base";
+import { Container, Content, Text, Icon, ListItem, Thumbnail } from "native-base";
 import { Grid, Col } from "react-native-easy-grid";
 
 import styles from "./style";

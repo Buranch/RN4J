@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Image, View, Switch, TouchableOpacity, Platform } from "react-native";
-import { connect } from "react-redux";
 
 import { NavigationActions } from "react-navigation";
 import { Container, Header, Content, Text, Button, Icon, Thumbnail, Item, Input, Left, Right, Body } from "native-base";

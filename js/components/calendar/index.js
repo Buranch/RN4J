@@ -1,14 +1,10 @@
 import React, { Component } from "react";
-import { Image, View, TouchableOpacity, Platform } from "react-native";
-import { connect } from "react-redux";
+import { Image, View, TouchableOpacity } from "react-native";
 
 import { Container, Header, Content, Text, Left, Right, Body, Button, Icon } from "native-base";
 import { Grid, Col } from "react-native-easy-grid";
 import CalendarPicker from "react-native-calendar-picker";
 
-import HeaderContent from "./../headerContent/";
-
-import theme from "../../themes/base-theme";
 import styles from "./styles";
 
 const headerLogo = require("../../../images/Header-Logo.png");

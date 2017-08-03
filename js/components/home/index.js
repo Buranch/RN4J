@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Image, View, TouchableOpacity, Platform, Dimensions } from "react-native";
+import { Image, View, TouchableOpacity, Dimensions } from "react-native";
 import { connect } from "react-redux";
 import { NavigationActions } from "react-navigation";
 import { Container, Header, Content, Text, Button, Icon, Card, Left, Body, Right, List, Spinner } from "native-base";
@@ -8,7 +8,7 @@ import { Grid, Col } from "react-native-easy-grid";
 import Swiper from "react-native-swiper";
 
 import { itemsFetchData } from "../../actions/dataFetch";
-import data from "./data.json";
+import datas from "./data.json";
 
 import styles from "./styles";
 
@@ -20,13 +20,12 @@ const resetAction = NavigationActions.reset({
 });
 class Home extends Component {
 	componentDidMount() {
-		this.props.fetchData(data);
+		this.props.fetchData(datas);
 	}
 	render() {
-		console.log(this.props, "locall");
 		if (this.props.isLoading) {
 			return <Spinner />;
-		} else
+		} else {
 			return (
 				<Container style={{ backgroundColor: "#fff" }}>
 					<Header>
@@ -166,7 +165,7 @@ class Home extends Component {
 								renderRow={data =>
 									<TouchableOpacity
 										style={{ flexDirection: "row" }}
-										onPress={data => this.props.navigation.navigate("Story")}
+										onPress={() => this.props.navigation.navigate("Story")}
 									>
 										<View style={styles.newsContent}>
 											<Text numberOfLines={2} style={styles.newsHeader}>
@@ -199,6 +198,7 @@ class Home extends Component {
 					</Content>
 				</Container>
 			);
+		}
 	}
 }
 

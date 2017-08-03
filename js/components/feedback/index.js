@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Image, View } from "react-native";
-import { connect } from "react-redux";
 
 import { NavigationActions } from "react-navigation";
 

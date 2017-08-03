@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Image, View, TouchableOpacity, Platform } from "react-native";
-import { connect } from "react-redux";
 
 import { Container, Header, Content, Text, Button, Icon, Left, Right, Body } from "native-base";
 import { Grid, Col } from "react-native-easy-grid";

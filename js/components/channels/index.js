@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Image, View } from "react-native";
-import { connect } from "react-redux";
 import ScrollableTabView from "react-native-scrollable-tab-view";
 import { Container, Header, Left, Body, Right, Button, Icon } from "native-base";
 

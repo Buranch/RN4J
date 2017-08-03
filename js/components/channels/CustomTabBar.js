@@ -4,14 +4,7 @@ import { connect } from "react-redux";
 
 import { Text, View } from "native-base";
 
-const deviceWidth = require("Dimensions").get("window").width;
-const TAB_UNDERLINE_REF = "TAB_UNDERLINE";
 class CustomTabBar extends Component {
-	propTypes: {
-		goToPage: React.PropTypes.func,
-		activeTab: React.PropTypes.number,
-		tabs: React.PropTypes.array,
-	};
 	renderTabOption(name, page) {
 		const isTabActive = this.props.activeTab === page;
 
@@ -36,14 +29,6 @@ class CustomTabBar extends Component {
 	}
 
 	render() {
-		const numberOfTabs = this.props.tabs.length;
-		const tabUnderlineStyle = {
-			position: "absolute",
-			width: deviceWidth / numberOfTabs,
-			height: 4,
-			backgroundColor: "navy",
-			bottom: 0,
-		};
 		return (
 			<View style={styles.tabs}>
 				{this.props.tabs.map((tab, i) => this.renderTabOption(tab, i))}
@@ -52,7 +37,6 @@ class CustomTabBar extends Component {
 	}
 }
 
-const primary = require("../../themes/variable").brandPrimary;
 const styles = {
 	tab: {
 		flex: 1,
