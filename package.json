@@ -14,9 +14,8 @@
 		"eslint-plugin-prettier": "^2.1.2",
 		"eslint-plugin-react": "^7.1.0",
 		"eslint-plugin-react-native": "^2.0.0",
-		"jest": "16.0.2",
-		"jest-expo": "^0.4.0",
-		"jest-react-native": "18.0.0",
+		"jest": "20.0.4",
+		"jest-expo": "~19.0.1",
 		"pre-commit": "^1.2.2",
 		"prettier": "^1.5.3",
 		"react-native-scripts": "1.1.0",
@@ -30,11 +29,15 @@
 		"eject": "react-native-scripts eject",
 		"android": "react-native-scripts android",
 		"ios": "react-native-scripts ios",
-		"test": "node node_modules/jest/bin/jest.js --watch"
+		"test": "node jestTest.js"
 	},
-	"pre-commit": "eslint-test",
+	"pre-commit": "eslint-test, test",
 	"jest": {
-		"preset": "jest-expo"
+		"preset": "jest-expo",
+		"modulePathIgnorePatterns": ["react", "react-native"],
+		"transformIgnorePatterns": [
+			"node_modules/(?!(react-native|lottie-react-native|expo|react-native-maps|react-native-svg|react-native-branch|native-base-shoutem-theme|react-native-easy-grid|react-native-drawer|react-native-vector-icons|react-native-keyboard-aware-scroll-view|react-native-swiper|react-navigation|native-base|@expo|react-native-scrollable-tab-view|react-native-simple-modal)/)"
+		]
 	},
 	"dependencies": {
 		"color": "1.0.3",
@@ -52,6 +55,7 @@
 		"react-navigation": "^1.0.0-beta.11",
 		"react-redux": "^4.4.5",
 		"redux": "^3.5.2",
+		"redux-form": "^7.0.3",
 		"redux-persist": "^3.2.2",
 		"redux-thunk": "^2.1.0",
 		"remote-redux-devtools": "^0.3.3",

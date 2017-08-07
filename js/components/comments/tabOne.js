@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { View, Platform, Text } from "react-native";
+import { Platform } from "react-native";
 
-import { Container, Content, Icon, Card, CardItem, Thumbnail } from "native-base";
+import { Container, Content, Icon, Card, CardItem, Thumbnail, View, Text } from "native-base";
 
 import styles from "./style";
 
@@ -28,9 +28,7 @@ class TabOne extends Component {
 							</CardItem>
 
 							<CardItem style={styles.cardItem}>
-								<Text style={{ color: "#000", paddingLeft: 10 }}>
-									Life is one time offer! Use it well
-								</Text>
+								<Text style={styles.commentText}>Life is one time offer! Use it well</Text>
 							</CardItem>
 						</Card>
 
@@ -50,9 +48,7 @@ class TabOne extends Component {
 								</View>
 							</CardItem>
 							<CardItem style={styles.cardItem}>
-								<Text style={{ color: "#000", paddingLeft: 10 }}>
-									Failure is the stepping stone for success.
-								</Text>
+								<Text style={styles.commentText}>Failure is the stepping stone for success.</Text>
 							</CardItem>
 						</Card>
 
@@ -72,7 +68,7 @@ class TabOne extends Component {
 								</View>
 							</CardItem>
 							<CardItem style={styles.cardItem}>
-								<Text style={{ color: "#000", paddingLeft: 10 }}>
+								<Text style={styles.commentText}>
 									Difficult road always lead to a beautiful destination.
 								</Text>
 							</CardItem>
@@ -94,7 +90,7 @@ class TabOne extends Component {
 								</View>
 							</CardItem>
 							<CardItem style={styles.cardItem}>
-								<Text style={{ color: "#000", paddingLeft: 10 }}>Wish I had a Time machine.</Text>
+								<Text style={styles.commentText}>Wish I had a Time machine.</Text>
 							</CardItem>
 						</Card>
 
@@ -115,9 +111,7 @@ class TabOne extends Component {
 							</CardItem>
 
 							<CardItem style={styles.cardItem}>
-								<Text style={{ color: "#000", paddingLeft: 10 }}>
-									Life is one time offer! Use it well
-								</Text>
+								<Text style={styles.commentText}>Life is one time offer! Use it well</Text>
 							</CardItem>
 						</Card>
 
@@ -137,9 +131,7 @@ class TabOne extends Component {
 								</View>
 							</CardItem>
 							<CardItem style={styles.cardItem}>
-								<Text style={{ color: "#000", paddingLeft: 10 }}>
-									Failure is the stepping stone for success.
-								</Text>
+								<Text style={styles.commentText}>Failure is the stepping stone for success.</Text>
 							</CardItem>
 						</Card>
 					</View>

@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { Image, View } from "react-native";
+import { Image } from "react-native";
 import { connect } from "react-redux";
 
-import { Container, Content, Text, Icon } from "native-base";
+import { Container, Content, Text, Icon, View } from "native-base";
 import { Grid, Col } from "react-native-easy-grid";
 
 import HeaderContent from "./../headerContent/";

@@ -20,9 +20,9 @@ class NeedHelp extends Component {
 		return (
 			<Container>
 				<StatusBar backgroundColor={commonColor.statusBarColor} barStyle="light-content" />
-				<Content contentOffset={this.state.offset}>
-					<View>
-						<Image source={require("../../../images/BG-signUp.png")} style={styles.background}>
+				<Image source={require("../../../images/BG-signUp.png")} style={styles.background}>
+					<Content contentOffset={this.state.offset}>
+						<View>
 							<Content padder scrollEnabled={false}>
 								<Text style={styles.signupHeader}>Forgot Your Password?</Text>
 								<View style={styles.signupContainer}>
@@ -46,9 +46,9 @@ class NeedHelp extends Component {
 									</TouchableOpacity>
 								</View>
 							</Content>
-						</Image>
-					</View>
-				</Content>
+						</View>
+					</Content>
+				</Image>
 			</Container>
 		);
 	}

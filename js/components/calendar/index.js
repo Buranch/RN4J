@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { Image, View, TouchableOpacity } from "react-native";
+import { Image, TouchableOpacity } from "react-native";
 
-import { Container, Header, Content, Text, Left, Right, Body, Button, Icon } from "native-base";
+import { Container, Header, Content, Text, Left, Right, Body, Button, Icon, View } from "native-base";
 import { Grid, Col } from "react-native-easy-grid";
 import CalendarPicker from "react-native-calendar-picker";
 
@@ -55,12 +55,13 @@ class Calendar extends Component {
 								</Text>
 								<Grid style={{ marginTop: 25 }}>
 									<Col>
-										<TouchableOpacity>
-											<Text style={styles.newsLink}>CDC</Text>
-										</TouchableOpacity>
+										<Text style={styles.newsLink}>CDC</Text>
 									</Col>
 									<Col>
-										<TouchableOpacity style={styles.newsTypeView}>
+										<TouchableOpacity
+											style={styles.newsTypeView}
+											onPress={() => this.props.navigation.navigate("Channel")}
+										>
 											<Text style={styles.newsTypeText}>ENVIRONMENT</Text>
 										</TouchableOpacity>
 									</Col>
@@ -75,12 +76,13 @@ class Calendar extends Component {
 								</Text>
 								<Grid style={{ marginTop: 25 }}>
 									<Col>
-										<TouchableOpacity>
-											<Text style={styles.newsLink}>SPACE.com</Text>
-										</TouchableOpacity>
+										<Text style={styles.newsLink}>SPACE.com</Text>
 									</Col>
 									<Col>
-										<TouchableOpacity style={styles.newsTypeView}>
+										<TouchableOpacity
+											style={styles.newsTypeView}
+											onPress={() => this.props.navigation.navigate("Channel")}
+										>
 											<Text style={styles.newsTypeText}>SCIENCE</Text>
 										</TouchableOpacity>
 									</Col>
@@ -95,12 +97,13 @@ class Calendar extends Component {
 								</Text>
 								<Grid style={{ marginTop: 25 }}>
 									<Col>
-										<TouchableOpacity>
-											<Text style={styles.newsLink}>SKY.com</Text>
-										</TouchableOpacity>
+										<Text style={styles.newsLink}>SKY.com</Text>
 									</Col>
 									<Col>
-										<TouchableOpacity style={styles.newsTypeView}>
+										<TouchableOpacity
+											style={styles.newsTypeView}
+											onPress={() => this.props.navigation.navigate("Channel")}
+										>
 											<Text style={styles.newsTypeText}>WORLD</Text>
 										</TouchableOpacity>
 									</Col>
@@ -115,12 +118,13 @@ class Calendar extends Component {
 								</Text>
 								<Grid style={{ marginTop: 25 }}>
 									<Col>
-										<TouchableOpacity>
-											<Text style={styles.newsLink}>ESPN</Text>
-										</TouchableOpacity>
+										<Text style={styles.newsLink}>ESPN</Text>
 									</Col>
 									<Col>
-										<TouchableOpacity style={styles.newsTypeView}>
+										<TouchableOpacity
+											style={styles.newsTypeView}
+											onPress={() => this.props.navigation.navigate("Channel")}
+										>
 											<Text style={styles.newsTypeText}>SPORTS</Text>
 										</TouchableOpacity>
 									</Col>
@@ -135,12 +139,13 @@ class Calendar extends Component {
 								</Text>
 								<Grid style={{ marginTop: 25 }}>
 									<Col>
-										<TouchableOpacity>
-											<Text style={styles.newsLink}>EDU.com</Text>
-										</TouchableOpacity>
+										<Text style={styles.newsLink}>EDU.com</Text>
 									</Col>
 									<Col>
-										<TouchableOpacity style={styles.newsTypeView}>
+										<TouchableOpacity
+											style={styles.newsTypeView}
+											onPress={() => this.props.navigation.navigate("Channel")}
+										>
 											<Text style={styles.newsTypeText}>EDUCATION</Text>
 										</TouchableOpacity>
 									</Col>
@@ -155,12 +160,13 @@ class Calendar extends Component {
 								</Text>
 								<Grid style={{ marginTop: 25 }}>
 									<Col>
-										<TouchableOpacity>
-											<Text style={styles.newsLink}>ART.com</Text>
-										</TouchableOpacity>
+										<Text style={styles.newsLink}>ART.com</Text>
 									</Col>
 									<Col>
-										<TouchableOpacity style={styles.newsTypeView}>
+										<TouchableOpacity
+											style={styles.newsTypeView}
+											onPress={() => this.props.navigation.navigate("Channel")}
+										>
 											<Text style={styles.newsTypeText}>ART</Text>
 										</TouchableOpacity>
 									</Col>

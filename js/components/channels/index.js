@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { Image, View } from "react-native";
+import { Image } from "react-native";
 import ScrollableTabView from "react-native-scrollable-tab-view";
-import { Container, Header, Left, Body, Right, Button, Icon } from "native-base";
+import { Container, Header, Left, Body, Right, Button, Icon, View } from "native-base";
 
 import styles from "./styles";
 

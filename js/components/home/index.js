@@ -1,8 +1,22 @@
 import React, { Component } from "react";
-import { Image, View, TouchableOpacity, Dimensions } from "react-native";
+import { Image, TouchableOpacity, Dimensions } from "react-native";
 import { connect } from "react-redux";
 import { NavigationActions } from "react-navigation";
-import { Container, Header, Content, Text, Button, Icon, Card, Left, Body, Right, List, Spinner } from "native-base";
+import {
+	Container,
+	Header,
+	Content,
+	Text,
+	Button,
+	Icon,
+	Card,
+	Left,
+	Body,
+	Right,
+	List,
+	View,
+	Spinner,
+} from "native-base";
 
 import { Grid, Col } from "react-native-easy-grid";
 import Swiper from "react-native-swiper";
@@ -78,15 +92,19 @@ class Home extends Component {
 												</Text>
 												<Grid style={styles.swiperContentBox}>
 													<Col style={{ flexDirection: "row" }}>
-														<TouchableOpacity>
-															<Text style={styles.newsPosterLink}>SPACE.com</Text>
-														</TouchableOpacity>
+														<Text style={styles.newsPosterLink}>SPACE.com</Text>
 														<Icon name="ios-time-outline" style={styles.headertimeIcon} />
 														<Text style={styles.newsPosterLink}>20m ago</Text>
 													</Col>
 													<Col>
 														<TouchableOpacity style={styles.newsPosterTypeView}>
-															<Text style={styles.newsPosterTypeText}>SCIENCE</Text>
+															<Text
+																style={styles.newsPosterTypeText}
+																onPress={() =>
+																	this.props.navigation.navigate("Channel")}
+															>
+																SCIENCE
+															</Text>
 														</TouchableOpacity>
 													</Col>
 												</Grid>
@@ -109,15 +127,19 @@ class Home extends Component {
 												</Text>
 												<Grid style={styles.swiperContentBox}>
 													<Col style={{ flexDirection: "row" }}>
-														<TouchableOpacity>
-															<Text style={styles.newsPosterLink}>CDC</Text>
-														</TouchableOpacity>
+														<Text style={styles.newsPosterLink}>CDC</Text>
 														<Icon name="ios-time-outline" style={styles.headertimeIcon} />
 														<Text style={styles.newsPosterLink}>2hr ago</Text>
 													</Col>
 													<Col>
 														<TouchableOpacity style={styles.newsPosterTypeView}>
-															<Text style={styles.newsPosterTypeText}>ENVIRONMENT</Text>
+															<Text
+																style={styles.newsPosterTypeText}
+																onPress={() =>
+																	this.props.navigation.navigate("Channel")}
+															>
+																ENVIRONMENT
+															</Text>
 														</TouchableOpacity>
 													</Col>
 												</Grid>
@@ -140,15 +162,19 @@ class Home extends Component {
 												</Text>
 												<Grid style={styles.swiperContentBox}>
 													<Col style={{ flexDirection: "row" }}>
-														<TouchableOpacity>
-															<Text style={styles.newsPosterLink}>SKY.com</Text>
-														</TouchableOpacity>
+														<Text style={styles.newsPosterLink}>SKY.com</Text>
 														<Icon name="ios-time-outline" style={styles.headertimeIcon} />
 														<Text style={styles.newsPosterLink}>1day ago</Text>
 													</Col>
 													<Col>
 														<TouchableOpacity style={styles.newsPosterTypeView}>
-															<Text style={styles.newsPosterTypeText}>WORLD</Text>
+															<Text
+																style={styles.newsPosterTypeText}
+																onPress={() =>
+																	this.props.navigation.navigate("Channel")}
+															>
+																WORLD
+															</Text>
 														</TouchableOpacity>
 													</Col>
 												</Grid>
@@ -173,18 +199,19 @@ class Home extends Component {
 											</Text>
 											<Grid style={styles.swiperContentBox}>
 												<Col style={{ flexDirection: "row" }}>
-													<TouchableOpacity>
-														<Text style={styles.newsLink}>
-															{data.link}
-														</Text>
-													</TouchableOpacity>
+													<Text style={styles.newsLink}>
+														{data.link}
+													</Text>
 													<Icon name="ios-time-outline" style={styles.timeIcon} />
 													<Text style={styles.newsLink}>
 														{data.time}
 													</Text>
 												</Col>
 												<Col>
-													<TouchableOpacity style={styles.newsTypeView}>
+													<TouchableOpacity
+														style={styles.newsTypeView}
+														onPress={() => this.props.navigation.navigate("Channel")}
+													>
 														<Text style={styles.newsTypeText}>
 															{data.category}
 														</Text>

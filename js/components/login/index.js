@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Image, Platform, StatusBar } from "react-native";
+import { connect } from "react-redux";
 import { Container, Content, Text, Item, Input, Button, Icon, View, Left, Right } from "native-base";
+import { Field, reduxForm } from "redux-form";
 
 import styles from "./styles";
 import commonColor from "../../../native-base-theme/variables/commonColor";
@@ -8,15 +10,67 @@ import commonColor from "../../../native-base-theme/variables/commonColor";
 const bg = require("../../../images/BG.png");
 const logo = require("../../../images/logo.png");
 
-class Login extends Component {
+const validate = values => {
+	const error = {};
+	error.email = "";
+	error.password = "";
+	var ema = values.email;
+	var pw = values.password;
+	if (values.email === undefined) {
+		ema = "";
+	}
+	if (values.password === undefined) {
+		pw = "";
+	}
+	if (ema.length < 8 && ema !== "") {
+		error.email = "too short";
+	}
+	if (!ema.includes("@") && ema !== "") {
+		error.email = "@ not included";
+	}
+	if (pw.length > 12) {
+		error.password = "max 11 characters";
+	}
+	if (pw.length < 5 && pw.length > 0) {
+		error.password = "Weak";
+	}
+	return error;
+};
+
+class LoginForm extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			username: "",
-			password: "",
+			name: "",
 		};
+		this.renderInput = this.renderInput.bind(this);
 	}
-
+	renderInput({ input, label, type, meta: { touched, error, warning }, inputProps }) {
+		var hasError = false;
+		if (error !== undefined) {
+			hasError = true;
+		}
+		return (
+			<View>
+				<Item error={hasError} rounded style={styles.inputGrp}>
+					<Icon active name={input.name === "email" ? "person" : "unlock"} />
+					<Input
+						placeholderTextColor="#FFF"
+						style={styles.input}
+						placeholder={input.name === "email" ? "EMAIL" : "PASSWORD"}
+						{...input}
+					/>
+					{hasError
+						? <Icon active style={{ color: "red", marginTop: 5, right: 10 }} name="close" />
+						: <Text />}
+				</Item>
+				{hasError &&
+					<Text style={{ fontSize: 15, color: "red", textAlign: "right", top: -15 }}>
+						{error}
+					</Text>}
+			</View>
+		);
+	}
 	render() {
 		const navigation = this.props.navigation;
 		return (
@@ -27,7 +81,7 @@ class Login extends Component {
 						<Image source={logo} style={Platform.OS === "android" ? styles.aShadow : styles.iosShadow} />
 
 						<View style={styles.bg}>
-							<Item rounded style={styles.inputGrp}>
+							{/* <Item rounded style={styles.inputGrp}>
 								<Icon name="person" />
 								<Input
 									placeholder="Username"
@@ -46,7 +100,9 @@ class Login extends Component {
 									onChangeText={password => this.setState({ password })}
 									style={styles.input}
 								/>
-							</Item>
+							</Item> */}
+							<Field name="email" component={this.renderInput} type="email" />
+							<Field name="password" component={this.renderInput} type="password" />
 
 							<Button
 								rounded
@@ -94,5 +150,8 @@ class Login extends Component {
 		);
 	}
 }
-
-export default Login;
+const Login = reduxForm({
+	form: "test",
+	validate,
+})(LoginForm);
+export default connect(Login);

@@ -1,8 +1,22 @@
 import React, { Component } from "react";
-import { Image, View, Switch, TouchableOpacity, Platform } from "react-native";
+import { Image, Switch, TouchableOpacity, Platform } from "react-native";
 
 import { NavigationActions } from "react-navigation";
-import { Container, Header, Content, Text, Button, Icon, Thumbnail, Item, Input, Left, Right, Body } from "native-base";
+import {
+	Container,
+	Header,
+	Content,
+	Text,
+	Button,
+	Icon,
+	Thumbnail,
+	Item,
+	Input,
+	View,
+	Left,
+	Right,
+	Body,
+} from "native-base";
 import { Grid, Col } from "react-native-easy-grid";
 
 import styles from "./styles";

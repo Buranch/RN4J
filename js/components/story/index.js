@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { Image, View, TouchableOpacity, Platform, Slider, Dimensions } from "react-native";
+import { Image, TouchableOpacity, Platform, Slider, Dimensions } from "react-native";
 
-import { Container, Header, Content, Text, Button, Icon, Body } from "native-base";
+import { Container, Header, Content, Text, Button, Icon, Body, View } from "native-base";
 import { Grid, Col } from "react-native-easy-grid";
 
 import Modal from "react-native-simple-modal";

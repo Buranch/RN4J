@@ -103,4 +103,9 @@ export default {
 		color: "#000",
 		paddingLeft: 10,
 	},
+	commentText: {
+		color: "#000",
+		paddingLeft: 10,
+		fontSize: 14,
+	},
 };

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { Image, View, TouchableOpacity, Platform } from "react-native";
+import { Image, TouchableOpacity, Platform } from "react-native";
 
-import { Container, Header, Content, Text, Button, Icon, Left, Right, Body } from "native-base";
+import { Container, Header, Content, Text, Button, Icon, Left, Right, Body, View } from "native-base";
 import { Grid, Col } from "react-native-easy-grid";
 
 import styles from "./styles";
@@ -38,7 +38,11 @@ class Channel extends Component {
 									>
 										SCIENCE CHANNEL
 									</Text>
-									<Button rounded style={styles.followBtn}>
+									<Button
+										rounded
+										style={styles.followBtn}
+										onPress={() => this.props.navigation.navigate("Profile")}
+									>
 										<Text
 											style={
 												Platform.OS === "android"
@@ -54,9 +58,9 @@ class Channel extends Component {
 											Following
 										</Text>
 									</Button>
-									<TouchableOpacity style={{ padding: 0 }}>
+									<View style={{ padding: 0 }}>
 										<Text style={styles.noOfFollowers}>234K Followers</Text>
-									</TouchableOpacity>
+									</View>
 								</View>
 							</Image>
 						</View>
@@ -72,9 +76,7 @@ class Channel extends Component {
 									</Text>
 									<Grid style={styles.newsContent}>
 										<Col style={{ flexDirection: "row" }}>
-											<TouchableOpacity>
-												<Text style={styles.newsLink}>CNN</Text>
-											</TouchableOpacity>
+											<Text style={styles.newsLink}>CNN</Text>
 											<Icon name="ios-time-outline" style={styles.timeIcon} />
 											<Text style={styles.newsLink}>May 24, 2016</Text>
 										</Col>
@@ -92,9 +94,7 @@ class Channel extends Component {
 									</Text>
 									<Grid style={styles.newsContent}>
 										<Col style={{ flexDirection: "row" }}>
-											<TouchableOpacity>
-												<Text style={styles.newsLink}>SPACE.com</Text>
-											</TouchableOpacity>
+											<Text style={styles.newsLink}>SPACE.com</Text>
 											<Icon name="ios-time-outline" style={styles.timeIcon} />
 											<Text style={styles.newsLink}>Apr 17, 2016</Text>
 										</Col>
@@ -112,9 +112,7 @@ class Channel extends Component {
 									</Text>
 									<Grid style={styles.newsContent}>
 										<Col style={{ flexDirection: "row" }}>
-											<TouchableOpacity>
-												<Text style={styles.newsLink}>CNN</Text>
-											</TouchableOpacity>
+											<Text style={styles.newsLink}>CNN</Text>
 											<Icon name="ios-time-outline" style={styles.timeIcon} />
 											<Text style={styles.newsLink}>Feb 03, 2016</Text>
 										</Col>
@@ -131,9 +129,7 @@ class Channel extends Component {
 									</Text>
 									<Grid style={styles.newsContent}>
 										<Col style={{ flexDirection: "row" }}>
-											<TouchableOpacity>
-												<Text style={styles.newsLink}>SKY.com</Text>
-											</TouchableOpacity>
+											<Text style={styles.newsLink}>SKY.com</Text>
 											<Icon name="ios-time-outline" style={styles.timeIcon} />
 											<Text style={styles.newsLink}>Dec 17, 2015</Text>
 										</Col>
@@ -151,9 +147,7 @@ class Channel extends Component {
 									</Text>
 									<Grid style={styles.newsContent}>
 										<Col style={{ flexDirection: "row" }}>
-											<TouchableOpacity>
-												<Text style={styles.newsLink}>SPACE.com</Text>
-											</TouchableOpacity>
+											<Text style={styles.newsLink}>SPACE.com</Text>
 											<Icon name="ios-time-outline" style={styles.timeIcon} />
 											<Text style={styles.newsLink}>Apr 17, 2016</Text>
 										</Col>
@@ -170,9 +164,7 @@ class Channel extends Component {
 									</Text>
 									<Grid style={styles.newsContent}>
 										<Col style={{ flexDirection: "row" }}>
-											<TouchableOpacity>
-												<Text style={styles.newsLink}>CNN</Text>
-											</TouchableOpacity>
+											<Text style={styles.newsLink}>CNN</Text>
 											<Icon name="ios-time-outline" style={styles.timeIcon} />
 											<Text style={styles.newsLink}>Feb 03, 2016</Text>
 										</Col>
@@ -189,9 +181,7 @@ class Channel extends Component {
 									</Text>
 									<Grid style={styles.newsContent}>
 										<Col style={{ flexDirection: "row" }}>
-											<TouchableOpacity>
-												<Text style={styles.newsLink}>SKY.com</Text>
-											</TouchableOpacity>
+											<Text style={styles.newsLink}>SKY.com</Text>
 											<Icon name="ios-time-outline" style={styles.timeIcon} />
 											<Text style={styles.newsLink}>Dec 17, 2015</Text>
 										</Col>

@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import { Image, View } from "react-native";
+import { Image } from "react-native";
 
 import { NavigationActions } from "react-navigation";
 
-import { Container, Header, Content, Text, Button, Icon, Item, Input, Left, Right, Body } from "native-base";
+import { Container, Header, Content, Text, Button, Icon, Item, Input, Left, Right, Body, View } from "native-base";
 import { Grid, Col } from "react-native-easy-grid";
 import styles from "./styles";
 

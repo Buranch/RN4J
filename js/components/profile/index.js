@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { Image, View, TouchableOpacity } from "react-native";
+import { Image, TouchableOpacity } from "react-native";
 
-import { Container, Content, Text, Thumbnail } from "native-base";
+import { Container, Content, Text, Thumbnail, View } from "native-base";
 import { Grid, Col } from "react-native-easy-grid";
 import HeaderContent from "./../headerContent/";
 
@@ -17,49 +17,45 @@ class Profile extends Component {
 
 					<Content showsVerticalScrollIndicator={false}>
 						<View style={styles.profileInfoContainer}>
-							<TouchableOpacity style={{ alignSelf: "center" }}>
+							<View style={{ alignSelf: "center" }}>
 								<Thumbnail
 									source={require("../../../images/contacts/sanket.png")}
 									style={styles.profilePic}
 								/>
-							</TouchableOpacity>
+							</View>
 							<View style={styles.profileInfo}>
-								<TouchableOpacity>
-									<Text style={styles.profileUser}>Kumar Sanket</Text>
-								</TouchableOpacity>
-								<TouchableOpacity>
-									<Text note style={styles.profileUserInfo}>
-										CEO, GeekyAnts
-									</Text>
-								</TouchableOpacity>
+								<Text style={styles.profileUser}>Kumar Sanket</Text>
+								<Text note style={styles.profileUserInfo}>
+									CEO, GeekyAnts
+								</Text>
 							</View>
 						</View>
 
 						<View style={styles.linkTabs}>
 							<Grid>
 								<Col>
-									<TouchableOpacity style={styles.linkTabs_header}>
+									<View style={styles.linkTabs_header}>
 										<Text style={styles.linkTabs_tabCounts}>13</Text>
 										<Text note style={styles.linkTabs_tabName}>
 											Comments
 										</Text>
-									</TouchableOpacity>
+									</View>
 								</Col>
 								<Col>
-									<TouchableOpacity style={styles.linkTabs_header}>
+									<View style={styles.linkTabs_header}>
 										<Text style={styles.linkTabs_tabCounts}>12</Text>
 										<Text note style={styles.linkTabs_tabName}>
 											Channels
 										</Text>
-									</TouchableOpacity>
+									</View>
 								</Col>
 								<Col>
-									<TouchableOpacity style={styles.linkTabs_header}>
+									<View style={styles.linkTabs_header}>
 										<Text style={styles.linkTabs_tabCounts}>52</Text>
 										<Text note style={styles.linkTabs_tabName}>
 											Bookmarks
 										</Text>
-									</TouchableOpacity>
+									</View>
 								</Col>
 							</Grid>
 						</View>
