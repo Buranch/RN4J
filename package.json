@@ -28,7 +28,6 @@
 		"test": "jest && eslint ./src",
 		"precommit": "yarn test"
 	},
-	"pre-commit": "test",
 	"jest": {
 		"preset": "jest-expo",
 		"transformIgnorePatterns": [
