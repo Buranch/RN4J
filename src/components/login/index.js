@@ -154,4 +154,4 @@ const Login = reduxForm({
 	form: "test",
 	validate,
 })(LoginForm);
-export default connect(Login);
+export default Login;

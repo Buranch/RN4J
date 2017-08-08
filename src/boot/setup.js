@@ -3,10 +3,10 @@ import React, { Component } from "react";
 import { Provider } from "react-redux";
 import { StyleProvider } from "native-base";
 
-import App from "./App";
+import App from "../App";
 import configureStore from "./configureStore";
-import getTheme from "../native-base-theme/components";
-import variables from "../native-base-theme/variables/commonColor";
+import getTheme from "../../native-base-theme/components";
+import variables from "../../native-base-theme/variables/commonColor";
 
 export default class Setup extends Component {
 	constructor() {

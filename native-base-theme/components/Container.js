@@ -1,7 +1,7 @@
 import { Platform, Dimensions } from "react-native";
 
 import variable from "./../variables/platform";
-const primary = require("../../js/themes/variable").brandPrimary;
+const primary = require("../../src/themes/variable").brandPrimary;
 
 const deviceHeight = Dimensions.get("window").height;
 export default (variables = variable) => {

@@ -2,7 +2,7 @@ import color from "color";
 
 import { Platform, Dimensions, PixelRatio } from "react-native";
 
-const primary = require("../../js/themes/variable").brandPrimary;
+const primary = require("../../src/themes/variable").brandPrimary;
 
 const deviceHeight = Dimensions.get("window").height;
 const deviceWidth = Dimensions.get("window").width;
