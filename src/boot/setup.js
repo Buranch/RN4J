@@ -28,6 +28,7 @@ export default class Setup extends Component {
 	}
 
 	render() {
+		console.log("jjj");
 		if (!this.state.isReady || this.state.isLoading) {
 			return <Expo.AppLoading />;
 		}
