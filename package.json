@@ -28,7 +28,7 @@
 		"android": "react-native-scripts android",
 		"ios": "react-native-scripts ios",
 		"test": "jest && eslint ./src",
-		"pre-commit": "yarn test"
+		"precommit": "yarn test"
 	},
 	"jest": {
 		"preset": "jest-expo",
