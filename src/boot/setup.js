@@ -5,8 +5,8 @@ import { StyleProvider } from "native-base";
 
 import App from "../App";
 import configureStore from "./configureStore";
-import getTheme from "../../native-base-theme/components";
-import variables from "../../native-base-theme/variables/commonColor";
+import getTheme from "../theme/components";
+import variables from "../theme/variables/commonColor";
 
 export default class Setup extends Component {
 	constructor() {
@@ -28,7 +28,6 @@ export default class Setup extends Component {
 	}
 
 	render() {
-		console.log("jjj");
 		if (!this.state.isReady || this.state.isLoading) {
 			return <Expo.AppLoading />;
 		}
