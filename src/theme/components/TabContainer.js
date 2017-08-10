@@ -1,5 +1,3 @@
-import { Platform } from "react-native";
-
 import variable from "./../variables/platform";
 
 export default (variables = variable) => {
@@ -16,7 +14,6 @@ export default (variables = variable) => {
 		justifyContent: "space-around",
 		marginVertical: 15,
 		marginHorizontal: 10,
-		// borderBottomWidth: Platform.OS === "ios" ? variables.borderWidth : 0,
 		borderColor: variables.topTabBarBorderColor,
 	};
 

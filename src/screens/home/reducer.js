@@ -1,4 +1,3 @@
-import { ITEMS_HAS_ERRORED, ITEMS_IS_LOADING, ITEMS_FETCH_DATA_SUCCESS } from "./actions";
 const initialState = {
 	isLoading: true,
 	hasErrored: false,

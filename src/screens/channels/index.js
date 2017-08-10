@@ -1,14 +1,12 @@
 import React, { Component } from "react";
 import { Image } from "react-native";
-import { Container, Header, Left, Body, Right, Button, Icon, View, Tabs, Tab, Text, TabHeading } from "native-base";
+import { Container, Header, Left, Body, Right, Button, Icon, Tabs, Tab, Text, TabHeading } from "native-base";
 
 import styles from "./styles";
 
 import TabOne from "./tabOne";
 import TabTwo from "./tabTwo";
 import TabThree from "./tabThree";
-
-import CustomTabBar from "./CustomTabBar";
 
 const headerLogo = require("../../../assets/header-logo.png");
 

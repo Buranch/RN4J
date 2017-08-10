@@ -57,7 +57,7 @@ class LoginForm extends Component {
 	login() {
 		if (this.props.valid) {
 			this.props.navigation.navigate("Walkthrough");
-		} else
+		} else {
 			Toast.show({
 				text: "Enter Valid Username & password!",
 				type: "danger",
@@ -65,6 +65,7 @@ class LoginForm extends Component {
 				position: "top",
 				textStyle: { textAlign: "center" },
 			});
+		}
 	}
 
 	render() {

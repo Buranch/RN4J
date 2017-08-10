@@ -27,7 +27,6 @@ import datas from "./data.json";
 import styles from "./styles";
 
 const deviceWidth = Dimensions.get("window").width;
-const deviceHeight = Dimensions.get("window").height;
 const headerLogo = require("../../../assets/header-logo.png");
 const resetAction = NavigationActions.reset({
 	index: 0,

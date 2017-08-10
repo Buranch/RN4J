@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Image, View } from "react-native";
 
-import { Container, Header, Text, Input, Button, Icon, Body, Item, Tabs, Tab, TabHeading } from "native-base";
+import { Container, Header, Text, Input, Button, Icon, Body, Item, Tabs, Tab } from "native-base";
 
 import styles from "./style";
 

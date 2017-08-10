@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Image, TouchableOpacity, Platform } from "react-native";
 
-import { Container, Content, Text, View } from "native-base";
+import { Content, Text, View } from "native-base";
 import { Grid, Col, Row } from "react-native-easy-grid";
 
 import styles from "./styles";
