@@ -13,7 +13,7 @@ class Widgets extends Component {
 	render() {
 		return (
 			<Container>
-				<Image source={require("../../../images/glow2.png")} style={styles.container}>
+				<Image source={require("../../../assets/bg-transparent.png")} style={styles.container}>
 					<Header>
 						<Left>
 							<Button transparent onPress={() => this.props.navigation.navigate("DrawerOpen")}>
@@ -22,7 +22,7 @@ class Widgets extends Component {
 						</Left>
 
 						<Body>
-							<Image source={require("../../../images/Header-Logo.png")} style={styles.imageHeader} />
+							<Image source={require("../../../assets/header-logo.png")} style={styles.imageHeader} />
 						</Body>
 
 						<Right>
@@ -37,7 +37,7 @@ class Widgets extends Component {
 							<Text style={styles.overviewHeader}>WIDGETS</Text>
 						</View>
 
-						<Image source={require("../../../images/Widgets/widget1.png")} style={styles.mainWidget}>
+						<Image source={require("../../../assets/Widgets/widget1.png")} style={styles.mainWidget}>
 							<Grid style={styles.mainWidgetContainer}>
 								<Col>
 									<Icon name="ios-cloud-outline" style={{ fontSize: 40 }} />
@@ -83,7 +83,7 @@ class Widgets extends Component {
 						<Grid>
 							<Col>
 								<Image
-									source={require("../../../images/Widgets/widget2.png")}
+									source={require("../../../assets/Widgets/widget2.png")}
 									style={styles.otherWidget}
 								>
 									<View style={styles.otherWidgetContainer}>
@@ -118,7 +118,7 @@ class Widgets extends Component {
 							</Col>
 							<Col>
 								<Image
-									source={require("../../../images/Widgets/widget3.png")}
+									source={require("../../../assets/Widgets/widget3.png")}
 									style={styles.otherWidget}
 								>
 									<View style={styles.otherWidgetContainer}>

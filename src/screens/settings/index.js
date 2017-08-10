@@ -60,7 +60,7 @@ class Settings extends Component {
 					</Left>
 
 					<Body>
-						<Image source={require("../../../images/Header-Logo.png")} style={styles.imageHeader} />
+						<Image source={require("../../../assets/header-logo.png")} style={styles.imageHeader} />
 					</Body>
 					<Right>
 						<Button transparent onPress={() => navigation.dispatch(resetAction)}>
@@ -89,7 +89,7 @@ class Settings extends Component {
 								<Col>
 									<TouchableOpacity style={{ alignSelf: "center" }}>
 										<Thumbnail
-											source={require("../../../images/contacts/sanket.png")}
+											source={require("../../../assets/Contacts/sanket.png")}
 											style={styles.profilePic}
 										/>
 									</TouchableOpacity>

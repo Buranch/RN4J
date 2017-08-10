@@ -6,7 +6,7 @@ import { Grid, Col } from "react-native-easy-grid";
 
 import styles from "./styles";
 
-const headerLogo = require("../../../images/Header-Logo.png");
+const headerLogo = require("../../../assets/header-logo.png");
 const primary = require("../../theme/variables/commonColor").brandPrimary;
 
 class Channel extends Component {
@@ -14,7 +14,7 @@ class Channel extends Component {
 		const navigation = this.props.navigation;
 		return (
 			<Container>
-				<Image source={require("../../../images/glow2.png")} style={styles.container}>
+				<Image source={require("../../../assets/bg-transparent.png")} style={styles.container}>
 					<Header>
 						<Left>
 							<Button transparent onPress={() => navigation.goBack()}>
@@ -29,7 +29,7 @@ class Channel extends Component {
 
 					<Content showsVerticalScrollIndicator={false}>
 						<View>
-							<Image source={require("../../../images/NewsIcons/2.jpg")} style={styles.newsPoster}>
+							<Image source={require("../../../assets/NewsIcons/2.jpg")} style={styles.newsPoster}>
 								<View>
 									<Text
 										style={

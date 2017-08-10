@@ -10,7 +10,7 @@ import TabThree from "./tabThree";
 
 import CustomTabBar from "./CustomTabBar";
 
-const headerLogo = require("../../../images/Header-Logo.png");
+const headerLogo = require("../../../assets/header-logo.png");
 
 class Channels extends Component {
 	render() {

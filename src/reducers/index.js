@@ -1,11 +1,12 @@
 import { combineReducers } from "redux";
 import { reducer as formReducer } from "redux-form";
 
-import { items, itemsHasErrored, itemsIsLoading } from "../screens/home/reducer";
+import homeReducer from "../Screens/Home/reducer";
 
 export default combineReducers({
 	form: formReducer,
-	items,
-	itemsHasErrored,
-	itemsIsLoading,
+	screens: {
+		home: homeReducer,
+	},
+	homeReducer,
 });

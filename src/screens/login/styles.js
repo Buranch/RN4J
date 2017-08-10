@@ -14,7 +14,7 @@ export default {
 		resizeMode: "contain",
 		height: deviceHeight < 500 ? 50 : deviceHeight / 15,
 		alignSelf: "center",
-		marginTop: deviceWidth < 330 ? deviceHeight / 15 : deviceHeight / 6,
+		marginTop: deviceWidth < 330 ? deviceHeight / 15 : deviceHeight / 10,
 	},
 	aShadow: {
 		flex: 1,
@@ -23,12 +23,12 @@ export default {
 		height: deviceHeight / 20,
 		padding: 20,
 		alignSelf: "center",
-		marginTop: deviceWidth < 330 ? deviceHeight / 15 : deviceHeight / 5 - 60,
+		marginTop: deviceWidth < 330 ? deviceHeight / 15 : deviceHeight / 9 - 60,
 	},
 	inputGrp: {
 		flexDirection: "row",
 		backgroundColor: "rgba(255,255,255,0.3)",
-		marginBottom: 20,
+		marginBottom: 10,
 		borderWidth: 0,
 		borderColor: "transparent",
 	},
@@ -50,7 +50,7 @@ export default {
 		marginTop:
 			deviceHeight < 500
 				? Platform.OS === "android" ? 20 : 0
-				: Platform.OS === "android" ? deviceHeight / 6 - 45 : deviceHeight / 6 - 10,
+				: Platform.OS === "android" ? deviceHeight / 15 - 45 : deviceHeight / 10,
 	},
 	loginBtn: {
 		marginTop: 10,

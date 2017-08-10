@@ -20,7 +20,7 @@ class NeedHelp extends Component {
 		return (
 			<Container>
 				<StatusBar backgroundColor={commonColor.statusBarColor} barStyle="light-content" />
-				<Image source={require("../../../images/BG-signUp.png")} style={styles.background}>
+				<Image source={require("../../../assets/bg-signup.png")} style={styles.background}>
 					<Content contentOffset={this.state.offset}>
 						<View>
 							<Content padder scrollEnabled={false}>

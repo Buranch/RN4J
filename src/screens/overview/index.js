@@ -1,18 +1,18 @@
 import React, { Component } from "react";
 import { Image, Platform } from "react-native";
 import { Container, Header, Content, Text, Left, Right, Body, Button, Icon, View, Grid, Col } from "native-base";
-import ProgressBar from "./../loaders/ProgressBar";
+import ProgressBar from "./../Loaders/ProgressBar";
 
 import styles from "./styles";
 
-const headerLogo = require("../../../images/Header-Logo.png");
+const headerLogo = require("../../../assets/header-logo.png");
 
 class Overview extends Component {
 	render() {
 		const navigation = this.props.navigation;
 		return (
 			<Container>
-				<Image source={require("../../../images/glow2.png")} style={styles.container}>
+				<Image source={require("../../../assets/bg-transparent.png")} style={styles.container}>
 					<Header>
 						<Left>
 							<Button transparent style={styles.btnHeader} onPress={() => navigation.goBack()}>

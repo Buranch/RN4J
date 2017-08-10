@@ -33,7 +33,7 @@ class Story extends Component {
 	render() {
 		return (
 			<Container style={{ backgroundColor: "#fff" }}>
-				<Image source={require("../../../images/glow2.png")} style={styles.container}>
+				<Image source={require("../../../assets/bg-transparent.png")} style={styles.container}>
 					<Header>
 						<Body style={{ flexDirection: "row", justifyContent: "space-around" }}>
 							<Button transparent onPress={() => this.props.navigation.goBack()}>
@@ -57,7 +57,7 @@ class Story extends Component {
 					<Content showsVerticalScrollIndicator={false}>
 						<View style={{ flex: 1 }}>
 							<View>
-								<Image source={require("../../../images/NewsIcons/5.jpg")} style={styles.newsPoster}>
+								<Image source={require("../../../assets/NewsIcons/5.jpg")} style={styles.newsPoster}>
 									<TouchableOpacity>
 										<View style={styles.newsPosterContent}>
 											<Text numberOfLines={2} style={styles.newsPosterHeader}>
@@ -132,25 +132,25 @@ class Story extends Component {
 										<View style={styles.slide}>
 											<Image
 												style={styles.newsPoster}
-												source={require("../../../images/NewsIcons/1.jpg")}
+												source={require("../../../assets/NewsIcons/1.jpg")}
 											/>
 										</View>
 										<View style={styles.slide}>
 											<Image
 												style={styles.newsPoster}
-												source={require("../../../images/NewsIcons/3.jpg")}
+												source={require("../../../assets/NewsIcons/3.jpg")}
 											/>
 										</View>
 										<View style={styles.slide}>
 											<Image
 												style={styles.newsPoster}
-												source={require("../../../images/NewsIcons/4.jpg")}
+												source={require("../../../assets/NewsIcons/4.jpg")}
 											/>
 										</View>
 										<View style={styles.slide}>
 											<Image
 												style={styles.newsPoster}
-												source={require("../../../images/NewsIcons/5.jpg")}
+												source={require("../../../assets/NewsIcons/5.jpg")}
 											/>
 										</View>
 									</Carousel>

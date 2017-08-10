@@ -1,12 +1,12 @@
 {
 	"expo": {
 		"sdkVersion": "19.0.0",
-		"icon": "./images/icon.png",
+		"icon": "./assets/icon.png",
 		"slug": "strapflatapp",
 		"loading": {
 			"hideExponentText": true,
-			"icon": "./images/loading.png",
-			"backgroundImage": "./images/launchImages/splashscreen.png"
+			"icon": "./assets/loading.png",
+			"backgroundImage": "./assets/LaunchImages/splash-screen.png"
 		},
 		"orientation": "portrait",
 		"primaryColor": "#cccccc",

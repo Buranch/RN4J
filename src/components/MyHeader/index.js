@@ -4,7 +4,7 @@ import { Icon, Button, Left, Right, Body, Header } from "native-base";
 
 import styles from "./styles";
 
-const headerLogo = require("../../../images/Header-Logo.png");
+const headerLogo = require("../../../assets/header-logo.png");
 
 class MyHeader extends Component {
 	render() {

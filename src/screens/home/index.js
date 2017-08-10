@@ -21,14 +21,14 @@ import {
 import { Grid, Col } from "react-native-easy-grid";
 import Carousel from "react-native-carousel";
 
-import { itemsFetchData } from "./actions";
+import { itemsFetchData } from "../../actions";
 import datas from "./data.json";
 
 import styles from "./styles";
 
 const deviceWidth = Dimensions.get("window").width;
 const deviceHeight = Dimensions.get("window").height;
-const headerLogo = require("../../../images/Header-Logo.png");
+const headerLogo = require("../../../assets/header-logo.png");
 const resetAction = NavigationActions.reset({
 	index: 0,
 	actions: [NavigationActions.navigate({ routeName: "Login" })],
@@ -86,7 +86,7 @@ class Home extends Component {
 									>
 										<Image
 											style={styles.newsPoster}
-											source={require("../../../images/NewsIcons/1.jpg")}
+											source={require("../../../assets/NewsIcons/1.jpg")}
 										>
 											<View style={styles.swiperTextContent}>
 												<Text numberOfLines={2} style={styles.newsPosterHeader}>
@@ -122,7 +122,7 @@ class Home extends Component {
 									>
 										<Image
 											style={styles.newsPoster}
-											source={require("../../../images/NewsIcons/3.jpg")}
+											source={require("../../../assets/NewsIcons/3.jpg")}
 										>
 											<View style={styles.swiperTextContent}>
 												<Text numberOfLines={2} style={styles.newsPosterHeader}>
@@ -157,7 +157,7 @@ class Home extends Component {
 									>
 										<Image
 											style={styles.newsPoster}
-											source={require("../../../images/NewsIcons/4.jpg")}
+											source={require("../../../assets/NewsIcons/4.jpg")}
 										>
 											<View style={styles.swiperTextContent}>
 												<Text numberOfLines={2} style={styles.newsPosterHeader}>
@@ -239,8 +239,8 @@ function bindAction(dispatch) {
 }
 
 const mapStateToProps = state => ({
-	items: state.items,
-	hasErrored: state.itemsHasErrored,
-	isLoading: state.itemsIsLoading,
+	items: state.homeReducer.items,
+	hasErrored: state.homeReducer.itemsHasErrored,
+	isLoading: state.homeReducer.itemsIsLoading,
 });
 export default connect(mapStateToProps, bindAction)(Home);

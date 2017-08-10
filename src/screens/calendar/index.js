@@ -7,7 +7,7 @@ import { Calendar as MonthCalendar } from "react-native-calendars";
 
 import styles from "./styles";
 
-const headerLogo = require("../../../images/Header-Logo.png");
+const headerLogo = require("../../../assets/header-logo.png");
 
 class Calendar extends Component {
 	constructor(props) {
@@ -71,7 +71,7 @@ class Calendar extends Component {
 
 					<View style={{ backgroundColor: "#fff" }}>
 						<TouchableOpacity style={{ flexDirection: "row" }} onPress={() => navigation.navigate("Story")}>
-							<Image source={require("../../../images/NewsIcons/1.jpg")} style={styles.newsImage} />
+							<Image source={require("../../../assets/NewsIcons/1.jpg")} style={styles.newsImage} />
 							<View style={styles.newsContent}>
 								<Text numberOfLines={2} style={styles.newsHeader}>
 									Flat App is focussed on a minimal use of simple elements.
@@ -92,7 +92,7 @@ class Calendar extends Component {
 							</View>
 						</TouchableOpacity>
 						<TouchableOpacity style={{ flexDirection: "row" }} onPress={() => navigation.navigate("Story")}>
-							<Image source={require("../../../images/NewsIcons/3.jpg")} style={styles.newsImage} />
+							<Image source={require("../../../assets/NewsIcons/3.jpg")} style={styles.newsImage} />
 							<View style={styles.newsContent}>
 								<Text numberOfLines={2} style={styles.newsHeader}>
 									So that the applications are able to load faster and reaize easily.
@@ -113,7 +113,7 @@ class Calendar extends Component {
 							</View>
 						</TouchableOpacity>
 						<TouchableOpacity style={{ flexDirection: "row" }} onPress={() => navigation.navigate("Story")}>
-							<Image source={require("../../../images/NewsIcons/4.jpg")} style={styles.newsImage} />
+							<Image source={require("../../../assets/NewsIcons/4.jpg")} style={styles.newsImage} />
 							<View style={styles.newsContent}>
 								<Text numberOfLines={2} style={styles.newsHeader}>
 									But still look sharp on high-definition screens.
@@ -134,7 +134,7 @@ class Calendar extends Component {
 							</View>
 						</TouchableOpacity>
 						<TouchableOpacity style={{ flexDirection: "row" }} onPress={() => navigation.navigate("Story")}>
-							<Image source={require("../../../images/NewsIcons/11.jpg")} style={styles.newsImage} />
+							<Image source={require("../../../assets/NewsIcons/11.jpg")} style={styles.newsImage} />
 							<View style={styles.newsContent}>
 								<Text numberOfLines={2} style={styles.newsHeader}>
 									Highly customizable widgets are part of our never ending mission.
@@ -155,7 +155,7 @@ class Calendar extends Component {
 							</View>
 						</TouchableOpacity>
 						<TouchableOpacity style={{ flexDirection: "row" }} onPress={() => navigation.navigate("Story")}>
-							<Image source={require("../../../images/NewsIcons/13.jpg")} style={styles.newsImage} />
+							<Image source={require("../../../assets/NewsIcons/13.jpg")} style={styles.newsImage} />
 							<View style={styles.newsContent}>
 								<Text numberOfLines={2} style={styles.newsHeader}>
 									Ready to use components built using NativeBase.
@@ -176,7 +176,7 @@ class Calendar extends Component {
 							</View>
 						</TouchableOpacity>
 						<TouchableOpacity style={{ flexDirection: "row" }} onPress={() => navigation.navigate("Story")}>
-							<Image source={require("../../../images/NewsIcons/12.jpg")} style={styles.newsImage} />
+							<Image source={require("../../../assets/NewsIcons/12.jpg")} style={styles.newsImage} />
 							<View style={styles.newsContent}>
 								<Text numberOfLines={2} style={styles.newsHeader}>
 									Theme your app with one single file.

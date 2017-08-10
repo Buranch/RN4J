@@ -17,7 +17,7 @@ class TabTwo extends Component {
 							<Col>
 								<TouchableOpacity onPress={() => navigation.navigate("Channel")}>
 									<Image
-										source={require("../../../images/NewsIcons/10.jpg")}
+										source={require("../../../assets/NewsIcons/10.jpg")}
 										style={styles.channelImg}
 									>
 										<Text
@@ -35,7 +35,7 @@ class TabTwo extends Component {
 							<Col>
 								<TouchableOpacity onPress={() => navigation.navigate("Channel")}>
 									<Image
-										source={require("../../../images/NewsIcons/13.jpg")}
+										source={require("../../../assets/NewsIcons/13.jpg")}
 										style={styles.channelImg}
 									>
 										<Text
@@ -55,7 +55,7 @@ class TabTwo extends Component {
 							<Col>
 								<TouchableOpacity onPress={() => navigation.navigate("Channel")}>
 									<Image
-										source={require("../../../images/NewsIcons/6.jpg")}
+										source={require("../../../assets/NewsIcons/6.jpg")}
 										style={styles.channelImg}
 									>
 										<Text
@@ -73,7 +73,7 @@ class TabTwo extends Component {
 							<Col>
 								<TouchableOpacity onPress={() => navigation.navigate("Channel")}>
 									<Image
-										source={require("../../../images/NewsIcons/1.jpg")}
+										source={require("../../../assets/NewsIcons/1.jpg")}
 										style={styles.channelImg}
 									>
 										<Text
@@ -93,7 +93,7 @@ class TabTwo extends Component {
 							<Col>
 								<TouchableOpacity onPress={() => navigation.navigate("Channel")}>
 									<Image
-										source={require("../../../images/NewsIcons/8.jpg")}
+										source={require("../../../assets/NewsIcons/8.jpg")}
 										style={styles.channelImg}
 									>
 										<Text
@@ -111,7 +111,7 @@ class TabTwo extends Component {
 							<Col>
 								<TouchableOpacity onPress={() => navigation.navigate("Channel")}>
 									<Image
-										source={require("../../../images/NewsIcons/7.jpg")}
+										source={require("../../../assets/NewsIcons/7.jpg")}
 										style={styles.channelImg}
 									>
 										<Text
@@ -131,7 +131,7 @@ class TabTwo extends Component {
 							<Col>
 								<TouchableOpacity onPress={() => navigation.navigate("Channel")}>
 									<Image
-										source={require("../../../images/NewsIcons/11.jpg")}
+										source={require("../../../assets/NewsIcons/11.jpg")}
 										style={styles.channelImg}
 									>
 										<Text
@@ -149,7 +149,7 @@ class TabTwo extends Component {
 							<Col>
 								<TouchableOpacity onPress={() => navigation.navigate("Channel")}>
 									<Image
-										source={require("../../../images/NewsIcons/12.jpg")}
+										source={require("../../../assets/NewsIcons/12.jpg")}
 										style={styles.channelImg}
 									>
 										<Text
@@ -169,7 +169,7 @@ class TabTwo extends Component {
 							<Col>
 								<TouchableOpacity onPress={() => navigation.navigate("Channel")}>
 									<Image
-										source={require("../../../images/NewsIcons/9.jpg")}
+										source={require("../../../assets/NewsIcons/9.jpg")}
 										style={styles.channelImg}
 									>
 										<Text
@@ -187,7 +187,7 @@ class TabTwo extends Component {
 							<Col>
 								<TouchableOpacity onPress={() => navigation.navigate("Channel")}>
 									<Image
-										source={require("../../../images/NewsIcons/2.jpg")}
+										source={require("../../../assets/NewsIcons/2.jpg")}
 										style={styles.channelImg}
 									>
 										<Text

@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import { Container, Content, Text, Icon, View } from "native-base";
 import { Grid, Col } from "react-native-easy-grid";
 
-import MyHeader from "../../components/MyHeader";
+import MyHeader from "../../Components/MyHeader";
 
 import styles from "./styles";
 
@@ -14,7 +14,7 @@ class Timeline extends Component {
 		const navigation = this.props.navigation;
 		return (
 			<Container style={styles.bg}>
-				<Image source={require("../../../images/glow2.png")} style={styles.container}>
+				<Image source={require("../../../assets/bg-transparent.png")} style={styles.container}>
 					<MyHeader navigation={navigation} />
 					<View style={styles.overviewHeaderContainer}>
 						<Text style={styles.overviewHeader}>Thursday</Text>

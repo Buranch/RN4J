@@ -15,7 +15,7 @@ class SideBar extends Component {
 		const navigation = this.props.navigation;
 		return (
 			<Container>
-				<Image source={require("../../../images/sid.png")} style={styles.background}>
+				<Image source={require("../../../assets/sidebar-transparent.png")} style={styles.background}>
 					<Content style={styles.drawerContent}>
 						<ListItem
 							button
@@ -141,7 +141,7 @@ class SideBar extends Component {
 											}}
 										>
 											<Thumbnail
-												source={require("../../../images/contacts/sanket.png")}
+												source={require("../../../assets/Contacts/sanket.png")}
 												style={styles.profilePic}
 											/>
 										</TouchableOpacity>

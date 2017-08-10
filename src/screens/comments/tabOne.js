@@ -15,7 +15,7 @@ class TabOne extends Component {
 							<CardItem style={styles.cardHeader} header>
 								<Thumbnail
 									small
-									source={require("../../../images/contacts/sanket.png")}
+									source={require("../../../assets/Contacts/sanket.png")}
 									style={Platform.OS === "android" ? { borderRadius: 40 } : {}}
 								/>
 								<Text style={styles.cmtName}>Kumar Sanket</Text>
@@ -36,7 +36,7 @@ class TabOne extends Component {
 							<CardItem style={styles.cardHeader} header>
 								<Thumbnail
 									small
-									source={require("../../../images/contacts/saurav.png")}
+									source={require("../../../assets/Contacts/saurav.png")}
 									style={Platform.OS === "android" ? { borderRadius: 40 } : {}}
 								/>
 								<Text style={styles.cmtName}>Saurav Sahu</Text>
@@ -56,7 +56,7 @@ class TabOne extends Component {
 							<CardItem style={styles.cardHeader} header>
 								<Thumbnail
 									small
-									source={require("../../../images/contacts/atul.png")}
+									source={require("../../../assets/Contacts/atul.png")}
 									style={Platform.OS === "android" ? { borderRadius: 40 } : {}}
 								/>
 								<Text style={styles.cmtName}>Atul Ranjan</Text>
@@ -78,7 +78,7 @@ class TabOne extends Component {
 							<CardItem style={styles.cardHeader} header>
 								<Thumbnail
 									small
-									source={require("../../../images/contacts/varun.png")}
+									source={require("../../../assets/Contacts/varun.png")}
 									style={Platform.OS === "android" ? { borderRadius: 40 } : {}}
 								/>
 								<Text style={styles.cmtName}>Varun Sahu</Text>
@@ -98,7 +98,7 @@ class TabOne extends Component {
 							<CardItem style={styles.cardHeader} header>
 								<Thumbnail
 									small
-									source={require("../../../images/contacts/sanket.png")}
+									source={require("../../../assets/Contacts/sanket.png")}
 									style={Platform.OS === "android" ? { borderRadius: 40 } : {}}
 								/>
 								<Text style={styles.cmtName}>Kumar Sanket</Text>
@@ -119,7 +119,7 @@ class TabOne extends Component {
 							<CardItem style={styles.cardHeader} header>
 								<Thumbnail
 									small
-									source={require("../../../images/contacts/saurav.png")}
+									source={require("../../../assets/Contacts/saurav.png")}
 									style={Platform.OS === "android" ? { borderRadius: 40 } : {}}
 								/>
 								<Text style={styles.cmtName}>Saurav Sahu</Text>

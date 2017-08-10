@@ -3,7 +3,7 @@ import { Image, TouchableOpacity } from "react-native";
 
 import { Container, Content, Text, Thumbnail, View } from "native-base";
 import { Grid, Col } from "react-native-easy-grid";
-import MyHeader from "../../components/MyHeader";
+import MyHeader from "../../Components/MyHeader";
 
 import styles from "./styles";
 
@@ -12,14 +12,14 @@ class Profile extends Component {
 		const navigation = this.props.navigation;
 		return (
 			<Container>
-				<Image source={require("../../../images/glow2.png")} style={styles.container}>
+				<Image source={require("../../../assets/bg-transparent.png")} style={styles.container}>
 					<MyHeader navigation={navigation} />
 
 					<Content showsVerticalScrollIndicator={false}>
 						<View style={styles.profileInfoContainer}>
 							<View style={{ alignSelf: "center" }}>
 								<Thumbnail
-									source={require("../../../images/contacts/sanket.png")}
+									source={require("../../../assets/Contacts/sanket.png")}
 									style={styles.profilePic}
 								/>
 							</View>
@@ -64,7 +64,7 @@ class Profile extends Component {
 								style={{ flexDirection: "row" }}
 								onPress={() => navigation.navigate("Story")}
 							>
-								<Image source={require("../../../images/NewsIcons/1.jpg")} style={styles.newsImage} />
+								<Image source={require("../../../assets/NewsIcons/1.jpg")} style={styles.newsImage} />
 								<View style={styles.newsContent}>
 									<Text numberOfLines={2} style={styles.newsHeader}>
 										Flat App is focussed on a minimal use of simple elements.
@@ -87,7 +87,7 @@ class Profile extends Component {
 								style={{ flexDirection: "row" }}
 								onPress={() => navigation.navigate("Story")}
 							>
-								<Image source={require("../../../images/NewsIcons/3.jpg")} style={styles.newsImage} />
+								<Image source={require("../../../assets/NewsIcons/3.jpg")} style={styles.newsImage} />
 								<View style={styles.newsContent}>
 									<Text numberOfLines={2} style={styles.newsHeader}>
 										So that the applications are able to load faster and reaize easily.
@@ -110,7 +110,7 @@ class Profile extends Component {
 								style={{ flexDirection: "row" }}
 								onPress={() => navigation.navigate("Story")}
 							>
-								<Image source={require("../../../images/NewsIcons/4.jpg")} style={styles.newsImage} />
+								<Image source={require("../../../assets/NewsIcons/4.jpg")} style={styles.newsImage} />
 								<View style={styles.newsContent}>
 									<Text numberOfLines={2} style={styles.newsHeader}>
 										But still look sharp on high-definition screens.
@@ -134,7 +134,7 @@ class Profile extends Component {
 								style={{ flexDirection: "row" }}
 								onPress={() => navigation.navigate("Story")}
 							>
-								<Image source={require("../../../images/NewsIcons/10.jpg")} style={styles.newsImage} />
+								<Image source={require("../../../assets/NewsIcons/10.jpg")} style={styles.newsImage} />
 								<View style={styles.newsContent}>
 									<Text numberOfLines={2} style={styles.newsHeader}>
 										Highly customizable widgets are part of our never ending mission.
@@ -157,7 +157,7 @@ class Profile extends Component {
 								style={{ flexDirection: "row" }}
 								onPress={() => navigation.navigate("Story")}
 							>
-								<Image source={require("../../../images/NewsIcons/9.jpg")} style={styles.newsImage} />
+								<Image source={require("../../../assets/NewsIcons/9.jpg")} style={styles.newsImage} />
 								<View style={styles.newsContent}>
 									<Text numberOfLines={2} style={styles.newsHeader}>
 										Ready to use components built using NativeBase.
@@ -180,7 +180,7 @@ class Profile extends Component {
 								style={{ flexDirection: "row" }}
 								onPress={() => navigation.navigate("Story")}
 							>
-								<Image source={require("../../../images/NewsIcons/12.jpg")} style={styles.newsImage} />
+								<Image source={require("../../../assets/NewsIcons/12.jpg")} style={styles.newsImage} />
 								<View style={styles.newsContent}>
 									<Text numberOfLines={2} style={styles.newsHeader}>
 										Theme your app with one single file.

@@ -5,7 +5,6 @@ import { Container, Header, Text, Input, Button, Icon, Body, Item, Tabs, Tab, Ta
 
 import styles from "./style";
 
-import CustomTabBar from "../channels/CustomTabBar";
 import TabOne from "./tabOne";
 import TabTwo from "./tabTwo";
 import TabThree from "./tabThree";
@@ -24,7 +23,7 @@ class Comments extends Component {
 	render() {
 		return (
 			<Container>
-				<Image source={require("../../../images/glow2.png")} style={styles.container}>
+				<Image source={require("../../../assets/bg-transparent.png")} style={styles.container}>
 					<Header>
 						<Body style={{ flexDirection: "row", justifyContent: "space-around" }}>
 							<Button transparent onPress={() => this.props.navigation.goBack()}>

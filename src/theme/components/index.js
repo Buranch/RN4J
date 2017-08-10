@@ -24,6 +24,7 @@ import tabBarTheme from "./TabBar";
 import tabContainerTheme from "./TabContainer";
 import viewTheme from "./View";
 import tabHeadingTheme from "./TabHeading";
+import toastTheme from "./Toast";
 import iconTheme from "./Icon";
 import inputTheme from "./Input";
 import spinnerTheme from "./Spinner";
@@ -82,7 +83,9 @@ export default (variables = variable) => {
 		"NativeBase.Radio": {
 			...radioTheme(variables),
 		},
-
+		"NativeBase.Toast": {
+			...toastTheme(variables),
+		},
 		"NativeBase.Card": {
 			...cardTheme(),
 		},

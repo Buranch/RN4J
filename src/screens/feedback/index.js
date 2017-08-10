@@ -27,7 +27,7 @@ class Feedback extends Component {
 		const navigation = this.props.navigation;
 		return (
 			<Container contentOffset={this.state.offset} scrollEnabled={false}>
-				<Image source={require("../../../images/BG-signUp.png")} style={styles.container}>
+				<Image source={require("../../../assets/bg-signup.png")} style={styles.container}>
 					<Header>
 						<Left>
 							<Button transparent onPress={() => navigation.navigate("DrawerOpen")}>
@@ -35,7 +35,7 @@ class Feedback extends Component {
 							</Button>
 						</Left>
 						<Body>
-							<Image source={require("../../../images/Header-Logo.png")} style={styles.imageHeader} />
+							<Image source={require("../../../assets/header-logo.png")} style={styles.imageHeader} />
 						</Body>
 						<Right>
 							<Button transparent onPress={() => navigation.dispatch(resetAction)}>
