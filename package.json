@@ -26,7 +26,6 @@
 		"eject": "react-native-scripts eject",
 		"android": "react-native-scripts android",
 		"ios": "react-native-scripts ios",
-		"hooks:install": "node ./node_modules/husky/bin/install",
 		"test": "jest && eslint .",
 		"precommit": "yarn test"
 	},
