@@ -1,3 +1,4 @@
+/* @flow */
 import React, { Component } from "react";
 import { Image, View } from "react-native";
 
@@ -8,9 +9,16 @@ import styles from "./style";
 import TabOne from "./tabOne";
 import TabTwo from "./tabTwo";
 import TabThree from "./tabThree";
-
+type Props = {};
 class Comments extends Component {
-	constructor(props) {
+	state: {
+		offset: {
+			x: 0,
+			y: 0,
+		},
+	};
+	props: Props;
+	constructor(props: Props) {
 		super(props);
 		this.state = {
 			offset: {

@@ -1,5 +1,3 @@
-/* @flow */
-
 import React, { Component } from "react";
 import { ProgressViewIOS } from "react-native";
 

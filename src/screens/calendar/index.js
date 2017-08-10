@@ -10,6 +10,7 @@ import styles from "./styles";
 const headerLogo = require("../../../assets/header-logo.png");
 
 class Calendar extends Component {
+	props: {};
 	constructor(props) {
 		super(props);
 		this.state = {
