@@ -5,8 +5,5 @@ import homeReducer from "../Screens/Home/reducer";
 
 export default combineReducers({
 	form: formReducer,
-	screens: {
-		home: homeReducer,
-	},
 	homeReducer,
 });
