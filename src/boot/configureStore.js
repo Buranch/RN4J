@@ -6,16 +6,16 @@ import { persistStore } from "redux-persist";
 import reducer from "../reducers";
 
 export default function configureStore(onCompletion: () => void): any {
-	const enhancer = compose(
-		applyMiddleware(thunk),
-		devTools({
-			name: "flatapp",
-			realtime: true,
-		})
-	);
+  const enhancer = compose(
+    applyMiddleware(thunk),
+    devTools({
+      name: "flatapp",
+      realtime: true
+    })
+  );
 
-	const store = createStore(reducer, enhancer);
-	persistStore(store, { storage: AsyncStorage }, onCompletion);
+  const store = createStore(reducer, enhancer);
+  persistStore(store, { storage: AsyncStorage }, onCompletion);
 
-	return store;
+  return store;
 }

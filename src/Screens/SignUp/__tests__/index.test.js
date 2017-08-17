@@ -1,6 +1,3 @@
-/**
- * Sample React Native Snapshot Test
- */
 "use strict";
 
 import "react-native";
@@ -10,6 +7,6 @@ import SignUp from "../index";
 import renderer from "react-test-renderer";
 
 it("renders correctly", () => {
-	const tree = renderer.create(<SignUp />).toJSON();
-	expect(tree).toMatchSnapshot();
+  const tree = renderer.create(<SignUp />).toJSON();
+  expect(tree).toMatchSnapshot();
 });

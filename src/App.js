@@ -1,61 +1,61 @@
 import React from "react";
 import { StackNavigator, DrawerNavigator } from "react-navigation";
 import { Root } from "native-base";
-import Login from "./Screens/Login/";
-import NeedHelp from "./Screens/NeedHelp";
-import SignUp from "./Screens/SignUp/";
-import Walkthrough from "./Screens/Walkthrough/";
-import Comments from "./Screens/Comments/";
-import Channel from "./Screens/Channel";
-import Story from "./Screens/Story";
-import Home from "./Screens/Home/";
-import Channels from "./Screens/Channels";
-import Sidebar from "./Screens/Sidebar";
-import Overview from "./Screens/Overview";
-import Calendar from "./Screens/Calendar/";
-import Timeline from "./Screens/Timeline";
-import Feedback from "./Screens/Feedback/";
-import Profile from "./Screens/Profile/";
-import Settings from "./Screens/Settings";
-import Widgets from "./Screens/Widgets";
+import Login from "./screens/Login/";
+import NeedHelp from "./screens/NeedHelp";
+import SignUp from "./screens/SignUp/";
+import Walkthrough from "./screens/Walkthrough/";
+import Comments from "./screens/Comments/";
+import Channel from "./screens/Channel";
+import Story from "./screens/Story";
+import Home from "./screens/Home/";
+import Channels from "./screens/Channels";
+import Sidebar from "./screens/Sidebar";
+import Overview from "./screens/Overview";
+import Calendar from "./screens/Calendar/";
+import Timeline from "./screens/Timeline";
+import Feedback from "./screens/Feedback/";
+import Profile from "./screens/Profile/";
+import Settings from "./screens/Settings";
+import Widgets from "./screens/Widgets";
 
 const Drawer = DrawerNavigator(
-	{
-		Home: { screen: Home },
-		Channels: { screen: Channels },
-		Overview: { screen: Overview },
-		Calendar: { screen: Calendar },
-		Timeline: { screen: Timeline },
-		Feedback: { screen: Feedback },
-		Profile: { screen: Profile },
-		Settings: { screen: Settings },
-		Widgets: { screen: Widgets },
-	},
-	{
-		initialRouteName: "Home",
-		contentComponent: props => <Sidebar {...props} />,
-	}
+  {
+    Home: { screen: Home },
+    Channels: { screen: Channels },
+    Overview: { screen: Overview },
+    Calendar: { screen: Calendar },
+    Timeline: { screen: Timeline },
+    Feedback: { screen: Feedback },
+    Profile: { screen: Profile },
+    Settings: { screen: Settings },
+    Widgets: { screen: Widgets }
+  },
+  {
+    initialRouteName: "Home",
+    contentComponent: props => <Sidebar {...props} />
+  }
 );
 
 const App = StackNavigator(
-	{
-		Login: { screen: Login },
-		SignUp: { screen: SignUp },
-		NeedHelp: { screen: NeedHelp },
-		Walkthrough: { screen: Walkthrough },
-		Story: { screen: Story },
-		Comments: { screen: Comments },
-		Channel: { screen: Channel },
-		Drawer: { screen: Drawer },
-	},
-	{
-		index: 0,
-		initialRouteName: "Login",
-		headerMode: "none",
-	}
+  {
+    Login: { screen: Login },
+    SignUp: { screen: SignUp },
+    NeedHelp: { screen: NeedHelp },
+    Walkthrough: { screen: Walkthrough },
+    Story: { screen: Story },
+    Comments: { screen: Comments },
+    Channel: { screen: Channel },
+    Drawer: { screen: Drawer }
+  },
+  {
+    index: 0,
+    initialRouteName: "Login",
+    headerMode: "none"
+  }
 );
 
 export default () =>
-	<Root>
-		<App />
-	</Root>;
+  <Root>
+    <App />
+  </Root>;
