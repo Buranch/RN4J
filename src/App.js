@@ -2,7 +2,7 @@ import React from "react";
 import { StackNavigator, DrawerNavigator } from "react-navigation";
 import { Root } from "native-base";
 import Login from "./screens/Login/";
-import NeedHelp from "./screens/NeedHelp";
+import ForgotPassword from "./screens/ForgotPassword";
 import SignUp from "./screens/SignUp/";
 import Walkthrough from "./screens/Walkthrough/";
 import Comments from "./screens/Comments/";
@@ -41,7 +41,7 @@ const App = StackNavigator(
   {
     Login: { screen: Login },
     SignUp: { screen: SignUp },
-    NeedHelp: { screen: NeedHelp },
+    ForgotPassword: { screen: ForgotPassword },
     Walkthrough: { screen: Walkthrough },
     Story: { screen: Story },
     Comments: { screen: Comments },

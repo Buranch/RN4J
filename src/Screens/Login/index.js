@@ -51,17 +51,22 @@ class LoginForm extends Component {
     return (
       <View>
         <Item error={error && touched} rounded style={styles.inputGrp}>
-          <Icon active name={input.name === "email" ? "person" : "unlock"} />
+          <Icon
+            active
+            name={input.name === "email" ? "mail" : "unlock"}
+            style={{ color: "#fff" }}
+          />
           <Input
             placeholderTextColor="#FFF"
-            style={[styles.input, { color: touched && error ? "red" : "#FFF" }]}
+            style={styles.input}
             placeholder={input.name === "email" ? "EMAIL" : "PASSWORD"}
+            secureTextEntry={input.name === "password" ? true : false}
             {...input}
           />
           {touched && error
             ? <Icon
                 active
-                style={{ color: "red", marginTop: 5, right: 10 }}
+                style={{ color: "#fff", marginTop: 5, right: 10 }}
                 name="close"
               />
             : <Text />}
@@ -70,7 +75,7 @@ class LoginForm extends Component {
           ? <Text
               style={{
                 fontSize: 15,
-                color: "red",
+                color: commonColor.brandDanger,
                 textAlign: "right",
                 top: -10
               }}
@@ -90,6 +95,7 @@ class LoginForm extends Component {
       </View>
     );
   }
+
   login() {
     if (this.props.valid) {
       this.props.navigation.navigate("Walkthrough");
@@ -177,9 +183,9 @@ class LoginForm extends Component {
                     small
                     transparent
                     style={{ alignSelf: "flex-end" }}
-                    onPress={() => navigation.navigate("NeedHelp")}
+                    onPress={() => navigation.navigate("ForgotPassword")}
                   >
-                    <Text style={styles.helpBtns}>Need Help?</Text>
+                    <Text style={styles.helpBtns}>Forgot Password</Text>
                   </Button>
                 </Right>
               </View>

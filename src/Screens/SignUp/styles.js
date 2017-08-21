@@ -14,11 +14,11 @@ export default {
     marginTop:
       deviceWidth < 330
         ? Platform.OS === "android"
-          ? deviceHeight / 9 - 10
-          : deviceHeight / 9 - 10
+          ? deviceHeight / 9 - 20
+          : deviceHeight / 10 - 20
         : Platform.OS === "android"
-          ? deviceHeight / 7 - 10
-          : deviceHeight / 5 - 10
+          ? deviceHeight / 9 - 20
+          : deviceHeight / 8 - 20
   },
   signupHeader: {
     alignSelf: "center",
@@ -39,7 +39,7 @@ export default {
     flexDirection: "row",
     borderRadius: 25,
     backgroundColor: "rgba(255,255,255,0.2)",
-    marginBottom: 20,
+    marginBottom: 10,
     borderWidth: 0,
     borderColor: "transparent"
   },
@@ -49,15 +49,25 @@ export default {
   },
   signupBtn: {
     height: 50,
-    marginTop: 20,
+    marginTop: 10,
     borderWidth: 1,
     borderColor: "#ddd"
   },
-  termsText: {
+  otherLinkText: {
     alignSelf: "center",
     opacity: 0.8,
     fontSize: 14,
     fontWeight: "bold",
     color: "#EFF"
+  },
+  otherLinksContainer: {
+    flexDirection: "row",
+    marginTop: 10
+  },
+  helpBtns: {
+    opacity: 0.9,
+    fontSize: 14,
+    fontWeight: "bold",
+    color: "#FFF"
   }
 };
