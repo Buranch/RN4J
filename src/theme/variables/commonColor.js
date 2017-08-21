@@ -249,6 +249,9 @@ module.exports = {
   // New Variable
   titleFontColor: "#FFF",
 
+  //Toast
+  toastBgColor: "rgba(255,0,0,0.4)",
+
   // Other
   borderRadiusBase: platform === "ios" ? 5 : 2,
   borderWidth: 1 / PixelRatio.getPixelSizeForLayoutSize(1),
