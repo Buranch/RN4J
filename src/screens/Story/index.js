@@ -4,7 +4,8 @@ import {
   TouchableOpacity,
   Platform,
   Slider,
-  Dimensions
+  Dimensions,
+  View as RNView
 } from "react-native";
 
 import {
@@ -157,30 +158,30 @@ class Story extends Component {
                     indicatorOffset={10}
                     animate={false}
                   >
-                    <View style={styles.slide}>
+                    <RNView style={styles.slide}>
                       <Image
                         style={styles.newsPoster}
                         source={require("../../../assets/NewsIcons/1.jpg")}
                       />
-                    </View>
-                    <View style={styles.slide}>
+                    </RNView>
+                    <RNView style={styles.slide}>
                       <Image
                         style={styles.newsPoster}
                         source={require("../../../assets/NewsIcons/3.jpg")}
                       />
-                    </View>
-                    <View style={styles.slide}>
+                    </RNView>
+                    <RNView style={styles.slide}>
                       <Image
                         style={styles.newsPoster}
                         source={require("../../../assets/NewsIcons/4.jpg")}
                       />
-                    </View>
-                    <View style={styles.slide}>
+                    </RNView>
+                    <RNView style={styles.slide}>
                       <Image
                         style={styles.newsPoster}
                         source={require("../../../assets/NewsIcons/5.jpg")}
                       />
-                    </View>
+                    </RNView>
                   </Carousel>
                 </View>
 
