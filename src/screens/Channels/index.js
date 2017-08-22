@@ -30,7 +30,7 @@ class Channels extends Component {
 						</Button>
 					</Right>
 				</Header>
-				<Tabs tabBarUnderlineStyle={{ height: 0 }}>
+				<Tabs>
 					<Tab
 						heading={
 							<TabHeading>

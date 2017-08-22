@@ -1,14 +1,14 @@
 import variable from "./../variables/platform";
+
 const primary = require("../variables/commonColor").brandPrimary;
+
 export default (variables = variable) => {
 	const platform = variables.platform;
 
 	const tabHeadingTheme = {
 		flexDirection: "row",
 		backgroundColor: primary,
-		// flex: 1,
-		height: 45,
-		marginHorizontal: 5,
+		flex: 1,
 		alignItems: "center",
 		justifyContent: "center",
 		".scrollable": {
@@ -19,7 +19,7 @@ export default (variables = variable) => {
 		"NativeBase.Text": {
 			color: variables.topTabBarActiveTextColor,
 			marginHorizontal: 7,
-			fontWeight: "600",
+			fontWeight: platform === "ios" ? "500" : "300",
 		},
 		"NativeBase.Icon": {
 			color: variables.topTabBarTextColor,
@@ -33,9 +33,6 @@ export default (variables = variable) => {
 			"NativeBase.Icon": {
 				color: variables.topTabBarActiveTextColor,
 			},
-			borderWidth: 2,
-			borderColor: variables.topTabBarActiveTextColor,
-			borderRadius: 50,
 		},
 	};
 

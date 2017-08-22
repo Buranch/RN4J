@@ -55,7 +55,7 @@ class Comments extends Component {
 					</Header>
 					<View style={styles.commentHeadbg}>
 						<Text style={styles.commentHeader}>23 COMMENTS</Text>
-						<Tabs tabBarUnderlineStyle={{ height: 0 }}>
+						<Tabs>
 							<Tab heading="Best">
 								<TabOne />
 							</Tab>
