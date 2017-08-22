@@ -27,6 +27,7 @@ import tabHeadingTheme from "./TabHeading";
 import toastTheme from "./Toast";
 import iconTheme from "./Icon";
 import inputTheme from "./Input";
+import swipeRowTheme from "./SwipeRow";
 import spinnerTheme from "./Spinner";
 import cardItemTheme from "./CardItem";
 import listItemTheme from "./ListItem";
@@ -222,6 +223,10 @@ export default (variables = variable) => {
 		"NativeBase.Input": {
 			...inputTheme(variables),
 		},
+		"NativeBase.SwipeRow": {
+			...swipeRowTheme(variables),
+		},
+
 		"NativeBase.Thumbnail": {
 			".square": {
 				borderRadius: 0,
