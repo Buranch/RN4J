@@ -1,3 +1,4 @@
+// @flow
 import React, { Component } from "react";
 import { Image, View } from "react-native";
 
@@ -19,6 +20,9 @@ import styles from "./style";
 import TabOne from "./tabOne";
 import TabTwo from "./tabTwo";
 import TabThree from "./tabThree";
+
+const bg = require("../../../assets/bg-transparent.png");
+
 type Props = {
   navigation: () => void
 };
@@ -43,10 +47,7 @@ class Comments extends Component {
   render() {
     return (
       <Container>
-        <Image
-          source={require("../../../assets/bg-transparent.png")}
-          style={styles.container}
-        >
+        <Image source={bg} style={styles.container}>
           <Header style={styles.headerStyle}>
             <Body
               style={{ flexDirection: "row", justifyContent: "space-around" }}

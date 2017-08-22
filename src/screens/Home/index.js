@@ -1,7 +1,12 @@
 import React, { Component } from "react";
-import { Platform, Image, TouchableOpacity, Dimensions } from "react-native";
+import {
+  Platform,
+  Image,
+  TouchableOpacity,
+  Dimensions,
+  FlatList
+} from "react-native";
 import { connect } from "react-redux";
-import { NavigationActions } from "react-navigation";
 import {
   Container,
   Header,
@@ -13,7 +18,6 @@ import {
   Left,
   Body,
   Right,
-  List,
   View,
   Spinner
 } from "native-base";
@@ -28,14 +32,46 @@ import styles from "./styles";
 
 const deviceWidth = Dimensions.get("window").width;
 const headerLogo = require("../../../assets/header-logo.png");
-const resetAction = NavigationActions.reset({
-  index: 0,
-  actions: [NavigationActions.navigate({ routeName: "Login" })]
-});
+
 class Home extends Component {
   componentDidMount() {
     this.props.fetchData(datas);
   }
+  _renderItem = ({ item }) => {
+    return (
+      <TouchableOpacity
+        style={{ flexDirection: "row" }}
+        onPress={() => this.props.navigation.navigate("Story")}
+      >
+        <View style={styles.newsContent}>
+          <Text numberOfLines={2} style={styles.newsHeader}>
+            {item.headline}
+          </Text>
+          <Grid style={styles.swiperContentBox}>
+            <Col style={{ flexDirection: "row" }}>
+              <Text style={styles.newsLink}>
+                {item.link}
+              </Text>
+              <Icon name="ios-time-outline" style={styles.timeIcon} />
+              <Text style={styles.newsLink}>
+                {item.time}
+              </Text>
+            </Col>
+            <Col>
+              <TouchableOpacity
+                style={styles.newsTypeView}
+                onPress={() => this.props.navigation.navigate("Channel")}
+              >
+                <Text style={styles.newsTypeText}>
+                  {item.category}
+                </Text>
+              </TouchableOpacity>
+            </Col>
+          </Grid>
+        </View>
+      </TouchableOpacity>
+    );
+  };
   render() {
     if (this.props.isLoading) {
       return <Spinner />;
@@ -191,44 +227,10 @@ class Home extends Component {
             <Card
               style={{ backgroundColor: "#fff", marginTop: 0, marginRight: 0 }}
             >
-              <List
-                dataArray={this.props.items}
-                renderRow={data =>
-                  <TouchableOpacity
-                    style={{ flexDirection: "row" }}
-                    onPress={() => this.props.navigation.navigate("Story")}
-                  >
-                    <View style={styles.newsContent}>
-                      <Text numberOfLines={2} style={styles.newsHeader}>
-                        {data.headline}
-                      </Text>
-                      <Grid style={styles.swiperContentBox}>
-                        <Col style={{ flexDirection: "row" }}>
-                          <Text style={styles.newsLink}>
-                            {data.link}
-                          </Text>
-                          <Icon
-                            name="ios-time-outline"
-                            style={styles.timeIcon}
-                          />
-                          <Text style={styles.newsLink}>
-                            {data.time}
-                          </Text>
-                        </Col>
-                        <Col>
-                          <TouchableOpacity
-                            style={styles.newsTypeView}
-                            onPress={() =>
-                              this.props.navigation.navigate("Channel")}
-                          >
-                            <Text style={styles.newsTypeText}>
-                              {data.category}
-                            </Text>
-                          </TouchableOpacity>
-                        </Col>
-                      </Grid>
-                    </View>
-                  </TouchableOpacity>}
+              <FlatList
+                data={this.props.items}
+                renderItem={this._renderItem}
+                keyExtractor={item => item.id}
               />
             </Card>
           </Content>
@@ -246,7 +248,7 @@ function bindAction(dispatch) {
 
 const mapStateToProps = state => ({
   items: state.homeReducer.items,
-  hasErrored: state.homeReducer.itemsHasErrored,
-  isLoading: state.homeReducer.itemsIsLoading
+  hasErrored: state.homeReducer.hasErrored,
+  isLoading: state.homeReducer.isLoading
 });
 export default connect(mapStateToProps, bindAction)(Home);

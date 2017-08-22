@@ -1,3 +1,4 @@
+// @flow
 import React, { Component } from "react";
 import { Image, StatusBar } from "react-native";
 import {
@@ -21,9 +22,18 @@ const email = value =>
   value && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)
     ? "Invalid email address"
     : undefined;
-
+type Props = {
+  navigation: () => void
+};
 class ForgotPasswordForm extends Component {
-  constructor(props) {
+  state: {
+    offset: {
+      x: 0,
+      y: 0
+    }
+  };
+  props: Props;
+  constructor(props: Props) {
     super(props);
     this.state = {
       offset: {
@@ -32,8 +42,6 @@ class ForgotPasswordForm extends Component {
       },
       name: ""
     };
-    this.renderInput = this.renderInput.bind(this);
-    this.forgotPassword = this.forgotPassword.bind(this);
   }
 
   renderInput({ input, label, type, meta: { touched, error, warning } }) {

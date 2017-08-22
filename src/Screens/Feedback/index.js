@@ -1,3 +1,4 @@
+// @flow
 import React, { Component } from "react";
 import { Image } from "react-native";
 
@@ -20,14 +21,25 @@ import {
 import { Grid, Col } from "react-native-easy-grid";
 import styles from "./styles";
 
+const bgSignUp = require("../../../assets/bg-signup.png");
 const headerLogo = require("../../../assets/header-logo.png");
 const primary = require("../../theme/variables/commonColor").brandPrimary;
 const resetAction = NavigationActions.reset({
   index: 0,
   actions: [NavigationActions.navigate({ routeName: "Login" })]
 });
+type Props = {
+  navigation: () => void
+};
 class Feedback extends Component {
-  constructor(props) {
+  state: {
+    offset: {
+      x: 0,
+      y: 0
+    }
+  };
+  props: Props;
+  constructor(props: Props) {
     super(props);
     this.state = {
       offset: {
@@ -41,10 +53,7 @@ class Feedback extends Component {
     const navigation = this.props.navigation;
     return (
       <Container contentOffset={this.state.offset} scrollEnabled={false}>
-        <Image
-          source={require("../../../assets/bg-signup.png")}
-          style={styles.container}
-        >
+        <Image source={bgSignUp} style={styles.container}>
           <Header>
             <Left>
               <Button

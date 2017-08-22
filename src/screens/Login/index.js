@@ -11,10 +11,7 @@ import {
   View,
   Left,
   Right,
-  Toast,
-  Grid,
-  Col,
-  Row
+  Toast
 } from "native-base";
 import { Field, reduxForm } from "redux-form";
 
@@ -50,6 +47,7 @@ class LoginForm extends Component {
     this.renderInput = this.renderInput.bind(this);
     this.login = this.login.bind(this);
   }
+
   renderInput({ input, label, type, meta: { touched, error, warning } }) {
     return (
       <View>
