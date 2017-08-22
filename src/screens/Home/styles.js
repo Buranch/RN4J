@@ -18,21 +18,21 @@ export default {
     fontWeight: "bold"
   },
   newsLink: {
-    color: "#666",
+    color: Platform.OS === "android" ? "#777" : "#666",
     fontSize: 12,
     alignSelf: "flex-start",
     fontWeight: "bold"
   },
   newsTypeView: {
     borderBottomWidth: 1,
-    borderBottomColor: "#666",
+    borderBottomColor: Platform.OS === "android" ? "#777" : "#666",
     alignSelf: "flex-end"
   },
   newsTypeText: {
-    color: "#666",
+    color: Platform.OS === "android" ? "#777" : "#666",
     fontSize: 12,
     fontWeight: "bold",
-    paddingBottom: 5
+    paddingBottom: 2
   },
   newsPoster: {
     height: 330,
@@ -52,29 +52,29 @@ export default {
   },
   newsPosterTypeView: {
     borderBottomWidth: 1,
-    borderBottomColor: "#666",
+    borderBottomColor: "#ddd",
     alignSelf: "flex-end"
   },
   newsPosterTypeText: {
     opacity: 0.8,
     fontSize: 12,
     fontWeight: "bold",
-    paddingBottom: 5
+    paddingBottom: 2
   },
   timeIcon: {
     fontSize: 20,
     marginLeft: Platform.OS === "android" ? 15 : 0,
     paddingLeft: Platform.OS === "android" ? 0 : 20,
-    paddingRight: 10,
+    paddingRight: 5,
     marginTop: Platform.OS === "android" ? -1 : -3,
     color: "#666"
   },
-  headertimeIcon: {
+  timePosterIcon: {
     fontSize: 20,
-    marginLeft: Platform.OS === "android" ? 15 : 0,
+    marginLeft: Platform.OS === "android" ? 20 : 0,
     paddingLeft: Platform.OS === "android" ? 0 : 20,
-    paddingRight: 10,
-    marginTop: Platform.OS === "android" ? -1 : 0,
+    paddingRight: 5,
+    marginTop: Platform.OS === "android" ? -1 : -2,
     color: "#fff"
   },
   slide: {

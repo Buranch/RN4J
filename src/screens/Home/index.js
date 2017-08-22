@@ -124,7 +124,7 @@ class Home extends Component {
                             <Text style={styles.newsPosterLink}>SPACE.com</Text>
                             <Icon
                               name="ios-time-outline"
-                              style={styles.headertimeIcon}
+                              style={styles.timePosterIcon}
                             />
                             <Text style={styles.newsPosterLink}>20m ago</Text>
                           </Col>
@@ -163,7 +163,7 @@ class Home extends Component {
                             <Text style={styles.newsPosterLink}>CDC</Text>
                             <Icon
                               name="ios-time-outline"
-                              style={styles.headertimeIcon}
+                              style={styles.timePosterIcon}
                             />
                             <Text style={styles.newsPosterLink}>2hr ago</Text>
                           </Col>
@@ -201,7 +201,7 @@ class Home extends Component {
                             <Text style={styles.newsPosterLink}>SKY.com</Text>
                             <Icon
                               name="ios-time-outline"
-                              style={styles.headertimeIcon}
+                              style={styles.timePosterIcon}
                             />
                             <Text style={styles.newsPosterLink}>1day ago</Text>
                           </Col>

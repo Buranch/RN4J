@@ -90,15 +90,7 @@ class Story extends Component {
                 <Image
                   source={require("../../../assets/NewsIcons/5.jpg")}
                   style={styles.newsPoster}
-                >
-                  <TouchableOpacity>
-                    <View style={styles.newsPosterContent}>
-                      <Text numberOfLines={2} style={styles.newsPosterHeader}>
-                        Flat App Theme
-                      </Text>
-                    </View>
-                  </TouchableOpacity>
-                </Image>
+                />
               </View>
               <View style={{ backgroundColor: "#fff" }}>
                 <View style={styles.newsContent}>
@@ -138,14 +130,14 @@ class Story extends Component {
                     The flat UI design adds an aesthetic touch to the native
                     look and feel of React Native apps.
                   </Text>
-                  <View style={{ paddingBottom: 20 }}>
+                  <View style={{ paddingBottom: 15 }}>
                     <Text style={styles.newsHeader}>
                       NativeBase is a free and open source framework that
                       enables developers to build high-quality mobile apps using
                       React Native iOS and Android apps with a fusion of ES6.
                     </Text>
                   </View>
-                  <View style={{ paddingBottom: 20, paddingTop: 10 }}>
+                  <View style={{ paddingBottom: 20 }}>
                     <Text style={styles.newsHeader}>
                       NativeBase builds a layer on top of React Native that
                       provides you with basic set of components for mobile

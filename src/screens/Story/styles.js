@@ -29,7 +29,7 @@ export default {
   newsCommentContainer: {
     paddingLeft: 20,
     paddingRight: 20,
-    marginBottom: 10,
+    marginBottom: 15,
     borderLeftWidth: 2,
     borderLeftColor: primary
   },
@@ -39,21 +39,21 @@ export default {
     fontSize: 14
   },
   newsLink: {
-    color: "#666",
+    color: Platform.OS === "android" ? "#777" : "#666",
     fontSize: 12,
     alignSelf: "flex-start",
     fontWeight: "bold"
   },
   newsTypeView: {
     borderBottomWidth: 1,
-    borderBottomColor: "#666",
+    borderBottomColor: Platform.OS === "android" ? "#777" : "#666",
     alignSelf: "flex-end"
   },
   newsTypeText: {
-    color: "#666",
+    color: Platform.OS === "android" ? "#777" : "#666",
     fontSize: 12,
     fontWeight: "bold",
-    paddingBottom: 5
+    paddingBottom: 2
   },
   newsPoster: {
     width: null,
@@ -75,7 +75,7 @@ export default {
     fontSize: 20,
     marginLeft: Platform.OS === "android" ? 15 : 0,
     paddingLeft: Platform.OS === "android" ? 0 : 20,
-    paddingRight: 10,
+    paddingRight: 5,
     marginTop: Platform.OS === "android" ? -1 : -3,
     color: "#666"
   },
