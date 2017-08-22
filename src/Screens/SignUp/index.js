@@ -108,7 +108,6 @@ class SignUpForm extends Component {
     } else {
       Toast.show({
         text: "All the fields are compulsory!",
-        type: "danger",
         duration: 2500,
         position: "top",
         textStyle: { textAlign: "center" }

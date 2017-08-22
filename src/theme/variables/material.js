@@ -123,7 +123,7 @@ export default {
 
   // Footer
   footerHeight: 55,
-  footerDefaultBg: "#3F51B5",
+  footerDefaultBg: "transparent",
 
   // FooterTab
   tabBarTextColor: "#b3c7f9",
@@ -246,9 +246,6 @@ export default {
 
   // New Variable
   titleFontColor: "#FFF",
-
-  //Toast
-  toastBgColor: "rgba(255,0,0,0.4)",
 
   // Other
   borderRadiusBase: 2,

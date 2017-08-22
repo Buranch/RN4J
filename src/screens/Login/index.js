@@ -11,7 +11,10 @@ import {
   View,
   Left,
   Right,
-  Toast
+  Toast,
+  Grid,
+  Col,
+  Row
 } from "native-base";
 import { Field, reduxForm } from "redux-form";
 
@@ -59,7 +62,7 @@ class LoginForm extends Component {
           <Input
             placeholderTextColor="#FFF"
             style={styles.input}
-            placeholder={input.name === "email" ? "EMAIL" : "PASSWORD"}
+            placeholder={input.name === "email" ? "Email" : "Password"}
             secureTextEntry={input.name === "password" ? true : false}
             {...input}
           />
@@ -74,7 +77,7 @@ class LoginForm extends Component {
         {touched && error
           ? <Text
               style={{
-                fontSize: 15,
+                fontSize: Platform.OS === "android" ? 12 : 15,
                 color: commonColor.brandDanger,
                 textAlign: "right",
                 top: -10
@@ -84,7 +87,7 @@ class LoginForm extends Component {
             </Text>
           : <Text
               style={{
-                fontSize: 15,
+                fontSize: Platform.OS === "android" ? 12 : 15,
                 color: "transparent",
                 textAlign: "right",
                 top: -10
@@ -102,7 +105,6 @@ class LoginForm extends Component {
     } else {
       Toast.show({
         text: "Enter Valid Username & password!",
-        type: "danger",
         duration: 2500,
         position: "top",
         textStyle: { textAlign: "center" }
@@ -120,74 +122,81 @@ class LoginForm extends Component {
         />
         <Content scrollEnabled={true} bounces={false}>
           <Image source={bg} style={styles.background}>
-            <Image
-              source={logo}
-              style={
-                Platform.OS === "android" ? styles.aShadow : styles.iosShadow
-              }
-            />
+            <View style={styles.container}>
+              <Image source={logo} style={styles.logo} />
+            </View>
+            <View style={styles.container}>
+              <View style={styles.form}>
+                <Field
+                  name="email"
+                  component={this.renderInput}
+                  type="email"
+                  validate={[email, required]}
+                />
+                <Field
+                  name="password"
+                  component={this.renderInput}
+                  type="password"
+                  validate={[alphaNumeric, minLength8, maxLength15, required]}
+                />
 
-            <View style={styles.bg}>
-              <Field
-                name="email"
-                component={this.renderInput}
-                type="email"
-                validate={[email, required]}
-              />
-              <Field
-                name="password"
-                component={this.renderInput}
-                type="password"
-                validate={[alphaNumeric, minLength8, maxLength15, required]}
-              />
-
-              <Button
-                rounded
-                primary
-                block
-                large
-                style={styles.loginBtn}
-                onPress={() => this.login()}
-              >
-                <Text
-                  style={
-                    Platform.OS === "android"
-                      ? { fontSize: 16, textAlign: "center", top: -5 }
-                      : { fontSize: 16, fontWeight: "900" }
-                  }
+                <Button
+                  rounded
+                  primary
+                  block
+                  large
+                  style={styles.loginBtn}
+                  onPress={() => this.login()}
                 >
-                  Get Started
-                </Text>
-              </Button>
-              <Button
-                small
-                transparent
-                style={{ alignSelf: "flex-end", marginTop: 10 }}
-                onPress={() => navigation.navigate("Walkthrough")}
-              >
-                <Text style={styles.helpBtns}>Skip</Text>
-              </Button>
-              <View style={styles.otherLinksContainer}>
-                <Left>
+                  <Text
+                    style={
+                      Platform.OS === "android"
+                        ? { fontSize: 16, textAlign: "center", top: -5 }
+                        : { fontSize: 16, fontWeight: "900" }
+                    }
+                  >
+                    Get Started
+                  </Text>
+                </Button>
+
+                <View style={styles.otherLinksContainer}>
+                  <Left>
+                    <Button
+                      small
+                      transparent
+                      style={{ alignSelf: "flex-start" }}
+                      onPress={() => navigation.navigate("SignUp")}
+                    >
+                      <Text style={styles.helpBtns}>Create Account</Text>
+                    </Button>
+                  </Left>
+                  <Right>
+                    <Button
+                      small
+                      transparent
+                      style={{ alignSelf: "flex-end" }}
+                      onPress={() => navigation.navigate("ForgotPassword")}
+                    >
+                      <Text style={styles.helpBtns}>Forgot Password</Text>
+                    </Button>
+                  </Right>
+                </View>
+                <View style={{ flex: 1, alignSelf: "flex-end" }}>
                   <Button
+                    light
                     small
                     transparent
-                    style={{ alignSelf: "flex-start" }}
-                    onPress={() => navigation.navigate("SignUp")}
+                    bordered
+                    style={{
+                      alignSelf: "flex-end",
+                      marginTop: 10,
+                      borderWidth: 0.5
+                    }}
+                    onPress={() => navigation.navigate("Walkthrough")}
                   >
-                    <Text style={styles.helpBtns}>Create Account</Text>
+                    <Text style={styles.helpBtns}>Skip</Text>
                   </Button>
-                </Left>
-                <Right>
-                  <Button
-                    small
-                    transparent
-                    style={{ alignSelf: "flex-end" }}
-                    onPress={() => navigation.navigate("ForgotPassword")}
-                  >
-                    <Text style={styles.helpBtns}>Forgot Password</Text>
-                  </Button>
-                </Right>
+                </View>
               </View>
             </View>
           </Image>

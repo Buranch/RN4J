@@ -83,20 +83,23 @@ export default {
     backgroundColor: "rgba(0,0,0,0.2)",
     borderRadius: 30,
     width: 60,
-    height: 60
+    height: 60,
+    alignSelf: "center"
   },
   dayButton: {
     backgroundColor: "#fff",
     borderRadius: 30,
     width: 60,
-    height: 60
+    height: 60,
+    alignSelf: "center"
   },
   modal: {
     backgroundColor: primary,
     position: "absolute",
     width: deviceWidth,
     height: null,
-    top: 60
+    top: Platform.OS === "android" ? 55 : 60,
+    paddingBottom: Platform.OS === "android" ? 20 : 10
     // bottom: deviceHeight / 2.5,
   },
   slide: {
@@ -107,6 +110,15 @@ export default {
   },
   wrapper: {
     flex: 1
+  },
+  headerStyle: {
+    paddingLeft: 0,
+    paddingRight: 0
+  },
+  headerModalStyle: {
+    paddingLeft: 0,
+    paddingRight: 0,
+    elevation: 0
   },
   headerIcons: {
     fontSize: 30,
@@ -150,8 +162,7 @@ export default {
   },
   modalContentBox: {
     borderBottomWidth: 1,
-    borderBottomColor:
-      Platform.OS === "android" ? "#fff" : "rgba(255,255,255,0.5)"
+    borderBottomColor: "rgba(255,255,255,0.5)"
   },
   modalSmallText: {
     alignSelf: "flex-start",

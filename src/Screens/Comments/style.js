@@ -2,7 +2,7 @@ const React = require("react-native");
 const { Platform, Dimensions } = React;
 
 const deviceWidth = Dimensions.get("window").width;
-const primary = require("../../theme/variables/commonColor").brandPrimary;
+const commonColor = require("../../theme/variables/commonColor");
 
 export default {
   container: {
@@ -13,6 +13,11 @@ export default {
   headerContainer: {
     marginTop: Platform.OS === "android" ? -5 : undefined,
     marginLeft: Platform.OS === "android" ? -5 : undefined
+  },
+  headerStyle: {
+    paddingLeft: 0,
+    paddingRight: 0,
+    elevation: 0
   },
   headerBtns: {
     padding: 10,
@@ -27,7 +32,7 @@ export default {
     marginTop: Platform.OS === "android" ? -10 : 0
   },
   commentHeadbg: {
-    backgroundColor: primary,
+    backgroundColor: commonColor.darkenHeader,
     flex: 1
   },
   commentHeader: {
@@ -92,7 +97,7 @@ export default {
     color: "#222"
   },
   arrowForwardIcon: {
-    color: primary
+    color: commonColor.brandPrimary
   },
   arrowForwardIconContainer: {
     paddingTop: 5

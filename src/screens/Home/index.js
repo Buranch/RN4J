@@ -43,22 +43,13 @@ class Home extends Component {
       return (
         <Container style={{ backgroundColor: "#fff" }}>
           <Header>
-            <Left>
-              <Button
-                transparent
-                style={styles.btnHeader}
-                onPress={() => this.props.navigation.dispatch(resetAction)}
-              >
-                <Icon active name="power" />
-              </Button>
-            </Left>
+            <Left />
             <Body>
               <Image source={headerLogo} style={styles.imageHeader} />
             </Body>
             <Right>
               <Button
                 transparent
-                style={styles.btnHeader}
                 onPress={() => this.props.navigation.navigate("DrawerOpen")}
               >
                 <Icon active name="menu" />

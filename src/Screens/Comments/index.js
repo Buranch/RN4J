@@ -47,7 +47,7 @@ class Comments extends Component {
           source={require("../../../assets/bg-transparent.png")}
           style={styles.container}
         >
-          <Header>
+          <Header style={styles.headerStyle}>
             <Body
               style={{ flexDirection: "row", justifyContent: "space-around" }}
             >

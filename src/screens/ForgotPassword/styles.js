@@ -13,10 +13,10 @@ export default {
       deviceWidth < 330
         ? Platform.OS === "android"
           ? deviceHeight / 9 - 20
-          : deviceHeight / 10 - 20
+          : deviceHeight / 8 - 10
         : Platform.OS === "android"
           ? deviceHeight / 7 - 20
-          : deviceHeight / 6 - 20
+          : deviceHeight / 6 - 30
   },
   forgotPasswordHeader: {
     alignSelf: "center",

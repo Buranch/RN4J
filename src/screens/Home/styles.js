@@ -141,7 +141,6 @@ export default {
     alignSelf: "stretch",
     paddingTop: Platform.OS === "android" ? 0 : 0
   },
-  btnHeader: {},
   imageHeader: {
     height: 25,
     width: 95,

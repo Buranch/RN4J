@@ -123,7 +123,7 @@ export default {
 
   // Footer
   footerHeight: 55,
-  footerDefaultBg: platform === "ios" ? "#F8F8F8" : "#4179F7",
+  footerDefaultBg: "transparent",
 
   // FooterTab
   tabBarTextColor: platform === "ios" ? "#6b6b6b" : "#b3c7f9",
@@ -246,9 +246,6 @@ export default {
 
   // New Variable
   titleFontColor: platform === "ios" ? "#000" : "#FFF",
-
-  //Toast
-  toastBgColor: "rgba(255,0,0,0.4)",
 
   // Other
   borderRadiusBase: platform === "ios" ? 5 : 2,

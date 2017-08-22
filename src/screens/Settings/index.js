@@ -21,6 +21,7 @@ import { Grid, Col } from "react-native-easy-grid";
 
 import styles from "./styles";
 
+const headerLogo = require("../../../assets/header-logo.png");
 const primary = require("../../theme/variables/commonColor").brandPrimary;
 
 const resetAction = NavigationActions.reset({
@@ -54,26 +55,19 @@ class Settings extends Component {
       <Container>
         <Header>
           <Left>
-            <Button
-              transparent
-              onPress={() => navigation.navigate("DrawerOpen")}
-            >
-              <Icon active name="menu" />
+            <Button transparent onPress={() => this.props.navigation.goBack()}>
+              <Icon active name="arrow-back" />
             </Button>
           </Left>
-
           <Body>
-            <Image
-              source={require("../../../assets/header-logo.png")}
-              style={styles.imageHeader}
-            />
+            <Image source={headerLogo} style={styles.imageHeader} />
           </Body>
           <Right>
             <Button
               transparent
-              onPress={() => navigation.dispatch(resetAction)}
+              onPress={() => this.props.navigation.navigate("DrawerOpen")}
             >
-              <Icon active name="power" />
+              <Icon active name="menu" />
             </Button>
           </Right>
         </Header>

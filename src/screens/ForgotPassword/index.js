@@ -86,7 +86,6 @@ class ForgotPasswordForm extends Component {
     } else {
       Toast.show({
         text: "Enter Valid Email",
-        type: "danger",
         duration: 2500,
         position: "top",
         textStyle: { textAlign: "center" }

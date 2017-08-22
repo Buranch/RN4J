@@ -25,7 +25,6 @@ import Carousel from "react-native-carousel-view";
 import styles from "./styles";
 
 const deviceWidth = Dimensions.get("window").width;
-const primary = require("../../theme/variables/commonColor").brandPrimary;
 
 class Story extends Component {
   constructor(props) {
@@ -52,7 +51,12 @@ class Story extends Component {
           source={require("../../../assets/bg-transparent.png")}
           style={styles.container}
         >
-          <Header>
+          <Header
+            style={[
+              styles.headerStyle,
+              this.state.open ? styles.headerModalStyle : styles.headerStyle
+            ]}
+          >
             <Body
               style={{ flexDirection: "row", justifyContent: "space-around" }}
             >
@@ -215,20 +219,14 @@ class Story extends Component {
             <View>
               <View style={styles.modalContentBox}>
                 <Grid style={{ flex: 10, padding: 20 }}>
-                  <Col style={{ paddingLeft: 30 }}>
+                  <Col>
                     <Button transparent style={styles.dayButton}>
-                      <Icon
-                        name="ios-sunny-outline"
-                        style={{ color: primary, fontSize: 26 }}
-                      />
+                      <Icon name="ios-sunny-outline" />
                     </Button>
                   </Col>
-                  <Col style={{ paddingLeft: 80 }}>
+                  <Col style={{}}>
                     <Button transparent style={styles.nightButton}>
-                      <Icon
-                        name="ios-moon-outline"
-                        style={{ fontSize: 26, color: "#fff" }}
-                      />
+                      <Icon name="ios-moon-outline" style={{ color: "#fff" }} />
                     </Button>
                   </Col>
                 </Grid>
@@ -243,17 +241,21 @@ class Story extends Component {
                 >
                   <Col>
                     <Text
-                      style={
-                        Platform.OS === "android"
-                          ? { fontSize: 12, marginTop: 8 }
-                          : { fontSize: 12, marginTop: 8 }
-                      }
+                      style={{
+                        fontSize: 12,
+                        marginTop: 8,
+                        alignSelf: "center"
+                      }}
                     >
                       CHOOSE TYPESPACE
                     </Text>
                   </Col>
                   <Col>
-                    <Button transparent iconRight style={{ marginTop: -5 }}>
+                    <Button
+                      transparent
+                      iconRight
+                      style={{ marginTop: -5, alignSelf: "center" }}
+                    >
                       <Text style={{ color: "#FFF" }}>SANS SERIF</Text>
                       <Icon name="ios-arrow-forward" style={{ fontSize: 28 }} />
                     </Button>
@@ -278,6 +280,7 @@ class Story extends Component {
                 <Slider
                   {...this.props}
                   minimumTrackTintColor="#fff"
+                  thumbTintColor="#fff"
                   onValueChange={value => this.setState({ value })}
                 />
               </View>
