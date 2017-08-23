@@ -386,6 +386,11 @@ export default (variables = variable) => {
 		".noBorder": {
 			borderBottomWidth: null,
 		},
+		".swipeList": {
+			paddingBottom: 0,
+			paddingRight: 0,
+			paddingTop: 0,
+		},
 		alignItems: "center",
 		flexDirection: "row",
 		paddingRight: variables.listItemPadding + 5,
