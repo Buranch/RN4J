@@ -14,7 +14,7 @@ class Overview extends Component {
 		return (
 			<Container>
 				<Image source={require("../../../assets/bg-transparent.png")} style={styles.container}>
-					<Header>
+					<Header hasTabs>
 						<Left>
 							<Button transparent style={styles.btnHeader} onPress={() => navigation.goBack()}>
 								<Icon active name="arrow-back" />

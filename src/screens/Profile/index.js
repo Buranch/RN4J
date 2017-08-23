@@ -6,7 +6,7 @@ import { Grid, Col } from "react-native-easy-grid";
 import CustomHeader from "../../components/CustomHeader";
 
 import styles from "./styles";
-import data from "./data";
+import datas from "./data";
 
 class Profile extends Component {
 	constructor(props) {
@@ -14,7 +14,7 @@ class Profile extends Component {
 		this.ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
 		this.state = {
 			basic: true,
-			listViewData: data,
+			listViewData: datas,
 		};
 	}
 
@@ -25,12 +25,11 @@ class Profile extends Component {
 		this.setState({ listViewData: newData });
 	}
 	render() {
-		const ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
 		const navigation = this.props.navigation;
 		return (
 			<Container>
 				<Image source={require("../../../assets/bg-transparent.png")} style={styles.container}>
-					<CustomHeader navigation={navigation} />
+					<CustomHeader hasTabs navigation={navigation} />
 
 					<Content showsVerticalScrollIndicator={false}>
 						<View style={styles.profileInfoContainer}>
@@ -111,7 +110,6 @@ class Profile extends Component {
 							renderLeftHiddenRow={data =>
 								<Button
 									full
-									onPress={() => alert("About " + data.category)}
 									style={{
 										backgroundColor: "#CCC",
 										flex: 1,
