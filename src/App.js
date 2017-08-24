@@ -17,7 +17,6 @@ import Timeline from "./screens/Timeline";
 import Feedback from "./screens/Feedback/";
 import Profile from "./screens/Profile/";
 import Settings from "./screens/Settings";
-import Widgets from "./screens/Widgets";
 
 const Drawer = DrawerNavigator(
 	{
@@ -29,7 +28,6 @@ const Drawer = DrawerNavigator(
 		Feedback: { screen: Feedback },
 		Profile: { screen: Profile },
 		Settings: { screen: Settings },
-		Widgets: { screen: Widgets },
 	},
 	{
 		initialRouteName: "Home",

@@ -60,7 +60,7 @@ export default {
 		paddingBottom: 20,
 	},
 	newsLink: {
-		color: "#666",
+		color: Platform.OS === "android" ? "#777" : "#666",
 		fontSize: 12,
 		alignSelf: "flex-start",
 		fontWeight: "bold",

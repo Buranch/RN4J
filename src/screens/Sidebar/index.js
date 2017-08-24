@@ -86,17 +86,6 @@ class SideBar extends Component {
 						<ListItem
 							button
 							onPress={() => {
-								navigation.navigate("Widgets");
-							}}
-							iconLeft
-							style={styles.links}
-						>
-							<Icon name="ios-grid" />
-							<Text style={styles.linkText}>WIDGETS</Text>
-						</ListItem>
-						<ListItem
-							button
-							onPress={() => {
 								navigation.navigate("Settings");
 							}}
 							iconLeft
