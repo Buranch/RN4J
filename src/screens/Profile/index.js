@@ -1,3 +1,4 @@
+// @flow
 import React, { Component } from "react";
 import { Image, TouchableOpacity, ListView } from "react-native";
 
@@ -8,17 +9,24 @@ import CustomHeader from "../../components/CustomHeader";
 import styles from "./styles";
 import datas from "./data";
 
+type Props = {
+	navigation: () => void,
+};
 class Profile extends Component {
-	constructor(props) {
+	state: {
+		listViewData: any,
+	};
+	props: Props;
+	ds: Object;
+	constructor(props: Props) {
 		super(props);
 		this.ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
 		this.state = {
-			basic: true,
 			listViewData: datas,
 		};
 	}
 
-	deleteRow(secId, rowId, rowMap) {
+	deleteRow(secId: string, rowId: string, rowMap: any) {
 		rowMap[`${secId}${rowId}`].props.closeRow();
 		const newData = [...this.state.listViewData];
 		newData.splice(rowId, 1);

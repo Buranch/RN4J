@@ -1,3 +1,4 @@
+// @flow
 import React, { Component } from "react";
 import { Image, Platform, StatusBar } from "react-native";
 import { Container, Content, Text, Item, Input, Button, Icon, View, Left, Right, Toast } from "native-base";
@@ -12,23 +13,15 @@ const logo = require("../../../assets/logo.png");
 const required = value => (value ? undefined : "Required");
 const maxLength = max => value => (value && value.length > max ? `Must be ${max} characters or less` : undefined);
 const maxLength15 = maxLength(15);
-export const minLength = min => value =>
-	value && value.length < min ? `Must be ${min} characters or more` : undefined;
-export const minLength8 = minLength(8);
+const minLength = min => value => (value && value.length < min ? `Must be ${min} characters or more` : undefined);
+const minLength8 = minLength(8);
 const email = value =>
 	value && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value) ? "Invalid email address" : undefined;
 const alphaNumeric = value => (value && /[^a-zA-Z0-9 ]/i.test(value) ? "Only alphanumeric characters" : undefined);
 
+declare type Any = any;
 class LoginForm extends Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			name: "",
-			hasError: undefined,
-		};
-		this.renderInput = this.renderInput.bind(this);
-		this.login = this.login.bind(this);
-	}
+	textInput: Any;
 
 	renderInput({ input, label, type, meta: { touched, error, warning } }) {
 		return (
@@ -94,7 +87,7 @@ class LoginForm extends Component {
 		const navigation = this.props.navigation;
 		return (
 			<Container>
-				<StatusBar backgroundColor={commonColor.statusBarColor} barStyle="light-content" />
+				<StatusBar barStyle="light-content" />
 				<Image source={bg} style={styles.background}>
 					<Content contentContainerStyle={{ flex: 1 }}>
 						<View style={styles.container}>

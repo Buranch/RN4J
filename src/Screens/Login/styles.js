@@ -2,6 +2,7 @@ const React = require("react-native");
 const { Dimensions, Platform } = React;
 
 const deviceHeight = Dimensions.get("window").height;
+// const deviceWidth = Dimensions.get("window").width;
 
 export default {
 	background: {
@@ -56,7 +57,7 @@ export default {
 		fontWeight: "bold",
 		color: "#fff",
 		// fontSize: deviceWidth < 350 ? (Platform.OS === "android" ? 12 : 14) : 14
-		fontSize: Platform.OS === "android" ? 12 : 14,
+		fontSize: Platform.OS === "android" ? 12 : 12,
 	},
 	inputGrp: {
 		flexDirection: "row",

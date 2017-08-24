@@ -1,233 +1,153 @@
+// @flow
 import React, { Component } from "react";
-import { Image, TouchableOpacity } from "react-native";
+import { Image, TouchableOpacity, ListView } from "react-native";
 
-import { Container, Content, Text, Thumbnail, View } from "native-base";
+import { Container, Content, Text, Thumbnail, View, List, ListItem, Button, Icon } from "native-base";
 import { Grid, Col } from "react-native-easy-grid";
 import CustomHeader from "../../components/CustomHeader";
 
 import styles from "./styles";
+import datas from "./data";
 
+type Props = {
+	navigation: () => void,
+};
 class Profile extends Component {
-  render() {
-    const navigation = this.props.navigation;
-    return (
-      <Container>
-        <Image
-          source={require("../../../assets/bg-transparent.png")}
-          style={styles.container}
-        >
-          <CustomHeader navigation={navigation} />
+	state: {
+		listViewData: any,
+	};
+	props: Props;
+	ds: Object;
+	constructor(props: Props) {
+		super(props);
+		this.ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
+		this.state = {
+			listViewData: datas,
+		};
+	}
 
-          <Content showsVerticalScrollIndicator={false}>
-            <View style={styles.profileInfoContainer}>
-              <View style={{ alignSelf: "center" }}>
-                <Thumbnail
-                  source={require("../../../assets/Contacts/sanket.png")}
-                  style={styles.profilePic}
-                />
-              </View>
-              <View style={styles.profileInfo}>
-                <Text style={styles.profileUser}>Kumar Sanket</Text>
-                <Text note style={styles.profileUserInfo}>
-                  CEO, GeekyAnts
-                </Text>
-              </View>
-            </View>
+	deleteRow(secId: string, rowId: string, rowMap: any) {
+		rowMap[`${secId}${rowId}`].props.closeRow();
+		const newData = [...this.state.listViewData];
+		newData.splice(rowId, 1);
+		this.setState({ listViewData: newData });
+	}
+	render() {
+		const navigation = this.props.navigation;
+		return (
+			<Container>
+				<Image source={require("../../../assets/bg-transparent.png")} style={styles.container}>
+					<CustomHeader hasTabs navigation={navigation} />
 
-            <View style={styles.linkTabs}>
-              <Grid>
-                <Col>
-                  <View style={styles.linkTabs_header}>
-                    <Text style={styles.linkTabs_tabCounts}>13</Text>
-                    <Text note style={styles.linkTabs_tabName}>
-                      Comments
-                    </Text>
-                  </View>
-                </Col>
-                <Col>
-                  <View style={styles.linkTabs_header}>
-                    <Text style={styles.linkTabs_tabCounts}>12</Text>
-                    <Text note style={styles.linkTabs_tabName}>
-                      Channels
-                    </Text>
-                  </View>
-                </Col>
-                <Col>
-                  <View style={styles.linkTabs_header}>
-                    <Text style={styles.linkTabs_tabCounts}>52</Text>
-                    <Text note style={styles.linkTabs_tabName}>
-                      Bookmarks
-                    </Text>
-                  </View>
-                </Col>
-              </Grid>
-            </View>
-            <View style={{ backgroundColor: "#fff" }}>
-              <TouchableOpacity
-                style={{ flexDirection: "row" }}
-                onPress={() => navigation.navigate("Story")}
-              >
-                <Image
-                  source={require("../../../assets/NewsIcons/1.jpg")}
-                  style={styles.newsImage}
-                />
-                <View style={styles.newsContent}>
-                  <Text numberOfLines={2} style={styles.newsHeader}>
-                    Flat App is focussed on a minimal use of simple elements.
-                  </Text>
-                  <Grid style={{ marginTop: 25 }}>
-                    <Col>
-                      <TouchableOpacity>
-                        <Text style={styles.newsLink}>CDC</Text>
-                      </TouchableOpacity>
-                    </Col>
-                    <Col>
-                      <TouchableOpacity style={styles.newsTypeView}>
-                        <Text style={styles.newsTypeText}>ENVIRONMENT</Text>
-                      </TouchableOpacity>
-                    </Col>
-                  </Grid>
-                </View>
-              </TouchableOpacity>
-              <TouchableOpacity
-                style={{ flexDirection: "row" }}
-                onPress={() => navigation.navigate("Story")}
-              >
-                <Image
-                  source={require("../../../assets/NewsIcons/3.jpg")}
-                  style={styles.newsImage}
-                />
-                <View style={styles.newsContent}>
-                  <Text numberOfLines={2} style={styles.newsHeader}>
-                    So that the applications are able to load faster and reaize
-                    easily.
-                  </Text>
-                  <Grid style={{ marginTop: 25 }}>
-                    <Col>
-                      <TouchableOpacity>
-                        <Text style={styles.newsLink}>SPACE.com</Text>
-                      </TouchableOpacity>
-                    </Col>
-                    <Col>
-                      <TouchableOpacity style={styles.newsTypeView}>
-                        <Text style={styles.newsTypeText}>SCIENCE</Text>
-                      </TouchableOpacity>
-                    </Col>
-                  </Grid>
-                </View>
-              </TouchableOpacity>
-              <TouchableOpacity
-                style={{ flexDirection: "row" }}
-                onPress={() => navigation.navigate("Story")}
-              >
-                <Image
-                  source={require("../../../assets/NewsIcons/4.jpg")}
-                  style={styles.newsImage}
-                />
-                <View style={styles.newsContent}>
-                  <Text numberOfLines={2} style={styles.newsHeader}>
-                    But still look sharp on high-definition screens.
-                  </Text>
-                  <Grid style={{ marginTop: 25 }}>
-                    <Col>
-                      <TouchableOpacity>
-                        <Text style={styles.newsLink}>SKY.com</Text>
-                      </TouchableOpacity>
-                    </Col>
-                    <Col>
-                      <TouchableOpacity style={styles.newsTypeView}>
-                        <Text style={styles.newsTypeText}>WORLD</Text>
-                      </TouchableOpacity>
-                    </Col>
-                  </Grid>
-                </View>
-              </TouchableOpacity>
+					<Content showsVerticalScrollIndicator={false}>
+						<View style={styles.profileInfoContainer}>
+							<View style={{ alignSelf: "center" }}>
+								<Thumbnail
+									source={require("../../../assets/Contacts/sanket.png")}
+									style={styles.profilePic}
+								/>
+							</View>
+							<View style={styles.profileInfo}>
+								<Text style={styles.profileUser}>Kumar Sanket</Text>
+								<Text note style={styles.profileUserInfo}>
+									CEO, GeekyAnts
+								</Text>
+							</View>
+						</View>
 
-              <TouchableOpacity
-                style={{ flexDirection: "row" }}
-                onPress={() => navigation.navigate("Story")}
-              >
-                <Image
-                  source={require("../../../assets/NewsIcons/10.jpg")}
-                  style={styles.newsImage}
-                />
-                <View style={styles.newsContent}>
-                  <Text numberOfLines={2} style={styles.newsHeader}>
-                    Highly customizable widgets are part of our never ending
-                    mission.
-                  </Text>
-                  <Grid style={{ marginTop: 25 }}>
-                    <Col>
-                      <TouchableOpacity>
-                        <Text style={styles.newsLink}>ANI.com</Text>
-                      </TouchableOpacity>
-                    </Col>
-                    <Col>
-                      <TouchableOpacity style={styles.newsTypeView}>
-                        <Text style={styles.newsTypeText}>ANIMATION</Text>
-                      </TouchableOpacity>
-                    </Col>
-                  </Grid>
-                </View>
-              </TouchableOpacity>
-              <TouchableOpacity
-                style={{ flexDirection: "row" }}
-                onPress={() => navigation.navigate("Story")}
-              >
-                <Image
-                  source={require("../../../assets/NewsIcons/9.jpg")}
-                  style={styles.newsImage}
-                />
-                <View style={styles.newsContent}>
-                  <Text numberOfLines={2} style={styles.newsHeader}>
-                    Ready to use components built using NativeBase.
-                  </Text>
-                  <Grid style={{ marginTop: 25 }}>
-                    <Col>
-                      <TouchableOpacity>
-                        <Text style={styles.newsLink}>STYLE.com</Text>
-                      </TouchableOpacity>
-                    </Col>
-                    <Col>
-                      <TouchableOpacity style={styles.newsTypeView}>
-                        <Text style={styles.newsTypeText}>FASHION</Text>
-                      </TouchableOpacity>
-                    </Col>
-                  </Grid>
-                </View>
-              </TouchableOpacity>
-              <TouchableOpacity
-                style={{ flexDirection: "row" }}
-                onPress={() => navigation.navigate("Story")}
-              >
-                <Image
-                  source={require("../../../assets/NewsIcons/12.jpg")}
-                  style={styles.newsImage}
-                />
-                <View style={styles.newsContent}>
-                  <Text numberOfLines={2} style={styles.newsHeader}>
-                    Theme your app with one single file.
-                  </Text>
-                  <Grid style={{ marginTop: 25 }}>
-                    <Col>
-                      <TouchableOpacity>
-                        <Text style={styles.newsLink}>ART.com</Text>
-                      </TouchableOpacity>
-                    </Col>
-                    <Col>
-                      <TouchableOpacity style={styles.newsTypeView}>
-                        <Text style={styles.newsTypeText}>ART</Text>
-                      </TouchableOpacity>
-                    </Col>
-                  </Grid>
-                </View>
-              </TouchableOpacity>
-            </View>
-          </Content>
-        </Image>
-      </Container>
-    );
-  }
+						<View style={styles.linkTabs}>
+							<Grid>
+								<Col>
+									<View style={styles.linkTabs_header}>
+										<Text style={styles.linkTabs_tabCounts}>13</Text>
+										<Text note style={styles.linkTabs_tabName}>
+											Comments
+										</Text>
+									</View>
+								</Col>
+								<Col>
+									<View style={styles.linkTabs_header}>
+										<Text style={styles.linkTabs_tabCounts}>12</Text>
+										<Text note style={styles.linkTabs_tabName}>
+											Channels
+										</Text>
+									</View>
+								</Col>
+								<Col>
+									<View style={styles.linkTabs_header}>
+										<Text style={styles.linkTabs_tabCounts}>52</Text>
+										<Text note style={styles.linkTabs_tabName}>
+											Bookmarks
+										</Text>
+									</View>
+								</Col>
+							</Grid>
+						</View>
+
+						<List
+							dataSource={this.ds.cloneWithRows(this.state.listViewData)}
+							renderRow={data =>
+								<ListItem
+									swipeList
+									style={{ flexDirection: "row", backgroundColor: "#FFF" }}
+									onPress={() => navigation.navigate("Story")}
+								>
+									<Image source={data.url} style={styles.newsImage} />
+									<View style={styles.newsContent}>
+										<Text numberOfLines={2} style={styles.newsHeader}>
+											{data.headline}
+										</Text>
+										<Grid style={{ marginTop: 25 }}>
+											<Col>
+												<TouchableOpacity>
+													<Text style={styles.newsLink}>
+														{data.link}
+													</Text>
+												</TouchableOpacity>
+											</Col>
+											<Col>
+												<TouchableOpacity style={styles.newsTypeView}>
+													<Text style={styles.newsTypeText}>
+														{data.category}
+													</Text>
+												</TouchableOpacity>
+											</Col>
+										</Grid>
+									</View>
+								</ListItem>}
+							renderLeftHiddenRow={data =>
+								<Button
+									full
+									style={{
+										backgroundColor: "#CCC",
+										flex: 1,
+										alignItems: "center",
+										justifyContent: "center",
+									}}
+								>
+									<Icon active name="information-circle" style={{ fontSize: 35 }} />
+								</Button>}
+							renderRightHiddenRow={(data, secId, rowId, rowMap) =>
+								<Button
+									full
+									danger
+									onPress={_ => this.deleteRow(secId, rowId, rowMap)}
+									style={{
+										flex: 1,
+										alignItems: "center",
+										justifyContent: "center",
+									}}
+								>
+									<Icon active name="trash" style={{ fontSize: 35 }} />
+								</Button>}
+							leftOpenValue={100}
+							rightOpenValue={-100}
+						/>
+					</Content>
+				</Image>
+			</Container>
+		);
+	}
 }
 
 export default Profile;

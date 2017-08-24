@@ -1,3 +1,4 @@
+// @flow
 var Color = require("color");
 import React, { Component } from "react";
 import { Image, Switch, TouchableOpacity, Platform } from "react-native";
@@ -25,8 +26,28 @@ const headerLogo = require("../../../assets/header-logo.png");
 const primary = require("../../theme/variables/commonColor").brandPrimary;
 const light = Color(primary).alpha(0.3);
 
+type Props = {
+	navigation: () => void,
+};
 class Settings extends Component {
-	constructor(props) {
+	state: {
+		monSwitch: true,
+		tueSwitch: false,
+		wedSwitch: false,
+		thuSwitch: false,
+		friSwitch: false,
+		satSwitch: false,
+		sunSwitch: false,
+		Username: "",
+		email: "",
+		password: "",
+		offset: {
+			x: 0,
+			y: 0,
+		},
+	};
+	props: Props;
+	constructor(props: Props) {
 		super(props);
 		this.state = {
 			monSwitch: true,

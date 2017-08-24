@@ -12,7 +12,9 @@ const email = value =>
 type Props = {
 	navigation: () => void,
 };
+declare type Any = any;
 class ForgotPasswordForm extends Component {
+	textInput: Any;
 	state: {
 		offset: {
 			x: 0,
@@ -93,7 +95,7 @@ class ForgotPasswordForm extends Component {
 	render() {
 		return (
 			<Container>
-				<StatusBar backgroundColor={commonColor.statusBarColor} barStyle="light-content" />
+				<StatusBar barStyle="light-content" />
 				<Image source={require("../../../assets/bg-signup.png")} style={styles.background}>
 					<Content contentOffset={this.state.offset}>
 						<Content padder scrollEnabled={false}>

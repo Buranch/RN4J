@@ -1,10 +1,10 @@
+// @flow
 import React, { Component } from "react";
 import { Platform, Dimensions, StatusBar, View } from "react-native";
 import { Container, Content, Text, Button, Icon } from "native-base";
 import Carousel from "react-native-carousel-view";
 
 import styles from "./styles";
-import commonColor from "../../theme/variables/commonColor";
 
 const deviceHeight = Dimensions.get("window").height;
 const deviceWidth = Dimensions.get("window").width;
@@ -12,7 +12,7 @@ class Walkthrough extends Component {
 	render() {
 		return (
 			<Container>
-				<StatusBar backgroundColor={commonColor.statusBarColor} barStyle="light-content" />
+				<StatusBar barStyle="light-content" />
 				<Content>
 					<Carousel
 						width={deviceWidth}

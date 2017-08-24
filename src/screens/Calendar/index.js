@@ -1,3 +1,4 @@
+// @flow
 import React, { Component } from "react";
 import { Image, TouchableOpacity } from "react-native";
 import { Container, Header, Content, Text, Left, Right, Body, Button, Icon, View } from "native-base";
@@ -25,10 +26,10 @@ class Calendar extends Component {
 		};
 	}
 
-	onDateChange(date) {
+	onDateChange(date: Object) {
 		this.setState({ date });
 	}
-	onDayPress(day) {
+	onDayPress(day: any) {
 		this.setState({
 			selected: day.dateString,
 		});
@@ -40,7 +41,7 @@ class Calendar extends Component {
 			<Container>
 				<Header>
 					<Left>
-						<Button transparent style={styles.btnHeader} onPress={() => navigation.goBack()}>
+						<Button transparent onPress={() => navigation.goBack()}>
 							<Icon active name="arrow-back" />
 						</Button>
 					</Left>
@@ -48,7 +49,7 @@ class Calendar extends Component {
 						<Image source={headerLogo} style={styles.imageHeader} />
 					</Body>
 					<Right>
-						<Button transparent style={styles.btnHeader} onPress={() => navigation.navigate("DrawerOpen")}>
+						<Button transparent onPress={() => navigation.navigate("DrawerOpen")}>
 							<Icon active name="menu" />
 						</Button>
 					</Right>

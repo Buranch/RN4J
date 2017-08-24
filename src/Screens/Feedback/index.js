@@ -3,10 +3,8 @@ import React, { Component } from "react";
 import { Image } from "react-native";
 
 import { Container, Header, Content, Text, Button, Icon, Item, Input, Left, Right, Body, View } from "native-base";
-import { Grid, Col } from "react-native-easy-grid";
 import styles from "./styles";
 
-const bgSignUp = require("../../../assets/bg-signup.png");
 const headerLogo = require("../../../assets/header-logo.png");
 const primary = require("../../theme/variables/commonColor").brandPrimary;
 type Props = {
@@ -33,95 +31,70 @@ class Feedback extends Component {
 	render() {
 		const navigation = this.props.navigation;
 		return (
-			<Container contentOffset={this.state.offset} scrollEnabled={false}>
-				<Image source={bgSignUp} style={styles.container}>
-					<Header>
-						<Left>
-							<Button transparent onPress={() => navigation.goBack()}>
-								<Icon active name="arrow-back" />
-							</Button>
-						</Left>
-						<Body>
-							<Image source={headerLogo} style={styles.imageHeader} />
-						</Body>
-						<Right>
-							<Button transparent onPress={() => navigation.navigate("DrawerOpen")}>
-								<Icon active name="menu" />
-							</Button>
-						</Right>
-					</Header>
+			<Container contentOffset={this.state.offset} scrollEnabled={false} style={{ backgroundColor: "#FFF" }}>
+				<Header hasTabs>
+					<Left>
+						<Button transparent onPress={() => navigation.goBack()}>
+							<Icon active name="arrow-back" />
+						</Button>
+					</Left>
+					<Body>
+						<Image source={headerLogo} style={styles.imageHeader} />
+					</Body>
+					<Right>
+						<Button transparent onPress={() => navigation.navigate("DrawerOpen")}>
+							<Icon active name="menu" />
+						</Button>
+					</Right>
+				</Header>
+				<View style={styles.bg}>
+					<View style={styles.contentIconsContainer}>
+						<Button transparent style={styles.roundedButton}>
+							<Icon name="ios-call-outline" style={{ fontSize: 30, width: 30, color: "#FFF" }} />
+						</Button>
+						<Button transparent style={styles.roundedCustomButton}>
+							<Icon
+								name="ios-mail-outline"
+								style={{
+									fontSize: 28,
+									color: primary,
+									width: 22,
+									marginLeft: 5,
+								}}
+							/>
+						</Button>
+						<Button transparent style={styles.roundedButton}>
+							<Icon name="ios-pin-outline" style={{ fontSize: 28, width: 30, color: "#FFF" }} />
+						</Button>
+					</View>
+					<View style={styles.feedbackHeaderContainer}>
+						<Text style={styles.feedbackHeader}>SEND FEEDBACK</Text>
+						<Text note style={styles.feedbackHead}>
+							Your feedback is very important to us.
+						</Text>
+					</View>
+				</View>
+				<Content showsVerticalScrollIndicator={false}>
+					<View style={styles.feedbackContainer}>
+						<Item rounded style={styles.inputGrp}>
+							<Icon name="ios-mail-outline" style={{ color: "rgba(0,0,0,0.5)", marginTop: 3 }} />
+							<Input placeholder="Email" placeholderTextColor="rgba(0,0,0,0.5)" style={styles.input} />
+						</Item>
 
-					<Content showsVerticalScrollIndicator={false}>
-						<View style={styles.contentIconsContainer}>
-							<Grid>
-								<Col>
-									<Button transparent style={styles.roundedButton}>
-										<Icon
-											name="ios-call-outline"
-											style={{ fontSize: 30, width: 30, color: "#FFF" }}
-										/>
-									</Button>
-								</Col>
-								<Col>
-									<Button transparent style={styles.roundedCustomButton}>
-										<Icon
-											name="ios-mail-outline"
-											style={{
-												fontSize: 28,
-												color: primary,
-												width: 22,
-												marginLeft: 5,
-											}}
-										/>
-									</Button>
-								</Col>
-								<Col>
-									<Button transparent style={styles.roundedButton}>
-										<Icon
-											name="ios-pin-outline"
-											style={{ fontSize: 28, width: 30, color: "#FFF" }}
-										/>
-									</Button>
-								</Col>
-							</Grid>
-						</View>
-						<View style={styles.feedbackHeaderContainer}>
-							<Text style={styles.feedbackHeader}>SEND FEEDBACK</Text>
-							<Text note style={styles.feedbackHead}>
-								Your feedback is very important to us.
-							</Text>
-						</View>
-						<View style={styles.feedbackContainer}>
-							<Item rounded style={styles.inputGrp}>
-								<Icon name="ios-person-outline" />
-								<Input
-									placeholder="Username"
-									placeholderTextColor="rgba(255,255,255,0.5)"
-									style={styles.input}
-								/>
-							</Item>
-							<Item rounded style={styles.inputGrp}>
-								<Icon name="ios-mail-outline" />
-								<Input
-									placeholder="Email"
-									placeholderTextColor="rgba(255,255,255,0.5)"
-									style={styles.input}
-								/>
-							</Item>
-
-							<View style={styles.feedbackInputBox}>
-								<Item iconRight>
-									<Input
-										placeholder="Write something..."
-										placeholderTextColor="rgba(255,255,255,0.5)"
-										style={styles.input}
-									/>
-									<Icon active name="arrow-forward" style={styles.forwardIcon} />
-								</Item>
-							</View>
-						</View>
-					</Content>
-				</Image>
+						<Item regular style={{ marginTop: 10 }}>
+							<Input
+								placeholder="Write something..."
+								placeholderTextColor="rgba(0,0,0,0.5)"
+								style={styles.inputBox}
+								multiline
+								returnKeyType="default"
+							/>
+						</Item>
+						<Button style={{ alignSelf: "flex-end", marginTop: 10, height: 40 }}>
+							<Text>Send</Text>
+						</Button>
+					</View>
+				</Content>
 			</Container>
 		);
 	}
