@@ -1,6 +1,8 @@
+// @flow
 import React, { Component } from "react";
 import { Image, Platform } from "react-native";
 import { Container, Header, Content, Text, Left, Right, Body, Button, Icon, View, Grid, Col } from "native-base";
+
 import ProgressBar from "../../components/ProgressBar/ProgressBar";
 
 import styles from "./styles";
@@ -16,7 +18,7 @@ class Overview extends Component {
 				<Image source={require("../../../assets/bg-transparent.png")} style={styles.container}>
 					<Header hasTabs>
 						<Left>
-							<Button transparent style={styles.btnHeader} onPress={() => navigation.goBack()}>
+							<Button transparent onPress={() => navigation.goBack()}>
 								<Icon active name="arrow-back" />
 							</Button>
 						</Left>
@@ -24,11 +26,7 @@ class Overview extends Component {
 							<Image source={headerLogo} style={styles.imageHeader} />
 						</Body>
 						<Right>
-							<Button
-								transparent
-								style={styles.btnHeader}
-								onPress={() => navigation.navigate("DrawerOpen")}
-							>
+							<Button transparent onPress={() => navigation.navigate("DrawerOpen")}>
 								<Icon active name="menu" />
 							</Button>
 						</Right>

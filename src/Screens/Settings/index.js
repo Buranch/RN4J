@@ -1,3 +1,5 @@
+// @flow
+var Color = require("color");
 import React, { Component } from "react";
 import { Image, Switch, TouchableOpacity, Platform } from "react-native";
 
@@ -22,9 +24,30 @@ import styles from "./styles";
 
 const headerLogo = require("../../../assets/header-logo.png");
 const primary = require("../../theme/variables/commonColor").brandPrimary;
+const light = Color(primary).alpha(0.3);
 
+type Props = {
+	navigation: () => void,
+};
 class Settings extends Component {
-	constructor(props) {
+	state: {
+		monSwitch: true,
+		tueSwitch: false,
+		wedSwitch: false,
+		thuSwitch: false,
+		friSwitch: false,
+		satSwitch: false,
+		sunSwitch: false,
+		Username: "",
+		email: "",
+		password: "",
+		offset: {
+			x: 0,
+			y: 0,
+		},
+	};
+	props: Props;
+	constructor(props: Props) {
 		super(props);
 		this.state = {
 			monSwitch: true,
@@ -48,7 +71,7 @@ class Settings extends Component {
 		const navigation = this.props.navigation;
 		return (
 			<Container>
-				<Header>
+				<Header hasTabs>
 					<Left>
 						<Button transparent onPress={() => navigation.goBack()}>
 							<Icon active name="arrow-back" />
@@ -63,46 +86,39 @@ class Settings extends Component {
 						</Button>
 					</Right>
 				</Header>
-
+				<View>
+					<Text style={styles.signupHeader}>SETTINGS</Text>
+					<View style={styles.profileButtons}>
+						<Button transparent style={styles.roundedButton}>
+							<Icon
+								name="cloud-upload"
+								style={
+									Platform.OS === "android"
+										? { color: "#FFF", width: 23 }
+										: { color: "#FFF", width: 22 }
+								}
+							/>
+						</Button>
+						<TouchableOpacity style={{ alignSelf: "center" }}>
+							<Thumbnail
+								source={require("../../../assets/Contacts/sanket.png")}
+								style={styles.profilePic}
+							/>
+						</TouchableOpacity>
+						<Button transparent style={styles.roundedButton}>
+							<Icon
+								name="cloud-download"
+								style={
+									Platform.OS === "android"
+										? { color: "#FFF", width: 23 }
+										: { lineHeight: 0, color: "#FFF", width: 22 }
+								}
+							/>
+						</Button>
+					</View>
+				</View>
 				<Content showsVerticalScrollIndicator={false}>
 					<View style={styles.bg}>
-						<Text style={styles.signupHeader}>SETTINGS</Text>
-						<View style={{ marginTop: 20 }}>
-							<Grid>
-								<Col>
-									<Button transparent style={styles.roundedButton}>
-										<Icon
-											name="cloud-upload"
-											style={
-												Platform.OS === "android"
-													? { color: "#FFF", width: 23 }
-													: { color: "#FFF", width: 22 }
-											}
-										/>
-									</Button>
-								</Col>
-								<Col>
-									<TouchableOpacity style={{ alignSelf: "center" }}>
-										<Thumbnail
-											source={require("../../../assets/Contacts/sanket.png")}
-											style={styles.profilePic}
-										/>
-									</TouchableOpacity>
-								</Col>
-								<Col>
-									<Button transparent style={styles.roundedButton}>
-										<Icon
-											name="cloud-download"
-											style={
-												Platform.OS === "android"
-													? { color: "#FFF", width: 23 }
-													: { lineHeight: 0, color: "#FFF", width: 22 }
-											}
-										/>
-									</Button>
-								</Col>
-							</Grid>
-						</View>
 						<View style={styles.signupContainer}>
 							<Item rounded style={styles.inputGrp}>
 								<Icon name="ios-person-outline" />
@@ -134,7 +150,7 @@ class Settings extends Component {
 					<View style={styles.notificationSwitchContainer}>
 						<Text style={styles.notificationHeader}>EMAIL NOTIFICATIONS</Text>
 						<View>
-							<Grid style={{ marginBottom: 10 }}>
+							<Grid style={styles.child}>
 								<Col>
 									<Text style={Platform.OS === "android" ? styles.aswitchText : styles.switchText}>
 										Monday
@@ -145,15 +161,15 @@ class Settings extends Component {
 								>
 									<Switch
 										onValueChange={value => this.setState({ monSwitch: value })}
-										onTintColor={primary}
+										onTintColor={light}
 										style={styles.switch}
-										thumbTintColor="#ccc"
-										tintColor="#aaa"
+										thumbTintColor={primary}
+										tintColor={primary}
 										value={this.state.monSwitch}
 									/>
 								</Col>
 							</Grid>
-							<Grid style={{ marginBottom: 10 }}>
+							<Grid style={styles.child}>
 								<Col>
 									<Text style={Platform.OS === "android" ? styles.aswitchText : styles.switchText}>
 										Tuesday
@@ -164,15 +180,15 @@ class Settings extends Component {
 								>
 									<Switch
 										onValueChange={value => this.setState({ tueSwitch: value })}
-										onTintColor={primary}
+										onTintColor={light}
 										style={styles.switch}
-										thumbTintColor="#ccc"
-										tintColor="#aaa"
+										thumbTintColor={primary}
+										tintColor={primary}
 										value={this.state.tueSwitch}
 									/>
 								</Col>
 							</Grid>
-							<Grid style={{ marginBottom: 10 }}>
+							<Grid style={styles.child}>
 								<Col>
 									<Text style={Platform.OS === "android" ? styles.aswitchText : styles.switchText}>
 										Wednesday
@@ -183,15 +199,15 @@ class Settings extends Component {
 								>
 									<Switch
 										onValueChange={value => this.setState({ wedSwitch: value })}
-										onTintColor={primary}
+										onTintColor={light}
 										style={styles.switch}
-										thumbTintColor="#ccc"
-										tintColor="#aaa"
+										thumbTintColor={primary}
+										tintColor={primary}
 										value={this.state.wedSwitch}
 									/>
 								</Col>
 							</Grid>
-							<Grid style={{ marginBottom: 10 }}>
+							<Grid style={styles.child}>
 								<Col>
 									<Text style={Platform.OS === "android" ? styles.aswitchText : styles.switchText}>
 										Thursday
@@ -202,15 +218,15 @@ class Settings extends Component {
 								>
 									<Switch
 										onValueChange={value => this.setState({ thuSwitch: value })}
-										onTintColor={primary}
+										onTintColor={light}
 										style={styles.switch}
-										thumbTintColor="#ccc"
-										tintColor="#aaa"
+										thumbTintColor={primary}
+										tintColor={primary}
 										value={this.state.thuSwitch}
 									/>
 								</Col>
 							</Grid>
-							<Grid style={{ marginBottom: 10 }}>
+							<Grid style={styles.child}>
 								<Col>
 									<Text style={Platform.OS === "android" ? styles.aswitchText : styles.switchText}>
 										Friday
@@ -221,15 +237,15 @@ class Settings extends Component {
 								>
 									<Switch
 										onValueChange={value => this.setState({ friSwitch: value })}
-										onTintColor={primary}
+										onTintColor={light}
 										style={styles.switch}
-										thumbTintColor="#ccc"
-										tintColor="#aaa"
+										thumbTintColor={primary}
+										tintColor={primary}
 										value={this.state.friSwitch}
 									/>
 								</Col>
 							</Grid>
-							<Grid style={{ marginBottom: 10 }}>
+							<Grid style={styles.child}>
 								<Col>
 									<Text style={Platform.OS === "android" ? styles.aswitchText : styles.switchText}>
 										Saturday
@@ -240,15 +256,15 @@ class Settings extends Component {
 								>
 									<Switch
 										onValueChange={value => this.setState({ satSwitch: value })}
-										onTintColor={primary}
+										onTintColor={light}
 										style={styles.switch}
-										thumbTintColor="#ccc"
-										tintColor="#aaa"
+										thumbTintColor={primary}
+										tintColor={primary}
 										value={this.state.satSwitch}
 									/>
 								</Col>
 							</Grid>
-							<Grid style={{ marginBottom: 10 }}>
+							<Grid style={styles.child}>
 								<Col>
 									<Text style={Platform.OS === "android" ? styles.aswitchText : styles.switchText}>
 										Sunday
@@ -259,10 +275,10 @@ class Settings extends Component {
 								>
 									<Switch
 										onValueChange={value => this.setState({ sunSwitch: value })}
-										onTintColor={primary}
+										onTintColor={light}
 										style={styles.switch}
-										thumbTintColor="#ccc"
-										tintColor="#aaa"
+										thumbTintColor={primary}
+										tintColor={primary}
 										value={this.state.sunSwitch}
 									/>
 								</Col>

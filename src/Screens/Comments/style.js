@@ -55,12 +55,11 @@ export default {
 	cardHeader: {
 		backgroundColor: "transparent",
 		borderBottomWidth: 0,
-		paddingBottom: 10,
+		paddingBottom: 5,
 	},
 	cardItem: {
 		backgroundColor: "transparent",
 		paddingTop: 5,
-		paddingLeft: 50,
 	},
 	timeIcon: {
 		fontSize: 16,
@@ -95,6 +94,7 @@ export default {
 	},
 	input: {
 		color: "#222",
+		alignSelf: "center",
 	},
 	arrowForwardIcon: {
 		color: commonColor.brandPrimary,
@@ -104,12 +104,15 @@ export default {
 	},
 	cmtName: {
 		fontSize: deviceWidth < 330 ? 15 : 17,
-		color: "#000",
 		paddingLeft: 10,
+		color: "#444",
+		fontWeight: "bold",
 	},
 	commentText: {
 		color: "#000",
 		paddingLeft: 10,
+		paddingTop: 5,
 		fontSize: 14,
+		marginRight: 50,
 	},
 };

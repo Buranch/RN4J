@@ -1,3 +1,4 @@
+// @flow
 import React, { Component } from "react";
 import { Image, StatusBar } from "react-native";
 import { Container, Content, Text, Button, Icon, Item, Input, View, Toast, Left, Right, Footer } from "native-base";
@@ -9,24 +10,15 @@ import commonColor from "../../theme/variables/commonColor";
 const required = value => (value ? undefined : "Required");
 const maxLength = max => value => (value && value.length > max ? `Must be ${max} characters or less` : undefined);
 const maxLength15 = maxLength(15);
-export const minLength = min => value =>
-	value && value.length < min ? `Must be ${min} characters or more` : undefined;
-export const minLength8 = minLength(8);
-export const minLength5 = minLength(5);
+const minLength = min => value => (value && value.length < min ? `Must be ${min} characters or more` : undefined);
+const minLength8 = minLength(8);
+const minLength5 = minLength(5);
 const email = value =>
 	value && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value) ? "Invalid email address" : undefined;
 const alphaNumeric = value => (value && /[^a-zA-Z0-9 ]/i.test(value) ? "Only alphanumeric characters" : undefined);
 
 class SignUpForm extends Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			name: "",
-		};
-		this.renderInput = this.renderInput.bind(this);
-		this.signUp = this.signUp.bind(this);
-	}
-
+	textInput: any;
 	renderInput({ input, label, type, meta: { touched, error, warning } }) {
 		return (
 			<View>

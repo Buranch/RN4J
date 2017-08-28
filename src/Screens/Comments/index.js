@@ -72,14 +72,16 @@ class Comments extends Component {
 					</View>
 
 					<View style={styles.commentBox}>
-						<Item>
+						<Item style={{ alignItems: "center" }}>
 							<Icon name="ios-attach" style={styles.attachIcon} />
 							<Input
 								placeholder="Write something..."
 								placeholderTextColor="#797979"
 								style={styles.input}
 							/>
-							<Icon name="ios-arrow-forward" style={styles.arrowForwardIcon} />
+							<Button transparent small style={{ alignSelf: "center" }}>
+								<Text style={{ fontWeight: "600" }}>Send</Text>
+							</Button>
 						</Item>
 					</View>
 				</Image>

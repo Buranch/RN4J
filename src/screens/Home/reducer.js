@@ -3,7 +3,7 @@ const initialState = {
 	hasErrored: false,
 	items: [],
 };
-export default function(state = initialState, action) {
+export default function(state: any = initialState, action: Function) {
 	switch (action.type) {
 		case "ITEMS_HAS_ERRORED":
 			return { ...state, hasErrored: action.hasErrored };
