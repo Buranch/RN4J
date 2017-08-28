@@ -91,9 +91,7 @@ export default {
   switchContainer: {
     alignSelf: "flex-end"
   },
-  aswitchContainer: {
-    // alignSelf: 'flex-end'
-  },
+  aswitchContainer: {},
   switch: {
     transform: [{ scaleX: 0.75 }, { scaleY: 0.75 }],
     alignSelf: "flex-end",

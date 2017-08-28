@@ -20,41 +20,41 @@ import Profile from "./screens/Profile/";
 import Settings from "./screens/Settings";
 
 const Drawer = DrawerNavigator(
-	{
-		Home: { screen: Home },
-		Channels: { screen: Channels },
-		Overview: { screen: Overview },
-		Calendar: { screen: Calendar },
-		Timeline: { screen: Timeline },
-		Feedback: { screen: Feedback },
-		Profile: { screen: Profile },
-		Settings: { screen: Settings },
-	},
-	{
-		initialRouteName: "Home",
-		contentComponent: props => <Sidebar {...props} />,
-	}
+  {
+    Home: { screen: Home },
+    Channels: { screen: Channels },
+    Overview: { screen: Overview },
+    Calendar: { screen: Calendar },
+    Timeline: { screen: Timeline },
+    Feedback: { screen: Feedback },
+    Profile: { screen: Profile },
+    Settings: { screen: Settings }
+  },
+  {
+    initialRouteName: "Home",
+    contentComponent: props => <Sidebar {...props} />
+  }
 );
 
 const App = StackNavigator(
-	{
-		Login: { screen: Login },
-		SignUp: { screen: SignUp },
-		ForgotPassword: { screen: ForgotPassword },
-		Walkthrough: { screen: Walkthrough },
-		Story: { screen: Story },
-		Comments: { screen: Comments },
-		Channel: { screen: Channel },
-		Drawer: { screen: Drawer },
-	},
-	{
-		index: 0,
-		initialRouteName: "Login",
-		headerMode: "none",
-	}
+  {
+    Login: { screen: Login },
+    SignUp: { screen: SignUp },
+    ForgotPassword: { screen: ForgotPassword },
+    Walkthrough: { screen: Walkthrough },
+    Story: { screen: Story },
+    Comments: { screen: Comments },
+    Channel: { screen: Channel },
+    Drawer: { screen: Drawer }
+  },
+  {
+    index: 0,
+    initialRouteName: "Login",
+    headerMode: "none"
+  }
 );
 
 export default () =>
-	<Root>
-		<App />
-	</Root>;
+  <Root>
+    <App />
+  </Root>;
