@@ -23,7 +23,7 @@ export default {
     paddingTop: 30,
     flexDirection: "row",
     borderTopWidth: 1,
-    borderTopColor: "#666"
+    borderTopColor: "#fff"
   },
   background: {
     flex: 1,

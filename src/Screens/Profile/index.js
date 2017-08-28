@@ -52,22 +52,21 @@ class Profile extends Component {
         >
           <CustomHeader hasTabs navigation={navigation} />
 
-          <Content showsVerticalScrollIndicator={false}>
-            <View style={styles.profileInfoContainer}>
-              <View style={{ alignSelf: "center" }}>
-                <Thumbnail
-                  source={require("../../../assets/Contacts/sanket.png")}
-                  style={styles.profilePic}
-                />
-              </View>
-              <View style={styles.profileInfo}>
-                <Text style={styles.profileUser}>Kumar Sanket</Text>
-                <Text note style={styles.profileUserInfo}>
-                  CEO, GeekyAnts
-                </Text>
-              </View>
+          <View style={styles.profileInfoContainer}>
+            <View style={{ alignSelf: "center" }}>
+              <Thumbnail
+                source={require("../../../assets/Contacts/sanket.png")}
+                style={styles.profilePic}
+              />
             </View>
-
+            <View style={styles.profileInfo}>
+              <Text style={styles.profileUser}>Kumar Sanket</Text>
+              <Text note style={styles.profileUserInfo}>
+                CEO, GeekyAnts
+              </Text>
+            </View>
+          </View>
+          <Content showsVerticalScrollIndicator={false}>
             <View style={styles.linkTabs}>
               <Grid>
                 <Col>
