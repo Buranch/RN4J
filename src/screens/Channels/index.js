@@ -29,21 +29,17 @@ class Channels extends Component {
       <Container>
         <Header hasTabs>
           <Left>
-            <Button transparent onPress={() => this.props.navigation.goBack()}>
-              <Icon active name="arrow-back" />
-            </Button>
-          </Left>
-          <Body>
-            <Image source={headerLogo} style={styles.imageHeader} />
-          </Body>
-          <Right>
             <Button
               transparent
               onPress={() => this.props.navigation.navigate("DrawerOpen")}
             >
               <Icon active name="menu" />
             </Button>
-          </Right>
+          </Left>
+          <Body>
+            <Image source={headerLogo} style={styles.imageHeader} />
+          </Body>
+          <Right />
         </Header>
         <Tabs>
           <Tab

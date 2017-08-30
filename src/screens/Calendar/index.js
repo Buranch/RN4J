@@ -52,21 +52,17 @@ class Calendar extends Component {
       <Container>
         <Header>
           <Left>
-            <Button transparent onPress={() => navigation.goBack()}>
-              <Icon active name="arrow-back" />
-            </Button>
-          </Left>
-          <Body>
-            <Image source={headerLogo} style={styles.imageHeader} />
-          </Body>
-          <Right>
             <Button
               transparent
               onPress={() => navigation.navigate("DrawerOpen")}
             >
               <Icon active name="menu" />
             </Button>
-          </Right>
+          </Left>
+          <Body>
+            <Image source={headerLogo} style={styles.imageHeader} />
+          </Body>
+          <Right />
         </Header>
 
         <Content showsVerticalScrollIndicator={false}>

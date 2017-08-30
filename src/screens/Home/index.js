@@ -81,18 +81,18 @@ class Home extends Component {
       return (
         <Container style={{ backgroundColor: "#fff" }}>
           <Header>
-            <Left />
-            <Body>
-              <Image source={headerLogo} style={styles.imageHeader} />
-            </Body>
-            <Right>
+            <Left>
               <Button
                 transparent
                 onPress={() => this.props.navigation.navigate("DrawerOpen")}
               >
                 <Icon active name="menu" />
               </Button>
-            </Right>
+            </Left>
+            <Body>
+              <Image source={headerLogo} style={styles.imageHeader} />
+            </Body>
+            <Right />
           </Header>
           <Content showsVerticalScrollIndicator={false}>
             <View>
