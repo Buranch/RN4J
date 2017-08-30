@@ -12,7 +12,8 @@ import {
   Body,
   Item,
   Tabs,
-  Tab
+  Tab,
+  Content
 } from "native-base";
 
 import styles from "./style";
@@ -72,9 +73,13 @@ class Comments extends Component {
               </Button>
             </Body>
           </Header>
-          <View style={styles.commentHeadbg}>
+          <Content
+            scrollEnabled={false}
+            extraScrollHeight={-13}
+            contentContainerStyle={styles.commentHeadbg}
+          >
             <Text style={styles.commentHeader}>23 COMMENTS</Text>
-            <Tabs>
+            <Tabs style={{ backgroundColor: "#fff" }}>
               <Tab heading="Best">
                 <TabOne />
               </Tab>
@@ -85,21 +90,21 @@ class Comments extends Component {
                 <TabThree />
               </Tab>
             </Tabs>
-          </View>
 
-          <View style={styles.commentBox}>
-            <Item style={{ alignItems: "center" }}>
-              <Icon name="ios-attach" style={styles.attachIcon} />
-              <Input
-                placeholder="Write something..."
-                placeholderTextColor="#797979"
-                style={styles.input}
-              />
-              <Button transparent small style={{ alignSelf: "center" }}>
-                <Text style={{ fontWeight: "600" }}>Send</Text>
-              </Button>
-            </Item>
-          </View>
+            <View style={styles.commentBox}>
+              <Item style={{ alignItems: "center" }}>
+                <Icon name="ios-attach" style={styles.attachIcon} />
+                <Input
+                  placeholder="Write something..."
+                  placeholderTextColor="#797979"
+                  style={styles.input}
+                />
+                <Button transparent small style={{ alignSelf: "center" }}>
+                  <Text style={{ fontWeight: "600" }}>Send</Text>
+                </Button>
+              </Item>
+            </View>
+          </Content>
         </Image>
       </Container>
     );

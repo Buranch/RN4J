@@ -85,38 +85,39 @@ class Settings extends Component {
           </Body>
           <Right />
         </Header>
-        <View>
-          <Text style={styles.signupHeader}>SETTINGS</Text>
-          <View style={styles.profileButtons}>
-            <Button transparent style={styles.roundedButton}>
-              <Icon
-                name="cloud-upload"
-                style={
-                  Platform.OS === "android"
-                    ? { color: "#FFF", width: 23 }
-                    : { color: "#FFF", width: 22 }
-                }
-              />
-            </Button>
-            <TouchableOpacity style={{ alignSelf: "center" }}>
-              <Thumbnail
-                source={require("../../../assets/Contacts/sanket.png")}
-                style={styles.profilePic}
-              />
-            </TouchableOpacity>
-            <Button transparent style={styles.roundedButton}>
-              <Icon
-                name="cloud-download"
-                style={
-                  Platform.OS === "android"
-                    ? { color: "#FFF", width: 23 }
-                    : { lineHeight: 0, color: "#FFF", width: 22 }
-                }
-              />
-            </Button>
-          </View>
-        </View>
         <Content showsVerticalScrollIndicator={false}>
+          <View>
+            <Text style={styles.signupHeader}>SETTINGS</Text>
+            <View style={styles.profileButtons}>
+              <Button transparent style={styles.roundedButton}>
+                <Icon
+                  name="cloud-upload"
+                  style={
+                    Platform.OS === "android"
+                      ? { color: "#FFF", width: 23 }
+                      : { color: "#FFF", width: 22 }
+                  }
+                />
+              </Button>
+              <TouchableOpacity style={{ alignSelf: "center" }}>
+                <Thumbnail
+                  source={require("../../../assets/Contacts/sanket.png")}
+                  style={styles.profilePic}
+                />
+              </TouchableOpacity>
+              <Button transparent style={styles.roundedButton}>
+                <Icon
+                  name="cloud-download"
+                  style={
+                    Platform.OS === "android"
+                      ? { color: "#FFF", width: 23 }
+                      : { lineHeight: 0, color: "#FFF", width: 22 }
+                  }
+                />
+              </Button>
+            </View>
+          </View>
+
           <View style={styles.bg}>
             <View style={styles.signupContainer}>
               <Item rounded style={styles.inputGrp}>

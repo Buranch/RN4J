@@ -88,5 +88,14 @@ export default {
     fontSize: 12,
     fontWeight: "bold",
     paddingBottom: 5
+  },
+  textNote: {
+    color: "#777",
+    fontSize: 12
+  },
+  swipeBtn: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center"
   }
 };

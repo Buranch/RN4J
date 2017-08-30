@@ -66,7 +66,10 @@ class Profile extends Component {
               </Text>
             </View>
           </View>
-          <Content showsVerticalScrollIndicator={false}>
+          <Content
+            showsVerticalScrollIndicator={false}
+            style={{ backgroundColor: "#fff" }}
+          >
             <View style={styles.linkTabs}>
               <Grid>
                 <Col>
@@ -95,7 +98,15 @@ class Profile extends Component {
                 </Col>
               </Grid>
             </View>
-
+            <View style={styles.linkTabs}>
+              <ListItem
+                style={{ backgroundColor: "#fff", justifyContent: "center" }}
+              >
+                <Text style={styles.textNote}>
+                  Swipe the items to left and right
+                </Text>
+              </ListItem>
+            </View>
             <List
               dataSource={this.ds.cloneWithRows(this.state.listViewData)}
               renderRow={data =>
@@ -130,12 +141,7 @@ class Profile extends Component {
               renderLeftHiddenRow={data =>
                 <Button
                   full
-                  style={{
-                    backgroundColor: "#CCC",
-                    flex: 1,
-                    alignItems: "center",
-                    justifyContent: "center"
-                  }}
+                  style={([styles.swipeBtn], { backgroundColor: "#CCC" })}
                 >
                   <Icon
                     active
@@ -148,11 +154,7 @@ class Profile extends Component {
                   full
                   danger
                   onPress={_ => this.deleteRow(secId, rowId, rowMap)}
-                  style={{
-                    flex: 1,
-                    alignItems: "center",
-                    justifyContent: "center"
-                  }}
+                  style={styles.swipeBtn}
                 >
                   <Icon active name="trash" style={{ fontSize: 35 }} />
                 </Button>}

@@ -65,7 +65,10 @@ class Calendar extends Component {
           <Right />
         </Header>
 
-        <Content showsVerticalScrollIndicator={false}>
+        <Content
+          showsVerticalScrollIndicator={false}
+          style={{ backgroundColor: "#fff" }}
+        >
           <View style={styles.bg}>
             <MonthCalendar
               onDayPress={e => this.onDayPress(e)}

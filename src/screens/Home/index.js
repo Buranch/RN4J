@@ -79,7 +79,7 @@ class Home extends Component {
       return <Spinner />;
     } else {
       return (
-        <Container style={{ backgroundColor: "#fff" }}>
+        <Container>
           <Header>
             <Left>
               <Button
@@ -94,7 +94,10 @@ class Home extends Component {
             </Body>
             <Right />
           </Header>
-          <Content showsVerticalScrollIndicator={false}>
+          <Content
+            showsVerticalScrollIndicator={false}
+            style={{ backgroundColor: "#fff" }}
+          >
             <View>
               <View>
                 <Carousel
@@ -248,15 +251,11 @@ class Home extends Component {
               </View>
             </View>
 
-            <Card
-              style={{ backgroundColor: "#fff", marginTop: 0, marginRight: 0 }}
-            >
-              <FlatList
-                data={this.props.items}
-                renderItem={this._renderItem}
-                keyExtractor={item => item.id}
-              />
-            </Card>
+            <FlatList
+              data={this.props.items}
+              renderItem={this._renderItem}
+              keyExtractor={item => item.id}
+            />
           </Content>
         </Container>
       );

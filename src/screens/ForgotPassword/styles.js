@@ -4,6 +4,7 @@ const { Dimensions, Platform } = React;
 const deviceHeight = Dimensions.get("window").height;
 const deviceWidth = Dimensions.get("window").width;
 const primary = require("../../theme/variables/commonColor").brandPrimary;
+const commonColor = require("../../theme/variables/commonColor");
 
 export default {
   forgotPasswordContainer: {
@@ -32,6 +33,23 @@ export default {
     width: null,
     height: deviceHeight,
     backgroundColor: primary
+  },
+  formErrorIcon: {
+    color: "#fff",
+    marginTop: 5,
+    right: 10
+  },
+  formErrorText1: {
+    fontSize: Platform.OS === "android" ? 12 : 15,
+    color: commonColor.brandDanger,
+    textAlign: "right",
+    top: -10
+  },
+  formErrorText2: {
+    fontSize: Platform.OS === "android" ? 12 : 15,
+    color: "transparent",
+    textAlign: "right",
+    top: -10
   },
   inputGrp: {
     flexDirection: "row",

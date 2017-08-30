@@ -17,7 +17,7 @@ import {
 import { Field, reduxForm } from "redux-form";
 
 import styles from "./styles";
-import commonColor from "../../theme/variables/commonColor";
+// import commonColor from "../../theme/variables/commonColor";
 
 const bg = require("../../../assets/bg.png");
 const logo = require("../../../assets/logo.png");
@@ -62,33 +62,17 @@ class LoginForm extends Component {
           {touched && error
             ? <Icon
                 active
-                style={{ color: "#fff", marginTop: 5, right: 10 }}
+                style={styles.formErrorIcon}
                 onPress={() => this.textInput._root.clear()}
                 name="close"
               />
             : <Text />}
         </Item>
         {touched && error
-          ? <Text
-              style={{
-                fontSize: Platform.OS === "android" ? 12 : 15,
-                color: commonColor.brandDanger,
-                textAlign: "right",
-                top: -10
-              }}
-            >
+          ? <Text style={styles.formErrorText1}>
               {error}
             </Text>
-          : <Text
-              style={{
-                fontSize: Platform.OS === "android" ? 12 : 15,
-                color: "transparent",
-                textAlign: "right",
-                top: -10
-              }}
-            >
-              error here
-            </Text>}
+          : <Text style={styles.formErrorText2}>error here</Text>}
       </View>
     );
   }
@@ -177,15 +161,7 @@ class LoginForm extends Component {
                     light
                     small
                     transparent
-                    style={{
-                      alignSelf: "flex-end",
-                      marginTop: 10,
-                      borderWidth: 0.3,
-                      borderColor: "#FFF",
-                      position: "absolute",
-                      bottom: 15,
-                      right: 0
-                    }}
+                    style={styles.skipBtn}
                     onPress={() => navigation.navigate("Walkthrough")}
                   >
                     <Text

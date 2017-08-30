@@ -163,6 +163,21 @@ export default {
     borderBottomWidth: 1,
     borderBottomColor: "rgba(255,255,255,0.5)"
   },
+  modalContentGrid1: {
+    padding: 20,
+    paddingBottom: 15,
+    justifyContent: "center"
+  },
+  modalContentGridText: {
+    fontSize: 12,
+    marginTop: 8,
+    alignSelf: "center"
+  },
+  modalContentGrid2: {
+    flexDirection: "row",
+    paddingTop: 20,
+    marginHorizontal: 10
+  },
   modalSmallText: {
     alignSelf: "flex-start",
     fontWeight: "700"

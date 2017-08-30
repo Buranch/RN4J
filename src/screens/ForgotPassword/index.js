@@ -61,33 +61,17 @@ class ForgotPasswordForm extends Component {
           {touched && error
             ? <Icon
                 active
-                style={{ color: "#fff", marginTop: 5, right: 10 }}
+                style={styles.formErrorIcon}
                 onPress={() => this.textInput._root.clear()}
                 name="close"
               />
             : <Text />}
         </Item>
         {touched && error
-          ? <Text
-              style={{
-                fontSize: 15,
-                color: commonColor.brandDanger,
-                textAlign: "right",
-                top: -10
-              }}
-            >
+          ? <Text style={styles.formErrorText1}>
               {error}
             </Text>
-          : <Text
-              style={{
-                fontSize: 15,
-                color: "transparent",
-                textAlign: "right",
-                top: -10
-              }}
-            >
-              error here
-            </Text>}
+          : <Text style={styles.formErrorText2}>error here</Text>}
       </View>
     );
   }

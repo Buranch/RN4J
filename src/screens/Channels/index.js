@@ -41,7 +41,7 @@ class Channels extends Component {
           </Body>
           <Right />
         </Header>
-        <Tabs>
+        <Tabs style={{ backgroundColor: "#fff" }}>
           <Tab
             heading={
               <TabHeading>
