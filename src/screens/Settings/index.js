@@ -73,54 +73,51 @@ class Settings extends Component {
       <Container>
         <Header hasTabs>
           <Left>
-            <Button transparent onPress={() => navigation.goBack()}>
-              <Icon active name="arrow-back" />
-            </Button>
-          </Left>
-          <Body>
-            <Image source={headerLogo} style={styles.imageHeader} />
-          </Body>
-          <Right>
             <Button
               transparent
               onPress={() => navigation.navigate("DrawerOpen")}
             >
               <Icon active name="menu" />
             </Button>
-          </Right>
+          </Left>
+          <Body>
+            <Image source={headerLogo} style={styles.imageHeader} />
+          </Body>
+          <Right />
         </Header>
-        <View>
-          <Text style={styles.signupHeader}>SETTINGS</Text>
-          <View style={styles.profileButtons}>
-            <Button transparent style={styles.roundedButton}>
-              <Icon
-                name="cloud-upload"
-                style={
-                  Platform.OS === "android"
-                    ? { color: "#FFF", width: 23 }
-                    : { color: "#FFF", width: 22 }
-                }
-              />
-            </Button>
-            <TouchableOpacity style={{ alignSelf: "center" }}>
-              <Thumbnail
-                source={require("../../../assets/Contacts/sanket.png")}
-                style={styles.profilePic}
-              />
-            </TouchableOpacity>
-            <Button transparent style={styles.roundedButton}>
-              <Icon
-                name="cloud-download"
-                style={
-                  Platform.OS === "android"
-                    ? { color: "#FFF", width: 23 }
-                    : { lineHeight: 0, color: "#FFF", width: 22 }
-                }
-              />
-            </Button>
-          </View>
-        </View>
         <Content showsVerticalScrollIndicator={false}>
+          <View>
+            <Text style={styles.signupHeader}>SETTINGS</Text>
+            <View style={styles.profileButtons}>
+              <Button transparent style={styles.roundedButton}>
+                <Icon
+                  name="cloud-upload"
+                  style={
+                    Platform.OS === "android"
+                      ? { color: "#FFF", width: 23 }
+                      : { color: "#FFF", width: 22 }
+                  }
+                />
+              </Button>
+              <TouchableOpacity style={{ alignSelf: "center" }}>
+                <Thumbnail
+                  source={require("../../../assets/Contacts/sanket.png")}
+                  style={styles.profilePic}
+                />
+              </TouchableOpacity>
+              <Button transparent style={styles.roundedButton}>
+                <Icon
+                  name="cloud-download"
+                  style={
+                    Platform.OS === "android"
+                      ? { color: "#FFF", width: 23 }
+                      : { lineHeight: 0, color: "#FFF", width: 22 }
+                  }
+                />
+              </Button>
+            </View>
+          </View>
+
           <View style={styles.bg}>
             <View style={styles.signupContainer}>
               <Item rounded style={styles.inputGrp}>

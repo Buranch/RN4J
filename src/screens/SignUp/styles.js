@@ -1,6 +1,6 @@
 const React = require("react-native");
-
 const { Dimensions, Platform } = React;
+const commonColor = require("../../theme/variables/commonColor");
 
 const deviceHeight = Dimensions.get("window").height;
 const deviceWidth = Dimensions.get("window").width;
@@ -34,6 +34,23 @@ export default {
     width: null,
     height: null,
     backgroundColor: primary
+  },
+  formErrorIcon: {
+    color: "#fff",
+    marginTop: 5,
+    right: 10
+  },
+  formErrorText1: {
+    fontSize: Platform.OS === "android" ? 12 : 15,
+    color: commonColor.brandDanger,
+    textAlign: "right",
+    top: -10
+  },
+  formErrorText2: {
+    fontSize: Platform.OS === "android" ? 12 : 15,
+    color: "transparent",
+    textAlign: "right",
+    top: -10
   },
   inputGrp: {
     flexDirection: "row",

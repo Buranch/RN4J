@@ -39,33 +39,20 @@ class TabThree extends Component {
                       }
                     />
                     <View>
-                      <Text style={styles.cmtName}>
+                      <Text style={styles.commentName}>
                         {data.name}
                       </Text>
                       <Text style={styles.commentText}>
                         {data.comment}
                       </Text>
-                      <View
-                        style={{
-                          flexDirection: "row",
-                          paddingLeft: 10,
-                          paddingTop: 20
-                        }}
-                      >
+                      <View style={styles.commentDateView}>
                         <Icon name="ios-time-outline" style={styles.timeIcon} />
                         <Text style={styles.date}>
                           {data.time}
                         </Text>
                       </View>
                     </View>
-                    <TouchableOpacity
-                      style={{
-                        flexDirection: "row",
-                        position: "absolute",
-                        right: 0,
-                        top: 17
-                      }}
-                    >
+                    <TouchableOpacity style={styles.commentLikeView}>
                       <Icon name="ios-heart-outline" style={styles.likeIcon} />
                       <Text style={styles.date}>
                         {data.likes}

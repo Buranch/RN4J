@@ -40,10 +40,9 @@ export default {
     color: "#FFF"
   },
   apaginationText: {
-    // position: 'relative',
     top: -(deviceHeight / 9),
     fontSize: 20,
-    // lineHeight: 0,
+
     fontWeight: "bold",
     padding: 20,
     textAlign: "center",

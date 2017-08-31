@@ -13,18 +13,14 @@ class CustomHeader extends Component {
     return (
       <Header hasTabs={this.props.hasTabs}>
         <Left>
-          <Button transparent onPress={() => navigation.goBack()}>
-            <Icon active name="arrow-back" />
+          <Button transparent onPress={() => navigation.navigate("DrawerOpen")}>
+            <Icon active name="menu" />
           </Button>
         </Left>
         <Body>
           <Image source={headerLogo} style={styles.imageHeader} />
         </Body>
-        <Right>
-          <Button transparent onPress={() => navigation.navigate("DrawerOpen")}>
-            <Icon active name="menu" />
-          </Button>
-        </Right>
+        <Right />
       </Header>
     );
   }

@@ -66,7 +66,10 @@ class Profile extends Component {
               </Text>
             </View>
           </View>
-          <Content showsVerticalScrollIndicator={false}>
+          <Content
+            showsVerticalScrollIndicator={false}
+            style={{ backgroundColor: "#fff" }}
+          >
             <View style={styles.linkTabs}>
               <Grid>
                 <Col>
@@ -96,69 +99,88 @@ class Profile extends Component {
               </Grid>
             </View>
 
-            <List
-              dataSource={this.ds.cloneWithRows(this.state.listViewData)}
-              renderRow={data =>
-                <ListItem
-                  swipeList
-                  style={{ flexDirection: "row", backgroundColor: "#FFF" }}
-                  onPress={() => navigation.navigate("Story")}
-                >
-                  <Image source={data.url} style={styles.newsImage} />
-                  <View style={styles.newsContent}>
-                    <Text numberOfLines={2} style={styles.newsHeader}>
-                      {data.headline}
-                    </Text>
-                    <Grid style={{ marginTop: 25 }}>
-                      <Col>
-                        <TouchableOpacity>
-                          <Text style={styles.newsLink}>
-                            {data.link}
-                          </Text>
-                        </TouchableOpacity>
-                      </Col>
-                      <Col>
-                        <TouchableOpacity style={styles.newsTypeView}>
-                          <Text style={styles.newsTypeText}>
-                            {data.category}
-                          </Text>
-                        </TouchableOpacity>
-                      </Col>
-                    </Grid>
+            {this.ds.cloneWithRows(this.state.listViewData).getRowCount() === 0
+              ? <View style={styles.linkTabs}>
+                  <ListItem
+                    style={{
+                      backgroundColor: "#fff",
+                      justifyContent: "center"
+                    }}
+                  >
+                    <Text style={styles.textNote}>Empty List</Text>
+                  </ListItem>
+                </View>
+              : <View>
+                  <View style={styles.linkTabs}>
+                    <ListItem
+                      style={{
+                        backgroundColor: "#fff",
+                        justifyContent: "center"
+                      }}
+                    >
+                      <Text style={styles.textNote}>
+                        Swipe the items to left and right
+                      </Text>
+                    </ListItem>
                   </View>
-                </ListItem>}
-              renderLeftHiddenRow={data =>
-                <Button
-                  full
-                  style={{
-                    backgroundColor: "#CCC",
-                    flex: 1,
-                    alignItems: "center",
-                    justifyContent: "center"
-                  }}
-                >
-                  <Icon
-                    active
-                    name="information-circle"
-                    style={{ fontSize: 35 }}
+                  <List
+                    dataSource={this.ds.cloneWithRows(this.state.listViewData)}
+                    renderRow={data =>
+                      <ListItem
+                        swipeList
+                        style={{
+                          flexDirection: "row",
+                          backgroundColor: "#FFF"
+                        }}
+                        onPress={() => navigation.navigate("Story")}
+                      >
+                        <Image source={data.url} style={styles.newsImage} />
+                        <View style={styles.newsContent}>
+                          <Text numberOfLines={2} style={styles.newsHeader}>
+                            {data.headline}
+                          </Text>
+                          <Grid style={{ marginTop: 25 }}>
+                            <Col>
+                              <TouchableOpacity>
+                                <Text style={styles.newsLink}>
+                                  {data.link}
+                                </Text>
+                              </TouchableOpacity>
+                            </Col>
+                            <Col>
+                              <TouchableOpacity style={styles.newsTypeView}>
+                                <Text style={styles.newsTypeText}>
+                                  {data.category}
+                                </Text>
+                              </TouchableOpacity>
+                            </Col>
+                          </Grid>
+                        </View>
+                      </ListItem>}
+                    renderLeftHiddenRow={data =>
+                      <Button
+                        full
+                        style={([styles.swipeBtn], { backgroundColor: "#CCC" })}
+                      >
+                        <Icon
+                          active
+                          name="information-circle"
+                          style={{ fontSize: 35 }}
+                        />
+                      </Button>}
+                    renderRightHiddenRow={(data, secId, rowId, rowMap) =>
+                      <Button
+                        full
+                        danger
+                        onPress={_ => this.deleteRow(secId, rowId, rowMap)}
+                        style={styles.swipeBtn}
+                      >
+                        <Icon active name="trash" style={{ fontSize: 35 }} />
+                      </Button>}
+                    leftOpenValue={100}
+                    rightOpenValue={-100}
                   />
-                </Button>}
-              renderRightHiddenRow={(data, secId, rowId, rowMap) =>
-                <Button
-                  full
-                  danger
-                  onPress={_ => this.deleteRow(secId, rowId, rowMap)}
-                  style={{
-                    flex: 1,
-                    alignItems: "center",
-                    justifyContent: "center"
-                  }}
-                >
-                  <Icon active name="trash" style={{ fontSize: 35 }} />
-                </Button>}
-              leftOpenValue={100}
-              rightOpenValue={-100}
-            />
+                </View>}
           </Content>
         </Image>
       </Container>

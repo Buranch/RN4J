@@ -16,7 +16,6 @@ import {
   Text,
   Button,
   Icon,
-  Card,
   Left,
   Body,
   Right,
@@ -79,22 +78,25 @@ class Home extends Component {
       return <Spinner />;
     } else {
       return (
-        <Container style={{ backgroundColor: "#fff" }}>
+        <Container>
           <Header>
-            <Left />
-            <Body>
-              <Image source={headerLogo} style={styles.imageHeader} />
-            </Body>
-            <Right>
+            <Left>
               <Button
                 transparent
                 onPress={() => this.props.navigation.navigate("DrawerOpen")}
               >
                 <Icon active name="menu" />
               </Button>
-            </Right>
+            </Left>
+            <Body>
+              <Image source={headerLogo} style={styles.imageHeader} />
+            </Body>
+            <Right />
           </Header>
-          <Content showsVerticalScrollIndicator={false}>
+          <Content
+            showsVerticalScrollIndicator={false}
+            style={{ backgroundColor: "#fff" }}
+          >
             <View>
               <View>
                 <Carousel
@@ -248,15 +250,11 @@ class Home extends Component {
               </View>
             </View>
 
-            <Card
-              style={{ backgroundColor: "#fff", marginTop: 0, marginRight: 0 }}
-            >
-              <FlatList
-                data={this.props.items}
-                renderItem={this._renderItem}
-                keyExtractor={item => item.id}
-              />
-            </Card>
+            <FlatList
+              data={this.props.items}
+              renderItem={this._renderItem}
+              keyExtractor={item => item.id}
+            />
           </Content>
         </Container>
       );

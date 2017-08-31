@@ -44,63 +44,60 @@ class Feedback extends Component {
   render() {
     const navigation = this.props.navigation;
     return (
-      <Container
-        contentOffset={this.state.offset}
-        scrollEnabled={false}
-        style={{ backgroundColor: "#FFF" }}
-      >
+      <Container style={{ backgroundColor: "#FFF" }}>
         <Header hasTabs>
           <Left>
-            <Button transparent onPress={() => navigation.goBack()}>
-              <Icon active name="arrow-back" />
-            </Button>
-          </Left>
-          <Body>
-            <Image source={headerLogo} style={styles.imageHeader} />
-          </Body>
-          <Right>
             <Button
               transparent
               onPress={() => navigation.navigate("DrawerOpen")}
             >
               <Icon active name="menu" />
             </Button>
-          </Right>
+          </Left>
+          <Body>
+            <Image source={headerLogo} style={styles.imageHeader} />
+          </Body>
+          <Right />
         </Header>
-        <View style={styles.bg}>
-          <View style={styles.contentIconsContainer}>
-            <Button transparent style={styles.roundedButton}>
-              <Icon
-                name="ios-call-outline"
-                style={{ fontSize: 30, width: 30, color: "#FFF" }}
-              />
-            </Button>
-            <Button transparent style={styles.roundedCustomButton}>
-              <Icon
-                name="ios-mail-outline"
-                style={{
-                  fontSize: 28,
-                  color: primary,
-                  width: 22,
-                  marginLeft: 5
-                }}
-              />
-            </Button>
-            <Button transparent style={styles.roundedButton}>
-              <Icon
-                name="ios-pin-outline"
-                style={{ fontSize: 28, width: 30, color: "#FFF" }}
-              />
-            </Button>
+        <Content
+          showsVerticalScrollIndicator={false}
+          contentOffset={this.state.offset}
+          scrollEnabled={false}
+        >
+          <View style={styles.bg}>
+            <View style={styles.contentIconsContainer}>
+              <Button transparent style={styles.roundedButton}>
+                <Icon
+                  name="ios-call-outline"
+                  style={{ fontSize: 30, width: 30, color: "#FFF" }}
+                />
+              </Button>
+              <Button transparent style={styles.roundedCustomButton}>
+                <Icon
+                  name="ios-mail-outline"
+                  style={{
+                    fontSize: 28,
+                    color: primary,
+                    width: 22,
+                    marginLeft: 5
+                  }}
+                />
+              </Button>
+              <Button transparent style={styles.roundedButton}>
+                <Icon
+                  name="ios-pin-outline"
+                  style={{ fontSize: 28, width: 30, color: "#FFF" }}
+                />
+              </Button>
+            </View>
+            <View style={styles.feedbackHeaderContainer}>
+              <Text style={styles.feedbackHeader}>SEND FEEDBACK</Text>
+              <Text note style={styles.feedbackHead}>
+                Your feedback is very important to us.
+              </Text>
+            </View>
           </View>
-          <View style={styles.feedbackHeaderContainer}>
-            <Text style={styles.feedbackHeader}>SEND FEEDBACK</Text>
-            <Text note style={styles.feedbackHead}>
-              Your feedback is very important to us.
-            </Text>
-          </View>
-        </View>
-        <Content showsVerticalScrollIndicator={false}>
+
           <View style={styles.feedbackContainer}>
             <Item rounded style={styles.inputGrp}>
               <Icon

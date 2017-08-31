@@ -101,7 +101,7 @@ export default {
   arrowForwardIconContainer: {
     paddingTop: 5
   },
-  cmtName: {
+  commentName: {
     fontSize: deviceWidth < 330 ? 15 : 17,
     paddingLeft: 10,
     color: "#444",
@@ -113,5 +113,16 @@ export default {
     paddingTop: 5,
     fontSize: 14,
     marginRight: 50
+  },
+  commentDateView: {
+    flexDirection: "row",
+    paddingLeft: 10,
+    paddingTop: 20
+  },
+  commentLikeView: {
+    flexDirection: "row",
+    position: "absolute",
+    right: 0,
+    top: 17
   }
 };
