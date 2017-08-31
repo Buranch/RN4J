@@ -15,7 +15,6 @@ import {
 } from "native-base";
 import { Field, reduxForm } from "redux-form";
 import styles from "./styles";
-import commonColor from "../../theme/variables/commonColor";
 
 const required = value => (value ? undefined : "Required");
 const email = value =>

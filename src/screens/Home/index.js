@@ -16,7 +16,6 @@ import {
   Text,
   Button,
   Icon,
-  Card,
   Left,
   Body,
   Right,
