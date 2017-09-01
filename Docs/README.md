@@ -1,4 +1,4 @@
-#React Native Flat App Docs v8.0.0
+## React Native Flat App Docs v8.0.0
 
 [Flat App](https://market.nativebase.io/view/react-native-flat-app-theme) is basically a style of interface design emphasizing minimum use of stylistic elements. It is focused on a minimalist use of simple elements, typography and flat colors. Developers prefer flat design as it allows interface designs to be more streamlined and efficient. It is easier to quickly convey information while still looking visually appealing and approachable. With minimal design elements, applications are able to load faster and resize easily, and still look sharp on high-definition screens.
 
