@@ -1,12 +1,14 @@
-## React Native Flat App Theme v8.0.0
+## React Native Flat App Theme v8.0.0 - React Native
 
 Thanks for purchasing the React Native Flat App Theme.
+
+This is a React Native app with react-navigation.
 
 Follow the documentation to install and get started with the development:
 
 -   [Documentation](http://docs.market.nativebase.io/react-native-flat-app-ui/)
 -   [Product Page](https://market.nativebase.io/view/react-native-flat-app-theme)
--	[Change Log](https://docs.market.nativebase.io/react-native-flat-app-ui/docs/react-native-flat-app-theme/whats-new-in-v8.0.0.html)
+-	[Change Log](http://gitstrap.com/strapmobile/FlatApp/React-Native/blob/master/ChangeLog.md)
 
 Please do check `FAQs` section in docs for queries.
 
