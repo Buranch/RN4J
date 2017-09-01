@@ -13,3 +13,4 @@ Follow the documentation to install and get started with the development:
 Please do check `FAQs` section in docs for queries.
 
 Happy coding!
+
