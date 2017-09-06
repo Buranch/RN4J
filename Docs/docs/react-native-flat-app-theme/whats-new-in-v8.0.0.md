@@ -32,9 +32,9 @@
 		*	DrawerNavigator
 *	Upgraded NativeBase from 2.1.0-rc.2 to 2.3.1
 *	Upgraded React from 15.4.0 to 16.0.0-alpha.12
-*	Upgraded React Native from 0.42.3 to 0.46.4
+*	Upgraded React Native from 0.42.3 to 0.47.2
 *	Upgraded React Native Easy Grid from 0.1.7 to 0.1.15
-*	Upgraded Expo from 15.1.2 to 19.0.1
+*	Upgraded Expo from 15.1.2 to 20.0.2
 *	Upgraded Calendar package which includes various customizable react native calendar components.
 *	Upgraded Carousel package
 *	Other upgraded packages:
