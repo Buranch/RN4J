@@ -38,7 +38,7 @@
   },
   "dependencies": {
     "color": "1.0.3",
-    "expo": "20.0.1",
+    "expo": "20.0.2",
     "jest-cli": "20.0.4",
     "lodash": "4.13.1",
     "moment": "2.13.0",
