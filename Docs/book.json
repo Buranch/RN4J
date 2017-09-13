@@ -1,8 +1,7 @@
 {
     "plugins": [
         "ga",
-        "scripts",
-        "edit-link"
+        "scripts"
     ],
     "title": "NativeBase Market UI Themes",
     "variables":{
