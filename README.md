@@ -8,6 +8,7 @@ Follow the documentation to install and get started with the development:
 
 -   [Documentation](http://docs.market.nativebase.io/react-native-flat-app-ui/)
 -   [Product Page](https://market.nativebase.io/view/react-native-flat-app-theme)
+-	[License Page](https://market.nativebase.io/licenses)
 
 Please do check `FAQs` section in docs for queries.
 

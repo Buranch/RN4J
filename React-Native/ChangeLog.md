@@ -1,4 +1,4 @@
-# [8.0.0](http://gitstrap.com/strapmobile/FlatApp/tags/v8.0.0-RN)
+# [8.0.0](http://gitstrap.com/strapmobile/FlatApp/blob/v8.0.0/React-Native/ChangeLog.md)
 
 #### New Features
 

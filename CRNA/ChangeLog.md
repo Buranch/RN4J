@@ -1,4 +1,5 @@
-# [8.0.0](http://gitstrap.com/strapmobile/FlatApp/tags/v8.0.0-CRNA)
+# [8.0.0](http://gitstrap.com/strapmobile/FlatApp/blob/v8.0.0/CRNA/ChangeLog.md)
+
 
 #### New Features
 
