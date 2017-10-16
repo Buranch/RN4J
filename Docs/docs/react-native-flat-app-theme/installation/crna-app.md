@@ -39,4 +39,4 @@ yarn
 		*	Scan the QR code in your Expo app
 	*	Opt #2:
 		*	Make sure you have an `Android emulator` installed and running
-		*	Run `npm run ios` in your terminal
+		*	Run `npm run android` in your terminal
