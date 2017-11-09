@@ -2,10 +2,9 @@
 
 _package.json_
 
-<pre class="line-numbers"><code class="language-json">
-{
+<pre class="line-numbers"><code class="language-json">{
   "name": "StrapFlatApp",
-  "version": "8.0.0",
+  "version": "8.1.0",
   "private": true,
   "devDependencies": {
     "babel-eslint": "7.2.3",
@@ -43,13 +42,13 @@ _package.json_
   },
   "dependencies": {
     "color": "1.0.3",
-    "expo": "19.0.1",
+    "expo": "21.0.2",
     "jest-cli": "20.0.4",
     "lodash": "4.13.1",
     "moment": "2.13.0",
     "native-base": "2.3.1",
     "react": "16.0.0-alpha.12",
-    "react-native": "0.46.4",
+    "react-native": "0.48.4",
     "react-native-calendars": "1.5.6",
     "react-native-carousel-view": "^0.5.1",
     "react-native-easy-grid": "0.1.15",

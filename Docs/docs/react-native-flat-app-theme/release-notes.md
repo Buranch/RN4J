@@ -1,5 +1,17 @@
 ### Release Notes
 
+### 8.1.0
+
+#### Upgraded Features
+
+*	Upgraded React Native from 0.47.2 to 0.48.4
+*	Upgraded Expo from 20.0.2 to 21.0.2
+
+
+* * *
+
+
+
 ### 8.0.0
 
 #### New Features
@@ -13,7 +25,6 @@
 * 	Integrated Flow
 *	Integrated Husky (git hooks)
 *	Integrated Pettier
-
 
 #### Upgraded Features
 
@@ -36,7 +47,6 @@
 	*	remote-redux-devtools-on-debugger: 0.4.6 to 0.8.0
 *	Replaced Scrollable tabs by NativeBase tabs
 *	Modified structure of the project more efficiently
-
 
 #### Bug Fixes
 
