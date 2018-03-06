@@ -1,6 +1,6 @@
 // @flow
 import React, { Component } from "react";
-import { Image, TouchableOpacity, Platform } from "react-native";
+import { Image,ImageBackground, TouchableOpacity, Platform } from "react-native";
 
 import {
   Container,
@@ -40,7 +40,7 @@ class Channel extends Component {
 
         <Content showsVerticalScrollIndicator={false}>
           <View>
-            <Image
+            <ImageBackground
               source={require("../../../assets/NewsIcons/2.jpg")}
               style={styles.newsPoster}
             >
@@ -78,7 +78,7 @@ class Channel extends Component {
                   <Text style={styles.noOfFollowers}>234K Followers</Text>
                 </View>
               </View>
-            </Image>
+            </ImageBackground>
           </View>
 
           <View foregroundColor={"white"} style={{ backgroundColor: "#fff" }}>

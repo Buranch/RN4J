@@ -1,9 +1,9 @@
 // @flow
-import React, { Component } from "react";
-import { Image, TouchableOpacity, Platform } from "react-native";
+import React, {Component} from "react";
+import {Image, ImageBackground, TouchableOpacity, Platform} from "react-native";
 
-import { Content, Text, View } from "native-base";
-import { Grid, Col, Row } from "react-native-easy-grid";
+import {Content, Text, View} from "native-base";
+import {Grid, Col, Row} from "react-native-easy-grid";
 
 import styles from "./styles";
 
@@ -19,7 +19,7 @@ class TabThree extends Component {
                 <TouchableOpacity
                   onPress={() => navigation.navigate("Channel")}
                 >
-                  <Image
+                  <ImageBackground
                     source={require("../../../assets/NewsIcons/11.jpg")}
                     style={styles.channelImg}
                   >
@@ -32,14 +32,14 @@ class TabThree extends Component {
                     >
                       SPORTS
                     </Text>
-                  </Image>
+                  </ImageBackground>
                 </TouchableOpacity>
               </Col>
               <Col>
                 <TouchableOpacity
                   onPress={() => navigation.navigate("Channel")}
                 >
-                  <Image
+                  <ImageBackground
                     source={require("../../../assets/NewsIcons/12.jpg")}
                     style={styles.channelImg}
                   >
@@ -52,7 +52,7 @@ class TabThree extends Component {
                     >
                       ART
                     </Text>
-                  </Image>
+                  </ImageBackground>
                 </TouchableOpacity>
               </Col>
             </Row>
@@ -61,7 +61,7 @@ class TabThree extends Component {
                 <TouchableOpacity
                   onPress={() => navigation.navigate("Channel")}
                 >
-                  <Image
+                  <ImageBackground
                     source={require("../../../assets/NewsIcons/8.jpg")}
                     style={styles.channelImg}
                   >
@@ -74,14 +74,14 @@ class TabThree extends Component {
                     >
                       AUTO
                     </Text>
-                  </Image>
+                  </ImageBackground>
                 </TouchableOpacity>
               </Col>
               <Col>
                 <TouchableOpacity
                   onPress={() => navigation.navigate("Channel")}
                 >
-                  <Image
+                  <ImageBackground
                     source={require("../../../assets/NewsIcons/7.jpg")}
                     style={styles.channelImg}
                   >
@@ -94,7 +94,7 @@ class TabThree extends Component {
                     >
                       TECHNOLOGY
                     </Text>
-                  </Image>
+                  </ImageBackground>
                 </TouchableOpacity>
               </Col>
             </Row>
@@ -103,7 +103,7 @@ class TabThree extends Component {
                 <TouchableOpacity
                   onPress={() => navigation.navigate("Channel")}
                 >
-                  <Image
+                  <ImageBackground
                     source={require("../../../assets/NewsIcons/6.jpg")}
                     style={styles.channelImg}
                   >
@@ -116,14 +116,14 @@ class TabThree extends Component {
                     >
                       FINANCES
                     </Text>
-                  </Image>
+                  </ImageBackground>
                 </TouchableOpacity>
               </Col>
               <Col>
                 <TouchableOpacity
                   onPress={() => navigation.navigate("Channel")}
                 >
-                  <Image
+                  <ImageBackground
                     source={require("../../../assets/NewsIcons/1.jpg")}
                     style={styles.channelImg}
                   >
@@ -136,7 +136,7 @@ class TabThree extends Component {
                     >
                       ENVIRONMENT
                     </Text>
-                  </Image>
+                  </ImageBackground>
                 </TouchableOpacity>
               </Col>
             </Row>
@@ -145,7 +145,7 @@ class TabThree extends Component {
                 <TouchableOpacity
                   onPress={() => navigation.navigate("Channel")}
                 >
-                  <Image
+                  <ImageBackground
                     source={require("../../../assets/NewsIcons/9.jpg")}
                     style={styles.channelImg}
                   >
@@ -158,14 +158,14 @@ class TabThree extends Component {
                     >
                       FASHION
                     </Text>
-                  </Image>
+                  </ImageBackground>
                 </TouchableOpacity>
               </Col>
               <Col>
                 <TouchableOpacity
                   onPress={() => navigation.navigate("Channel")}
                 >
-                  <Image
+                  <ImageBackground
                     source={require("../../../assets/NewsIcons/2.jpg")}
                     style={styles.channelImg}
                   >
@@ -178,7 +178,7 @@ class TabThree extends Component {
                     >
                       SCIENCE
                     </Text>
-                  </Image>
+                  </ImageBackground>
                 </TouchableOpacity>
               </Col>
             </Row>
@@ -187,7 +187,7 @@ class TabThree extends Component {
                 <TouchableOpacity
                   onPress={() => navigation.navigate("Channel")}
                 >
-                  <Image
+                  <ImageBackground
                     source={require("../../../assets/NewsIcons/10.jpg")}
                     style={styles.channelImg}
                   >
@@ -200,14 +200,14 @@ class TabThree extends Component {
                     >
                       ANIMATION
                     </Text>
-                  </Image>
+                  </ImageBackground>
                 </TouchableOpacity>
               </Col>
               <Col>
                 <TouchableOpacity
                   onPress={() => navigation.navigate("Channel")}
                 >
-                  <Image
+                  <ImageBackground
                     source={require("../../../assets/NewsIcons/13.jpg")}
                     style={styles.channelImg}
                   >
@@ -220,7 +220,7 @@ class TabThree extends Component {
                     >
                       EDUCATION
                     </Text>
-                  </Image>
+                  </ImageBackground>
                 </TouchableOpacity>
               </Col>
             </Row>

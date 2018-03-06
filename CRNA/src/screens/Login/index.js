@@ -1,6 +1,6 @@
 // @flow
 import React, { Component } from "react";
-import { Image, Platform, StatusBar } from "react-native";
+import { Image,ImageBackground, Platform, StatusBar } from "react-native";
 import {
   Container,
   Content,
@@ -95,7 +95,7 @@ class LoginForm extends Component {
     return (
       <Container>
         <StatusBar barStyle="light-content" />
-        <Image source={bg} style={styles.background}>
+        <ImageBackground source={bg} style={styles.background}>
           <Content contentContainerStyle={{ flex: 1 }}>
             <View style={styles.container}>
               <Image source={logo} style={styles.logo} />
@@ -179,7 +179,7 @@ class LoginForm extends Component {
               </View>
             </View>
           </Content>
-        </Image>
+        </ImageBackground>
       </Container>
     );
   }
