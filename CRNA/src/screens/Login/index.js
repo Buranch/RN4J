@@ -1,6 +1,6 @@
 // @flow
-import React, { Component } from "react";
-import { Image,ImageBackground, Platform, StatusBar } from "react-native";
+import React, {Component} from "react";
+import {Image, ImageBackground, Platform, StatusBar} from "react-native";
 import {
   Container,
   Content,
@@ -14,7 +14,7 @@ import {
   Right,
   Toast
 } from "native-base";
-import { Field, reduxForm } from "redux-form";
+import {Field, reduxForm} from "redux-form";
 
 import styles from "./styles";
 // import commonColor from "../../theme/variables/commonColor";
@@ -42,14 +42,14 @@ declare type Any = any;
 class LoginForm extends Component {
   textInput: Any;
 
-  renderInput({ input, label, type, meta: { touched, error, warning } }) {
+  renderInput({input, label, type, meta: {touched, error, warning}}) {
     return (
       <View>
         <Item error={error && touched} rounded style={styles.inputGrp}>
           <Icon
             active
             name={input.name === "email" ? "mail" : "unlock"}
-            style={{ color: "#fff" }}
+            style={{color: "#fff"}}
           />
           <Input
             ref={c => (this.textInput = c)}
@@ -85,7 +85,7 @@ class LoginForm extends Component {
         text: "Enter Valid Username & password!",
         duration: 2500,
         position: "top",
-        textStyle: { textAlign: "center" }
+        textStyle: {textAlign: "center"}
       });
     }
   }
@@ -96,7 +96,7 @@ class LoginForm extends Component {
       <Container>
         <StatusBar barStyle="light-content" />
         <ImageBackground source={bg} style={styles.background}>
-          <Content contentContainerStyle={{ flex: 1 }}>
+          <Content contentContainerStyle={{flex: 1}}>
             <View style={styles.container}>
               <Image source={logo} style={styles.logo} />
             </View>
@@ -126,8 +126,8 @@ class LoginForm extends Component {
                   <Text
                     style={
                       Platform.OS === "android"
-                        ? { fontSize: 16, textAlign: "center", top: -5 }
-                        : { fontSize: 16, fontWeight: "900" }
+                        ? {fontSize: 16, textAlign: "center"}
+                        : {fontSize: 16, fontWeight: "900"}
                     }
                   >
                     Get Started
@@ -139,7 +139,7 @@ class LoginForm extends Component {
                     <Button
                       small
                       transparent
-                      style={{ alignSelf: "flex-start" }}
+                      style={{alignSelf: "flex-start"}}
                       onPress={() => navigation.navigate("SignUp")}
                     >
                       <Text style={styles.helpBtns}>Create Account</Text>
@@ -149,14 +149,14 @@ class LoginForm extends Component {
                     <Button
                       small
                       transparent
-                      style={{ alignSelf: "flex-end" }}
+                      style={{alignSelf: "flex-end"}}
                       onPress={() => navigation.navigate("ForgotPassword")}
                     >
                       <Text style={styles.helpBtns}>Forgot Password</Text>
                     </Button>
                   </Right>
                 </View>
-                <View style={{ flex: 1, alignSelf: "flex-end" }}>
+                <View style={{flex: 1, alignSelf: "flex-end"}}>
                   <Button
                     light
                     small
@@ -168,7 +168,7 @@ class LoginForm extends Component {
                       style={
                         (
                           [styles.helpBtns],
-                          { top: Platform.OS === "ios" ? null : 0 }
+                          {top: Platform.OS === "ios" ? null : 0}
                         )
                       }
                     >
