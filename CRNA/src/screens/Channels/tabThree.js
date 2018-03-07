@@ -1,6 +1,6 @@
 // @flow
 import React, {Component} from "react";
-import {Image, ImageBackground, TouchableOpacity, Platform} from "react-native";
+import {ImageBackground, TouchableOpacity, Platform} from "react-native";
 
 import {Content, Text, View} from "native-base";
 import {Grid, Col, Row} from "react-native-easy-grid";
