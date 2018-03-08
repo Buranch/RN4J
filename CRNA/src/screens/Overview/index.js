@@ -15,9 +15,7 @@ import {
   Grid,
   Col
 } from "native-base";
-
-import ProgressBar from "../../components/ProgressBar/ProgressBar";
-
+import ProgressBar from "../../components/ProgressBar";
 import styles from "./styles";
 
 const headerLogo = require("../../../assets/header-logo.png");
