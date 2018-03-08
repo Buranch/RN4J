@@ -4,7 +4,7 @@ _package.json_
 
 <pre class="line-numbers"><code class="language-json">{
   "name": "StrapFlatApp",
-  "version": "8.1.0",
+  "version": "8.2.0",
   "private": true,
   "devDependencies": {
     "babel-eslint": "7.2.3",
@@ -21,7 +21,7 @@ _package.json_
     "jest": "20.0.4",
     "jest-expo": "19.0.5",
     "prettier": "1.5.3",
-    "react-native-scripts": "1.1.0",
+    "react-native-scripts": "1.11.1",
     "react-test-renderer": "16.0.0-alpha.12"
   },
   "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
@@ -31,29 +31,31 @@ _package.json_
     "eject": "react-native-scripts eject",
     "android": "react-native-scripts android",
     "ios": "react-native-scripts ios",
-    "test": "jest && eslint .",
+    "test": "jest && flow && eslint .",
     "precommit": "yarn test"
   },
   "jest": {
     "preset": "jest-expo",
     "transformIgnorePatterns": [
-      "node_modules/(?!(react-native|lottie-react-native|expo|react-native-maps|react-native-svg|react-native-branch|native-base-shoutem-theme|react-native-easy-grid|react-native-drawer|react-native-vector-icons|react-native-keyboard-aware-scroll-view|react-native-swiper|react-navigation|native-base|@expo|react-native-scrollable-tab-view|react-native-simple-modal)/)"
+      "node_modules/(?!(react-native|lottie-react-native|expo|react-native-maps|react-native-svg|react-native-branch|native-base-shoutem-theme|react-native-easy-grid|react-native-drawer|react-native-vector-icons|react-native-keyboard-aware-scroll-view|react-native-swiper|react-navigation|native-base|@expo|react-native-scrollable-tab-view|react-native-simple-modal|react-native-iphone-x-helper)/)"
     ]
   },
   "dependencies": {
+    "@expo/vector-icons": "^6.3.1",
+    "babel-preset-expo": "^4.0.0",
     "color": "1.0.3",
-    "expo": "21.0.2",
+    "expo": "25.0.0",
     "jest-cli": "20.0.4",
     "lodash": "4.13.1",
     "moment": "2.13.0",
-    "native-base": "2.3.1",
-    "react": "16.0.0-alpha.12",
-    "react-native": "0.48.4",
+    "native-base": "2.3.9",
+    "react": "16.2.0",
+    "react-native": "0.52.0",
     "react-native-calendars": "1.5.6",
     "react-native-carousel-view": "^0.5.1",
     "react-native-easy-grid": "0.1.15",
     "react-native-modalbox": "1.4.2",
-    "react-navigation": "1.0.0-beta.11",
+    "react-navigation": "1.2.1",
     "react-redux": "5.0.5",
     "redux": "3.7.2",
     "redux-form": "7.0.3",
@@ -62,4 +64,5 @@ _package.json_
     "remote-redux-devtools": "0.5.0",
     "remote-redux-devtools-on-debugger": "^0.8.0"
   }
-}</code></pre>
+}
+</code></pre>
