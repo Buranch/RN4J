@@ -31,7 +31,7 @@
   "jest": {
     "preset": "react-native",
     "transformIgnorePatterns": [
-      "node_modules/(?!(react-native|lottie-react-native|expo|react-native-maps|react-native-svg|react-native-branch|native-base-shoutem-theme|react-native-easy-grid|react-native-drawer|react-native-vector-icons|react-native-keyboard-aware-scroll-view|react-native-swiper|react-navigation|native-base|@expo|react-native-scrollable-tab-view|react-native-simple-modal)/)"
+      "node_modules/(?!(react-native|lottie-react-native|expo|react-native-maps|react-native-svg|react-native-branch|native-base-shoutem-theme|react-native-easy-grid|react-native-drawer|react-native-vector-icons|react-native-keyboard-aware-scroll-view|react-native-swiper|react-navigation|native-base|@expo|react-native-scrollable-tab-view|react-native-simple-modal|react-native-iphone-x-helper)/)"
     ]
   },
   "dependencies": {
@@ -39,15 +39,15 @@
     "jest-cli": "20.0.4",
     "lodash": "4.13.1",
     "moment": "2.13.0",
-    "native-base": "2.3.1",
-    "react": "16.0.0-alpha.12",
-    "react-native": "0.48.4",
+    "native-base": "2.3.9",
+    "react": "16.2.0",
+    "react-native": "0.52.0",
     "react-native-calendars": "1.5.6",
     "react-native-carousel-view": "^0.5.1",
     "react-native-easy-grid": "0.1.15",
     "react-native-modalbox": "1.4.2",
     "react-native-vector-icons": "4.3.0",
-    "react-navigation": "1.0.0-beta.11",
+    "react-navigation": "1.2.1",
     "react-redux": "5.0.5",
     "redux": "3.7.2",
     "redux-form": "7.0.3",
