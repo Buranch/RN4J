@@ -1,14 +1,15 @@
 // @flow
-import React, { Component } from "react";
+import React, {Component} from "react";
 import {
   Platform,
   Image,
+  ImageBackground,
   TouchableOpacity,
   Dimensions,
   FlatList,
   View as RNView
 } from "react-native";
-import { connect } from "react-redux";
+import {connect} from "react-redux";
 import {
   Container,
   Header,
@@ -23,10 +24,10 @@ import {
   Spinner
 } from "native-base";
 
-import { Grid, Col } from "react-native-easy-grid";
+import {Grid, Col} from "react-native-easy-grid";
 import Carousel from "react-native-carousel-view";
 
-import { itemsFetchData } from "../../actions";
+import {itemsFetchData} from "../../actions";
 import datas from "./data.json";
 
 import styles from "./styles";
@@ -38,10 +39,10 @@ class Home extends Component {
   componentDidMount() {
     this.props.fetchData(datas);
   }
-  _renderItem = ({ item }) => {
+  _renderItem = ({item}) => {
     return (
       <TouchableOpacity
-        style={{ flexDirection: "row" }}
+        style={{flexDirection: "row"}}
         onPress={() => this.props.navigation.navigate("Story")}
       >
         <View style={styles.newsContent}>
@@ -49,7 +50,7 @@ class Home extends Component {
             {item.headline}
           </Text>
           <Grid style={styles.swiperContentBox}>
-            <Col style={{ flexDirection: "row" }}>
+            <Col style={{flexDirection: "row"}}>
               <Text style={styles.newsLink}>
                 {item.link}
               </Text>
@@ -95,7 +96,7 @@ class Home extends Component {
           </Header>
           <Content
             showsVerticalScrollIndicator={false}
-            style={{ backgroundColor: "#fff" }}
+            style={{backgroundColor: "#fff"}}
           >
             <View>
               <View>
@@ -114,7 +115,7 @@ class Home extends Component {
                       onPress={() => this.props.navigation.navigate("Story")}
                       style={styles.slide}
                     >
-                      <Image
+                      <ImageBackground
                         style={styles.newsPoster}
                         source={require("../../../assets/NewsIcons/1.jpg")}
                       >
@@ -127,7 +128,7 @@ class Home extends Component {
                             minimal use of stylistic elements.
                           </Text>
                           <Grid style={styles.swiperContentBox}>
-                            <Col style={{ flexDirection: "row" }}>
+                            <Col style={{flexDirection: "row"}}>
                               <Text style={styles.newsPosterLink}>
                                 SPACE.com
                               </Text>
@@ -152,7 +153,7 @@ class Home extends Component {
                             </Col>
                           </Grid>
                         </View>
-                      </Image>
+                      </ImageBackground>
                     </TouchableOpacity>
                   </RNView>
                   <RNView>
@@ -161,7 +162,7 @@ class Home extends Component {
                       onPress={() => this.props.navigation.navigate("Story")}
                       style={styles.slide}
                     >
-                      <Image
+                      <ImageBackground
                         style={styles.newsPoster}
                         source={require("../../../assets/NewsIcons/3.jpg")}
                       >
@@ -174,7 +175,7 @@ class Home extends Component {
                             resize easily.
                           </Text>
                           <Grid style={styles.swiperContentBox}>
-                            <Col style={{ flexDirection: "row" }}>
+                            <Col style={{flexDirection: "row"}}>
                               <Text style={styles.newsPosterLink}>CDC</Text>
                               <Icon
                                 name="ios-time-outline"
@@ -197,7 +198,7 @@ class Home extends Component {
                             </Col>
                           </Grid>
                         </View>
-                      </Image>
+                      </ImageBackground>
                     </TouchableOpacity>
                   </RNView>
                   <RNView>
@@ -206,7 +207,7 @@ class Home extends Component {
                       onPress={() => this.props.navigation.navigate("Story")}
                       style={styles.slide}
                     >
-                      <Image
+                      <ImageBackground
                         style={styles.newsPoster}
                         source={require("../../../assets/NewsIcons/4.jpg")}
                       >
@@ -218,7 +219,7 @@ class Home extends Component {
                             But still look sharp on high-definition screens.
                           </Text>
                           <Grid style={styles.swiperContentBox}>
-                            <Col style={{ flexDirection: "row" }}>
+                            <Col style={{flexDirection: "row"}}>
                               <Text style={styles.newsPosterLink}>SKY.com</Text>
                               <Icon
                                 name="ios-time-outline"
@@ -243,7 +244,7 @@ class Home extends Component {
                             </Col>
                           </Grid>
                         </View>
-                      </Image>
+                      </ImageBackground>
                     </TouchableOpacity>
                   </RNView>
                 </Carousel>

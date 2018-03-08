@@ -1,6 +1,6 @@
 // @flow
-import React, { Component } from "react";
-import { Image, StatusBar } from "react-native";
+import React, {Component} from "react";
+import {ImageBackground, StatusBar} from "react-native";
 import {
   Container,
   Content,
@@ -13,7 +13,7 @@ import {
   Toast,
   Footer
 } from "native-base";
-import { Field, reduxForm } from "redux-form";
+import {Field, reduxForm} from "redux-form";
 import styles from "./styles";
 
 const required = value => (value ? undefined : "Required");
@@ -45,11 +45,11 @@ class ForgotPasswordForm extends Component {
     };
   }
 
-  renderInput({ input, label, type, meta: { touched, error, warning } }) {
+  renderInput({input, label, type, meta: {touched, error, warning}}) {
     return (
       <View>
         <Item error={error && touched} rounded style={styles.inputGrp}>
-          <Icon active name="mail" style={{ color: "#fff" }} />
+          <Icon active name="mail" style={{color: "#fff"}} />
           <Input
             placeholderTextColor="#FFF"
             style={styles.input}
@@ -83,7 +83,7 @@ class ForgotPasswordForm extends Component {
         text: "Enter Valid Email",
         duration: 2500,
         position: "top",
-        textStyle: { textAlign: "center" }
+        textStyle: {textAlign: "center"}
       });
     }
   }
@@ -92,7 +92,7 @@ class ForgotPasswordForm extends Component {
     return (
       <Container>
         <StatusBar barStyle="light-content" />
-        <Image
+        <ImageBackground
           source={require("../../../assets/bg-signup.png")}
           style={styles.background}
         >
@@ -116,7 +116,7 @@ class ForgotPasswordForm extends Component {
                   onPress={() => this.forgotPassword()}
                   style={styles.emailBtn}
                 >
-                  <Text style={{ color: "#FFF" }}>Send Email</Text>
+                  <Text style={{color: "#FFF"}}>Send Email</Text>
                 </Button>
               </View>
             </Content>
@@ -131,7 +131,7 @@ class ForgotPasswordForm extends Component {
               <Text style={styles.helpBtns}>Back To Login</Text>
             </Button>
           </Footer>
-        </Image>
+        </ImageBackground>
       </Container>
     );
   }
