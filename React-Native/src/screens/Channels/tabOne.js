@@ -1,9 +1,9 @@
 // @flow
-import React, { Component } from "react";
-import { Image,ImageBackground, TouchableOpacity, Platform } from "react-native";
+import React, {Component} from "react";
+import {ImageBackground, TouchableOpacity, Platform} from "react-native";
 
-import { Content, Text, View } from "native-base";
-import { Grid, Col, Row } from "react-native-easy-grid";
+import {Content, Text, View} from "native-base";
+import {Grid, Col, Row} from "react-native-easy-grid";
 
 import styles from "./styles";
 
