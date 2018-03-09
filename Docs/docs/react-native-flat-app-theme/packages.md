@@ -48,7 +48,7 @@ _package.json_
     "jest-cli": "20.0.4",
     "lodash": "4.13.1",
     "moment": "2.13.0",
-    "native-base": "2.3.9",
+    "native-base": "2.3.10",
     "react": "16.2.0",
     "react-native": "0.52.0",
     "react-native-calendars": "1.5.6",
