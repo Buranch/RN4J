@@ -1,5 +1,6 @@
 // @flow
 import React, {Component} from "react";
+import {NavigationActions} from "react-navigation";
 import {Image, ImageBackground, Platform, StatusBar} from "react-native";
 import {
   Container,

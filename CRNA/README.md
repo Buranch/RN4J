@@ -1,4 +1,4 @@
-## React Native Flat App Theme v8.1.0 - CRNA
+## React Native Flat App Theme v8.2.0 - CRNA
 
 Thanks for purchasing the React Native Flat App Theme.
 
