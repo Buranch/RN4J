@@ -14,7 +14,7 @@ Follow the [NativeBase ](http://docs.nativebase.io/CUSTOMIZE.html#Customize) pro
 
 ### Change App logo
 
-FAT comes with its logo at login page. To change logo at login page:
+Flat App comes with its logo at login page. To change logo at login page:
 
 * Include image of your logo named as `logo.png`
 * Place it under `/images/`
@@ -27,7 +27,7 @@ FAT comes with its logo at login page. To change logo at login page:
 
 * **React Native**
 
-  Want to have your own icon for your app? This is very simple with FAT.
+  Want to have your own icon for your app? This is very simple with Flat App.
   Follow below given steps to customize app-icon for your app.
 
 * Visit [MakeAppIcon](https://makeappicon.com/) website
@@ -53,7 +53,7 @@ You just need to rename [name](https://docs.expo.io/versions/latest/guides/confi
 
 * **React Native**
 
-Renaming any [React Native](https://github.com/facebook/react-native) app is strenous. But FAT proves its flexibility for this approach.
+Renaming any [React Native](https://github.com/facebook/react-native) app is strenous. But Flat App proves its flexibility for this approach.
 Follow below given steps to rename your app.
 
 * Rename the app name in following files.
@@ -66,7 +66,6 @@ Follow below given steps to rename your app.
   * **Android:** Restore `/android/app/src/main/res`
 * Delete the **iOS** and **android** directories from your project.
 * Run the following commands on your terminal
-
 
 ```
 react-native upgrade
