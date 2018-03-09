@@ -1,6 +1,8 @@
 # [8.1.0](http://gitstrap.com/strapmobile/FlatApp/blob/v8.1.0/CRNA/ChangeLog.md)
 
 #### Upgraded Features
-
-*	Upgraded React Native from 0.47.2 to 0.48.4
-*	Upgraded Expo from 20.0.2 to 21.0.2
+* Upgraded React Native from 0.48.4 to 0.52.0
+* Upgraded Expo from 21.0.2 to 25.0.0
+* Upgraded NativeBase from 2.3.1 to 2.3.9
+* Upgraded React from 16.0.0-alpha.12 to 16.2.0
+* Upgraded ReactNavigation from 1.0.0-beta.11 to 1.2.1
