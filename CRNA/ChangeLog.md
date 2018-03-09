@@ -1,4 +1,4 @@
-# [8.1.0](http://gitstrap.com/strapmobile/FlatApp/blob/v8.1.0/CRNA/ChangeLog.md)
+# [8.2.0](http://gitstrap.com/strapmobile/FlatApp/blob/v8.1.0/CRNA/ChangeLog.md)
 
 #### Upgraded Features
 * Upgraded React Native from 0.48.4 to 0.52.0
