@@ -3,10 +3,9 @@
     "sdkVersion": "25.0.0",
     "icon": "./assets/DefaultIcon.png",
     "slug": "strapflatapp",
-    "loading": {
-      "hideExponentText": true,
-      "icon": "./assets/loading.png",
-      "backgroundImage": "./assets/LaunchImages/splash-screen.png"
+    "splash": {
+      "resizeMode": "cover",
+      "image": "./assets/LaunchImages/splash-screen.png"
     },
     "orientation": "portrait",
     "primaryColor": "#cccccc",

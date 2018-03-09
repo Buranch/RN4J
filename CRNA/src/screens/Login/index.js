@@ -1,5 +1,6 @@
 // @flow
 import React, {Component} from "react";
+import {NavigationActions} from "react-navigation";
 import {Image, ImageBackground, Platform, StatusBar} from "react-native";
 import {
   Container,
@@ -18,7 +19,7 @@ import {Field, reduxForm} from "redux-form";
 
 import styles from "./styles";
 // import commonColor from "../../theme/variables/commonColor";
-
+import Home from "../Home";
 const bg = require("../../../assets/bg.png");
 const logo = require("../../../assets/logo.png");
 
@@ -80,6 +81,12 @@ class LoginForm extends Component {
   login() {
     if (this.props.valid) {
       this.props.navigation.navigate("Walkthrough");
+      return this.props.navigation.dispatch(
+        NavigationActions.reset({
+          index: 0,
+          actions: [NavigationActions.navigate({routeName: "Walkthrough"})]
+        })
+      );
     } else {
       Toast.show({
         text: "Enter Valid Username & password!",
@@ -162,7 +169,19 @@ class LoginForm extends Component {
                     small
                     transparent
                     style={styles.skipBtn}
-                    onPress={() => navigation.navigate("Walkthrough")}
+                    onPress={() => {
+                      navigation.navigate("Walkthrough");
+                      this.props.navigation.dispatch(
+                        NavigationActions.reset({
+                          index: 0,
+                          actions: [
+                            NavigationActions.navigate({
+                              routeName: "Walkthrough"
+                            })
+                          ]
+                        })
+                      );
+                    }}
                   >
                     <Text
                       style={
