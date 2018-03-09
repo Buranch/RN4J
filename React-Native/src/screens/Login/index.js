@@ -80,6 +80,12 @@ class LoginForm extends Component {
   login() {
     if (this.props.valid) {
       this.props.navigation.navigate("Walkthrough");
+      return this.props.navigation.dispatch(
+        NavigationActions.reset({
+          index: 0,
+          actions: [NavigationActions.navigate({routeName: "Walkthrough"})]
+        })
+      );
     } else {
       Toast.show({
         text: "Enter Valid Username & password!",
@@ -88,6 +94,15 @@ class LoginForm extends Component {
         textStyle: {textAlign: "center"}
       });
     }
+  }
+  skip() {
+    this.props.navigation.navigate("Walkthrough");
+    return this.props.navigation.dispatch(
+      NavigationActions.reset({
+        index: 0,
+        actions: [NavigationActions.navigate({routeName: "Walkthrough"})]
+      })
+    );
   }
 
   render() {
@@ -162,7 +177,7 @@ class LoginForm extends Component {
                     small
                     transparent
                     style={styles.skipBtn}
-                    onPress={() => navigation.navigate("Walkthrough")}
+                    onPress={() => this.skip()}
                   >
                     <Text
                       style={

@@ -77,7 +77,15 @@ class LoginForm extends Component {
       </View>
     );
   }
-
+  skip() {
+    this.props.navigation.navigate("Walkthrough");
+    return this.props.navigation.dispatch(
+      NavigationActions.reset({
+        index: 0,
+        actions: [NavigationActions.navigate({routeName: "Walkthrough"})]
+      })
+    );
+  }
   login() {
     if (this.props.valid) {
       this.props.navigation.navigate("Walkthrough");
@@ -170,17 +178,7 @@ class LoginForm extends Component {
                     transparent
                     style={styles.skipBtn}
                     onPress={() => {
-                      navigation.navigate("Walkthrough");
-                      this.props.navigation.dispatch(
-                        NavigationActions.reset({
-                          index: 0,
-                          actions: [
-                            NavigationActions.navigate({
-                              routeName: "Walkthrough"
-                            })
-                          ]
-                        })
-                      );
+                      this.skip();
                     }}
                   >
                     <Text
