@@ -1,6 +1,6 @@
 // @flow
-import React, { Component } from "react";
-import { Image } from "react-native";
+import React, {Component} from "react";
+import {Image} from "react-native";
 import {
   Container,
   Header,
@@ -41,7 +41,7 @@ class Channels extends Component {
           </Body>
           <Right />
         </Header>
-        <Tabs style={{ backgroundColor: "#fff" }}>
+        <Tabs style={{backgroundColor: "#fff"}}>
           <Tab
             heading={
               <TabHeading>
@@ -51,10 +51,22 @@ class Channels extends Component {
           >
             <TabOne navigation={this.props.navigation} />
           </Tab>
-          <Tab heading="Popular">
+          <Tab
+            heading={
+              <TabHeading>
+                <Text>Popular</Text>
+              </TabHeading>
+            }
+          >
             <TabTwo navigation={this.props.navigation} />
           </Tab>
-          <Tab heading="Explore">
+          <Tab
+            heading={
+              <TabHeading>
+                <Text>Explore</Text>
+              </TabHeading>
+            }
+          >
             <TabThree navigation={this.props.navigation} />
           </Tab>
         </Tabs>

@@ -1,5 +1,5 @@
 const React = require("react-native");
-const { Dimensions, Platform } = React;
+const {Dimensions, Platform} = React;
 
 const deviceWidth = Dimensions.get("window").width;
 
@@ -37,7 +37,6 @@ export default {
   newsPoster: {
     height: 330,
     width: null,
-    resizeMode: "cover",
     flex: 1,
     position: "relative"
   },

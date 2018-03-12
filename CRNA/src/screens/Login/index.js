@@ -1,6 +1,7 @@
 // @flow
-import React, { Component } from "react";
-import { Image, Platform, StatusBar } from "react-native";
+import React, {Component} from "react";
+import {NavigationActions} from "react-navigation";
+import {Image, ImageBackground, Platform, StatusBar} from "react-native";
 import {
   Container,
   Content,
@@ -14,10 +15,8 @@ import {
   Right,
   Toast
 } from "native-base";
-import { Field, reduxForm } from "redux-form";
-
+import {Field, reduxForm} from "redux-form";
 import styles from "./styles";
-// import commonColor from "../../theme/variables/commonColor";
 
 const bg = require("../../../assets/bg.png");
 const logo = require("../../../assets/logo.png");
@@ -42,14 +41,14 @@ declare type Any = any;
 class LoginForm extends Component {
   textInput: Any;
 
-  renderInput({ input, label, type, meta: { touched, error, warning } }) {
+  renderInput({input, label, type, meta: {touched, error, warning}}) {
     return (
       <View>
         <Item error={error && touched} rounded style={styles.inputGrp}>
           <Icon
             active
             name={input.name === "email" ? "mail" : "unlock"}
-            style={{ color: "#fff" }}
+            style={{color: "#fff"}}
           />
           <Input
             ref={c => (this.textInput = c)}
@@ -76,16 +75,30 @@ class LoginForm extends Component {
       </View>
     );
   }
-
+  skip() {
+    this.props.navigation.navigate("Walkthrough");
+    return this.props.navigation.dispatch(
+      NavigationActions.reset({
+        index: 0,
+        actions: [NavigationActions.navigate({routeName: "Walkthrough"})]
+      })
+    );
+  }
   login() {
     if (this.props.valid) {
       this.props.navigation.navigate("Walkthrough");
+      return this.props.navigation.dispatch(
+        NavigationActions.reset({
+          index: 0,
+          actions: [NavigationActions.navigate({routeName: "Walkthrough"})]
+        })
+      );
     } else {
       Toast.show({
         text: "Enter Valid Username & password!",
         duration: 2500,
         position: "top",
-        textStyle: { textAlign: "center" }
+        textStyle: {textAlign: "center"}
       });
     }
   }
@@ -95,8 +108,8 @@ class LoginForm extends Component {
     return (
       <Container>
         <StatusBar barStyle="light-content" />
-        <Image source={bg} style={styles.background}>
-          <Content contentContainerStyle={{ flex: 1 }}>
+        <ImageBackground source={bg} style={styles.background}>
+          <Content contentContainerStyle={{flex: 1}}>
             <View style={styles.container}>
               <Image source={logo} style={styles.logo} />
             </View>
@@ -126,8 +139,8 @@ class LoginForm extends Component {
                   <Text
                     style={
                       Platform.OS === "android"
-                        ? { fontSize: 16, textAlign: "center", top: -5 }
-                        : { fontSize: 16, fontWeight: "900" }
+                        ? {fontSize: 16, textAlign: "center"}
+                        : {fontSize: 16, fontWeight: "900"}
                     }
                   >
                     Get Started
@@ -139,7 +152,7 @@ class LoginForm extends Component {
                     <Button
                       small
                       transparent
-                      style={{ alignSelf: "flex-start" }}
+                      style={{alignSelf: "flex-start"}}
                       onPress={() => navigation.navigate("SignUp")}
                     >
                       <Text style={styles.helpBtns}>Create Account</Text>
@@ -149,26 +162,28 @@ class LoginForm extends Component {
                     <Button
                       small
                       transparent
-                      style={{ alignSelf: "flex-end" }}
+                      style={{alignSelf: "flex-end"}}
                       onPress={() => navigation.navigate("ForgotPassword")}
                     >
                       <Text style={styles.helpBtns}>Forgot Password</Text>
                     </Button>
                   </Right>
                 </View>
-                <View style={{ flex: 1, alignSelf: "flex-end" }}>
+                <View style={{flex: 1, alignSelf: "flex-end"}}>
                   <Button
                     light
                     small
                     transparent
                     style={styles.skipBtn}
-                    onPress={() => navigation.navigate("Walkthrough")}
+                    onPress={() => {
+                      this.skip();
+                    }}
                   >
                     <Text
                       style={
                         (
                           [styles.helpBtns],
-                          { top: Platform.OS === "ios" ? null : 0 }
+                          {top: Platform.OS === "ios" ? null : 0}
                         )
                       }
                     >
@@ -179,7 +194,7 @@ class LoginForm extends Component {
               </View>
             </View>
           </Content>
-        </Image>
+        </ImageBackground>
       </Container>
     );
   }

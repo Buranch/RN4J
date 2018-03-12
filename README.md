@@ -1,4 +1,4 @@
-### React Native Flat App Theme v8.1.0
+### React Native Flat App Theme v8.2.0
 
 Thanks for purchasing the React Native Flat App Theme.
 

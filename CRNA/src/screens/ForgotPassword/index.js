@@ -1,6 +1,6 @@
 // @flow
 import React, { Component } from "react";
-import { Image, StatusBar } from "react-native";
+import { ImageBackground, StatusBar } from "react-native";
 import {
   Container,
   Content,
@@ -92,7 +92,7 @@ class ForgotPasswordForm extends Component {
     return (
       <Container>
         <StatusBar barStyle="light-content" />
-        <Image
+        <ImageBackground
           source={require("../../../assets/bg-signup.png")}
           style={styles.background}
         >
@@ -131,7 +131,7 @@ class ForgotPasswordForm extends Component {
               <Text style={styles.helpBtns}>Back To Login</Text>
             </Button>
           </Footer>
-        </Image>
+        </ImageBackground>
       </Container>
     );
   }

@@ -1,6 +1,7 @@
 // @flow
 import React, { Component } from "react";
-import { Image, Platform, StatusBar } from "react-native";
+import { NavigationActions } from "react-navigation";
+import { Image, ImageBackground, Platform, StatusBar } from "react-native";
 import {
   Container,
   Content,
@@ -80,6 +81,12 @@ class LoginForm extends Component {
   login() {
     if (this.props.valid) {
       this.props.navigation.navigate("Walkthrough");
+      return this.props.navigation.dispatch(
+        NavigationActions.reset({
+          index: 0,
+          actions: [NavigationActions.navigate({ routeName: "Walkthrough" })]
+        })
+      );
     } else {
       Toast.show({
         text: "Enter Valid Username & password!",
@@ -89,13 +96,22 @@ class LoginForm extends Component {
       });
     }
   }
+  skip() {
+    this.props.navigation.navigate("Walkthrough");
+    return this.props.navigation.dispatch(
+      NavigationActions.reset({
+        index: 0,
+        actions: [NavigationActions.navigate({ routeName: "Walkthrough" })]
+      })
+    );
+  }
 
   render() {
     const navigation = this.props.navigation;
     return (
       <Container>
         <StatusBar barStyle="light-content" />
-        <Image source={bg} style={styles.background}>
+        <ImageBackground source={bg} style={styles.background}>
           <Content contentContainerStyle={{ flex: 1 }}>
             <View style={styles.container}>
               <Image source={logo} style={styles.logo} />
@@ -126,7 +142,7 @@ class LoginForm extends Component {
                   <Text
                     style={
                       Platform.OS === "android"
-                        ? { fontSize: 16, textAlign: "center", top: -5 }
+                        ? { fontSize: 16, textAlign: "center" }
                         : { fontSize: 16, fontWeight: "900" }
                     }
                   >
@@ -162,7 +178,7 @@ class LoginForm extends Component {
                     small
                     transparent
                     style={styles.skipBtn}
-                    onPress={() => navigation.navigate("Walkthrough")}
+                    onPress={() => this.skip()}
                   >
                     <Text
                       style={
@@ -179,7 +195,7 @@ class LoginForm extends Component {
               </View>
             </View>
           </Content>
-        </Image>
+        </ImageBackground>
       </Container>
     );
   }

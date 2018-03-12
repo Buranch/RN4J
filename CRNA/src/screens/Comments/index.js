@@ -1,6 +1,6 @@
 // @flow
 import React, { Component } from "react";
-import { Image, View } from "react-native";
+import { ImageBackground, View } from "react-native";
 
 import {
   Container,
@@ -48,7 +48,7 @@ class Comments extends Component {
   render() {
     return (
       <Container>
-        <Image source={bg} style={styles.container}>
+        <ImageBackground source={bg} style={styles.container}>
           <Header style={styles.headerStyle}>
             <Body
               style={{ flexDirection: "row", justifyContent: "space-around" }}
@@ -105,7 +105,7 @@ class Comments extends Component {
               </Item>
             </View>
           </Content>
-        </Image>
+        </ImageBackground>
       </Container>
     );
   }

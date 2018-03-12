@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import {
   Platform,
   Image,
+  ImageBackground,
   TouchableOpacity,
   Dimensions,
   FlatList,
@@ -114,7 +115,7 @@ class Home extends Component {
                       onPress={() => this.props.navigation.navigate("Story")}
                       style={styles.slide}
                     >
-                      <Image
+                      <ImageBackground
                         style={styles.newsPoster}
                         source={require("../../../assets/NewsIcons/1.jpg")}
                       >
@@ -152,7 +153,7 @@ class Home extends Component {
                             </Col>
                           </Grid>
                         </View>
-                      </Image>
+                      </ImageBackground>
                     </TouchableOpacity>
                   </RNView>
                   <RNView>
@@ -161,7 +162,7 @@ class Home extends Component {
                       onPress={() => this.props.navigation.navigate("Story")}
                       style={styles.slide}
                     >
-                      <Image
+                      <ImageBackground
                         style={styles.newsPoster}
                         source={require("../../../assets/NewsIcons/3.jpg")}
                       >
@@ -197,7 +198,7 @@ class Home extends Component {
                             </Col>
                           </Grid>
                         </View>
-                      </Image>
+                      </ImageBackground>
                     </TouchableOpacity>
                   </RNView>
                   <RNView>
@@ -206,7 +207,7 @@ class Home extends Component {
                       onPress={() => this.props.navigation.navigate("Story")}
                       style={styles.slide}
                     >
-                      <Image
+                      <ImageBackground
                         style={styles.newsPoster}
                         source={require("../../../assets/NewsIcons/4.jpg")}
                       >
@@ -243,7 +244,7 @@ class Home extends Component {
                             </Col>
                           </Grid>
                         </View>
-                      </Image>
+                      </ImageBackground>
                     </TouchableOpacity>
                   </RNView>
                 </Carousel>

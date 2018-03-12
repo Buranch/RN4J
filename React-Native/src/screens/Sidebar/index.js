@@ -1,8 +1,8 @@
 // @flow
-import React, { Component } from "react";
-import { Image, TouchableOpacity } from "react-native";
+import React, {Component} from "react";
+import {ImageBackground, TouchableOpacity} from "react-native";
 
-import { NavigationActions } from "react-navigation";
+import {NavigationActions} from "react-navigation";
 import {
   Container,
   Content,
@@ -12,19 +12,19 @@ import {
   Thumbnail,
   View
 } from "native-base";
-import { Grid, Col } from "react-native-easy-grid";
+import {Grid, Col} from "react-native-easy-grid";
 
 import styles from "./style";
 const resetAction = NavigationActions.reset({
   index: 0,
-  actions: [NavigationActions.navigate({ routeName: "Login" })]
+  actions: [NavigationActions.navigate({routeName: "Login"})]
 });
 class SideBar extends Component {
   render() {
     const navigation = this.props.navigation;
     return (
       <Container>
-        <Image
+        <ImageBackground
           source={require("../../../assets/sidebar-transparent.png")}
           style={styles.background}
         >
@@ -131,17 +131,17 @@ class SideBar extends Component {
                       backgroundColor: "transparent"
                     }}
                   >
-                    <Text style={{ fontWeight: "bold", color: "#fff" }}>
+                    <Text style={{fontWeight: "bold", color: "#fff"}}>
                       LOG OUT
                     </Text>
-                    <Text note style={{ color: "#fff" }}>
+                    <Text note style={{color: "#fff"}}>
                       Kumar Sanket
                     </Text>
                   </TouchableOpacity>
                 </Col>
                 <Col>
                   <TouchableOpacity
-                    style={{ alignSelf: "flex-end" }}
+                    style={{alignSelf: "flex-end"}}
                     onPress={() => {
                       navigation.navigate("Profile");
                     }}
@@ -155,7 +155,7 @@ class SideBar extends Component {
               </Grid>
             </View>
           </View>
-        </Image>
+        </ImageBackground>
       </Container>
     );
   }
