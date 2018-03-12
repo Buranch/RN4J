@@ -193,6 +193,13 @@ exports[`renders correctly 1`] = `
             "flexDirection": "row",
             "height": 50,
             "justifyContent": "space-around",
+            "shadowColor": undefined,
+            "shadowOffset": undefined,
+            "shadowOpacity": undefined,
+            "shadowRadius": undefined,
+          },
+          Object {
+            "backgroundColor": "#F8F8F8",
           },
           Object {},
         ]
@@ -402,6 +409,7 @@ exports[`renders correctly 1`] = `
       directionalLockEnabled={true}
       horizontal={true}
       keyboardDismissMode="on-drag"
+      keyboardShouldPersistTaps="handled"
       onMomentumScrollBegin={[Function]}
       onMomentumScrollEnd={[Function]}
       onScroll={[Function]}
@@ -534,12 +542,7 @@ exports[`renders correctly 1`] = `
                           testID={undefined}
                           tvParallaxProperties={undefined}
                         >
-                          <Image
-                            source={
-                              Object {
-                                "testUri": "../../../assets/NewsIcons/9.jpg",
-                              }
-                            }
+                          <View
                             style={
                               Object {
                                 "height": 343.5,
@@ -547,6 +550,29 @@ exports[`renders correctly 1`] = `
                               }
                             }
                           >
+                            <Image
+                              source={
+                                Object {
+                                  "testUri": "../../../assets/NewsIcons/9.jpg",
+                                }
+                              }
+                              style={
+                                Array [
+                                  Object {
+                                    "bottom": 0,
+                                    "left": 0,
+                                    "position": "absolute",
+                                    "right": 0,
+                                    "top": 0,
+                                  },
+                                  Object {
+                                    "height": 343.5,
+                                    "width": 377,
+                                  },
+                                  undefined,
+                                ]
+                              }
+                            />
                             <Text
                               accessible={true}
                               allowFontScaling={true}
@@ -575,7 +601,7 @@ exports[`renders correctly 1`] = `
                             >
                               FASHION
                             </Text>
-                          </Image>
+                          </View>
                         </View>
                       </View>
                       <View
@@ -611,12 +637,7 @@ exports[`renders correctly 1`] = `
                           testID={undefined}
                           tvParallaxProperties={undefined}
                         >
-                          <Image
-                            source={
-                              Object {
-                                "testUri": "../../../assets/NewsIcons/2.jpg",
-                              }
-                            }
+                          <View
                             style={
                               Object {
                                 "height": 343.5,
@@ -624,6 +645,29 @@ exports[`renders correctly 1`] = `
                               }
                             }
                           >
+                            <Image
+                              source={
+                                Object {
+                                  "testUri": "../../../assets/NewsIcons/2.jpg",
+                                }
+                              }
+                              style={
+                                Array [
+                                  Object {
+                                    "bottom": 0,
+                                    "left": 0,
+                                    "position": "absolute",
+                                    "right": 0,
+                                    "top": 0,
+                                  },
+                                  Object {
+                                    "height": 343.5,
+                                    "width": 377,
+                                  },
+                                  undefined,
+                                ]
+                              }
+                            />
                             <Text
                               accessible={true}
                               allowFontScaling={true}
@@ -652,7 +696,7 @@ exports[`renders correctly 1`] = `
                             >
                               SCIENCE
                             </Text>
-                          </Image>
+                          </View>
                         </View>
                       </View>
                     </View>
@@ -697,12 +741,7 @@ exports[`renders correctly 1`] = `
                           testID={undefined}
                           tvParallaxProperties={undefined}
                         >
-                          <Image
-                            source={
-                              Object {
-                                "testUri": "../../../assets/NewsIcons/8.jpg",
-                              }
-                            }
+                          <View
                             style={
                               Object {
                                 "height": 343.5,
@@ -710,6 +749,29 @@ exports[`renders correctly 1`] = `
                               }
                             }
                           >
+                            <Image
+                              source={
+                                Object {
+                                  "testUri": "../../../assets/NewsIcons/8.jpg",
+                                }
+                              }
+                              style={
+                                Array [
+                                  Object {
+                                    "bottom": 0,
+                                    "left": 0,
+                                    "position": "absolute",
+                                    "right": 0,
+                                    "top": 0,
+                                  },
+                                  Object {
+                                    "height": 343.5,
+                                    "width": 377,
+                                  },
+                                  undefined,
+                                ]
+                              }
+                            />
                             <Text
                               accessible={true}
                               allowFontScaling={true}
@@ -738,7 +800,7 @@ exports[`renders correctly 1`] = `
                             >
                               AUTO
                             </Text>
-                          </Image>
+                          </View>
                         </View>
                       </View>
                       <View
@@ -774,12 +836,7 @@ exports[`renders correctly 1`] = `
                           testID={undefined}
                           tvParallaxProperties={undefined}
                         >
-                          <Image
-                            source={
-                              Object {
-                                "testUri": "../../../assets/NewsIcons/7.jpg",
-                              }
-                            }
+                          <View
                             style={
                               Object {
                                 "height": 343.5,
@@ -787,6 +844,29 @@ exports[`renders correctly 1`] = `
                               }
                             }
                           >
+                            <Image
+                              source={
+                                Object {
+                                  "testUri": "../../../assets/NewsIcons/7.jpg",
+                                }
+                              }
+                              style={
+                                Array [
+                                  Object {
+                                    "bottom": 0,
+                                    "left": 0,
+                                    "position": "absolute",
+                                    "right": 0,
+                                    "top": 0,
+                                  },
+                                  Object {
+                                    "height": 343.5,
+                                    "width": 377,
+                                  },
+                                  undefined,
+                                ]
+                              }
+                            />
                             <Text
                               accessible={true}
                               allowFontScaling={true}
@@ -815,7 +895,7 @@ exports[`renders correctly 1`] = `
                             >
                               TECHNOLOGY
                             </Text>
-                          </Image>
+                          </View>
                         </View>
                       </View>
                     </View>
@@ -860,12 +940,7 @@ exports[`renders correctly 1`] = `
                           testID={undefined}
                           tvParallaxProperties={undefined}
                         >
-                          <Image
-                            source={
-                              Object {
-                                "testUri": "../../../assets/NewsIcons/6.jpg",
-                              }
-                            }
+                          <View
                             style={
                               Object {
                                 "height": 343.5,
@@ -873,6 +948,29 @@ exports[`renders correctly 1`] = `
                               }
                             }
                           >
+                            <Image
+                              source={
+                                Object {
+                                  "testUri": "../../../assets/NewsIcons/6.jpg",
+                                }
+                              }
+                              style={
+                                Array [
+                                  Object {
+                                    "bottom": 0,
+                                    "left": 0,
+                                    "position": "absolute",
+                                    "right": 0,
+                                    "top": 0,
+                                  },
+                                  Object {
+                                    "height": 343.5,
+                                    "width": 377,
+                                  },
+                                  undefined,
+                                ]
+                              }
+                            />
                             <Text
                               accessible={true}
                               allowFontScaling={true}
@@ -901,7 +999,7 @@ exports[`renders correctly 1`] = `
                             >
                               FINANCES
                             </Text>
-                          </Image>
+                          </View>
                         </View>
                       </View>
                       <View
@@ -937,12 +1035,7 @@ exports[`renders correctly 1`] = `
                           testID={undefined}
                           tvParallaxProperties={undefined}
                         >
-                          <Image
-                            source={
-                              Object {
-                                "testUri": "../../../assets/NewsIcons/1.jpg",
-                              }
-                            }
+                          <View
                             style={
                               Object {
                                 "height": 343.5,
@@ -950,6 +1043,29 @@ exports[`renders correctly 1`] = `
                               }
                             }
                           >
+                            <Image
+                              source={
+                                Object {
+                                  "testUri": "../../../assets/NewsIcons/1.jpg",
+                                }
+                              }
+                              style={
+                                Array [
+                                  Object {
+                                    "bottom": 0,
+                                    "left": 0,
+                                    "position": "absolute",
+                                    "right": 0,
+                                    "top": 0,
+                                  },
+                                  Object {
+                                    "height": 343.5,
+                                    "width": 377,
+                                  },
+                                  undefined,
+                                ]
+                              }
+                            />
                             <Text
                               accessible={true}
                               allowFontScaling={true}
@@ -978,7 +1094,7 @@ exports[`renders correctly 1`] = `
                             >
                               ENVIRONMENT
                             </Text>
-                          </Image>
+                          </View>
                         </View>
                       </View>
                     </View>
@@ -1023,12 +1139,7 @@ exports[`renders correctly 1`] = `
                           testID={undefined}
                           tvParallaxProperties={undefined}
                         >
-                          <Image
-                            source={
-                              Object {
-                                "testUri": "../../../assets/NewsIcons/11.jpg",
-                              }
-                            }
+                          <View
                             style={
                               Object {
                                 "height": 343.5,
@@ -1036,6 +1147,29 @@ exports[`renders correctly 1`] = `
                               }
                             }
                           >
+                            <Image
+                              source={
+                                Object {
+                                  "testUri": "../../../assets/NewsIcons/11.jpg",
+                                }
+                              }
+                              style={
+                                Array [
+                                  Object {
+                                    "bottom": 0,
+                                    "left": 0,
+                                    "position": "absolute",
+                                    "right": 0,
+                                    "top": 0,
+                                  },
+                                  Object {
+                                    "height": 343.5,
+                                    "width": 377,
+                                  },
+                                  undefined,
+                                ]
+                              }
+                            />
                             <Text
                               accessible={true}
                               allowFontScaling={true}
@@ -1064,7 +1198,7 @@ exports[`renders correctly 1`] = `
                             >
                               SPORTS
                             </Text>
-                          </Image>
+                          </View>
                         </View>
                       </View>
                       <View
@@ -1100,12 +1234,7 @@ exports[`renders correctly 1`] = `
                           testID={undefined}
                           tvParallaxProperties={undefined}
                         >
-                          <Image
-                            source={
-                              Object {
-                                "testUri": "../../../assets/NewsIcons/12.jpg",
-                              }
-                            }
+                          <View
                             style={
                               Object {
                                 "height": 343.5,
@@ -1113,6 +1242,29 @@ exports[`renders correctly 1`] = `
                               }
                             }
                           >
+                            <Image
+                              source={
+                                Object {
+                                  "testUri": "../../../assets/NewsIcons/12.jpg",
+                                }
+                              }
+                              style={
+                                Array [
+                                  Object {
+                                    "bottom": 0,
+                                    "left": 0,
+                                    "position": "absolute",
+                                    "right": 0,
+                                    "top": 0,
+                                  },
+                                  Object {
+                                    "height": 343.5,
+                                    "width": 377,
+                                  },
+                                  undefined,
+                                ]
+                              }
+                            />
                             <Text
                               accessible={true}
                               allowFontScaling={true}
@@ -1141,7 +1293,7 @@ exports[`renders correctly 1`] = `
                             >
                               ART
                             </Text>
-                          </Image>
+                          </View>
                         </View>
                       </View>
                     </View>
@@ -1186,12 +1338,7 @@ exports[`renders correctly 1`] = `
                           testID={undefined}
                           tvParallaxProperties={undefined}
                         >
-                          <Image
-                            source={
-                              Object {
-                                "testUri": "../../../assets/NewsIcons/10.jpg",
-                              }
-                            }
+                          <View
                             style={
                               Object {
                                 "height": 343.5,
@@ -1199,6 +1346,29 @@ exports[`renders correctly 1`] = `
                               }
                             }
                           >
+                            <Image
+                              source={
+                                Object {
+                                  "testUri": "../../../assets/NewsIcons/10.jpg",
+                                }
+                              }
+                              style={
+                                Array [
+                                  Object {
+                                    "bottom": 0,
+                                    "left": 0,
+                                    "position": "absolute",
+                                    "right": 0,
+                                    "top": 0,
+                                  },
+                                  Object {
+                                    "height": 343.5,
+                                    "width": 377,
+                                  },
+                                  undefined,
+                                ]
+                              }
+                            />
                             <Text
                               accessible={true}
                               allowFontScaling={true}
@@ -1227,7 +1397,7 @@ exports[`renders correctly 1`] = `
                             >
                               ANIMATION
                             </Text>
-                          </Image>
+                          </View>
                         </View>
                       </View>
                       <View
@@ -1263,12 +1433,7 @@ exports[`renders correctly 1`] = `
                           testID={undefined}
                           tvParallaxProperties={undefined}
                         >
-                          <Image
-                            source={
-                              Object {
-                                "testUri": "../../../assets/NewsIcons/13.jpg",
-                              }
-                            }
+                          <View
                             style={
                               Object {
                                 "height": 343.5,
@@ -1276,6 +1441,29 @@ exports[`renders correctly 1`] = `
                               }
                             }
                           >
+                            <Image
+                              source={
+                                Object {
+                                  "testUri": "../../../assets/NewsIcons/13.jpg",
+                                }
+                              }
+                              style={
+                                Array [
+                                  Object {
+                                    "bottom": 0,
+                                    "left": 0,
+                                    "position": "absolute",
+                                    "right": 0,
+                                    "top": 0,
+                                  },
+                                  Object {
+                                    "height": 343.5,
+                                    "width": 377,
+                                  },
+                                  undefined,
+                                ]
+                              }
+                            />
                             <Text
                               accessible={true}
                               allowFontScaling={true}
@@ -1304,7 +1492,7 @@ exports[`renders correctly 1`] = `
                             >
                               EDUCATION
                             </Text>
-                          </Image>
+                          </View>
                         </View>
                       </View>
                     </View>

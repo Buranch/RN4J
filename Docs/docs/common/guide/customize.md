@@ -10,7 +10,7 @@ Customizing the App will be a cakewalk for you. That is due to the fact, we prov
 ### Change Components Color
 
 To customize any component of the App is very easy now.
-Follow the [NativeBase ](http://docs.nativebase.io/CUSTOMIZE.html#Customize) procedure to do so.
+Follow the [NativeBase ](https://docs.nativebase.io/Customize.html#Customize) procedure to do so.
 
 ### Change App logo
 
@@ -23,7 +23,7 @@ Flat App comes with its logo at login page. To change logo at login page:
 
 * **CRNA**
 
-  With [CRNA](https://github.com/facebook/react-native) Changing the app icon is much easier than the usual React Native App. You just need to give local path or remote url of an image you want to use as app icon to the [icon](https://docs.expo.io/versions/latest/guides/app-icons.html) attribute in `app.json`.
+  With [CRNA](https://github.com/react-community/create-react-native-app) Changing the app icon is much easier than the usual React Native App. You just need to give local path or remote url of an image you want to use as app icon to the [icon](https://docs.expo.io/versions/latest/guides/app-icons.html) attribute in `app.json`.
 
 * **React Native**
 
@@ -33,7 +33,7 @@ Flat App comes with its logo at login page. To change logo at login page:
 * Visit [MakeAppIcon](https://makeappicon.com/) website
 * Enter the image of your choice to get logo of various dimensions
 * For iOS:
-  * You should upload iOS icons to `/ios/NativeStarterPro/Images.xcassets/AppIcon.appiconset/`
+  * You should upload iOS icons to `/ios/FlatApp/Images.xcassets/AppIcon.appiconset/`
 * For Android:
 
   * You should upload Android icons along with the folders named as:
@@ -62,7 +62,7 @@ Follow below given steps to rename your app.
   * index.js
 
 * The process wipes out the **launchscreen** and **app icon** from your app. Hence you can restore them before moving ahead.
-  * **iOS:** Restore `ios/NativeStarterPro/Images.xcassets`
+  * **iOS:** Restore `ios/FlatApp/Images.xcassets`
   * **Android:** Restore `/android/app/src/main/res`
 * Delete the **iOS** and **android** directories from your project.
 * Run the following commands on your terminal

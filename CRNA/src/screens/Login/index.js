@@ -16,10 +16,8 @@ import {
   Toast
 } from "native-base";
 import {Field, reduxForm} from "redux-form";
-
 import styles from "./styles";
-// import commonColor from "../../theme/variables/commonColor";
-import Home from "../Home";
+
 const bg = require("../../../assets/bg.png");
 const logo = require("../../../assets/logo.png");
 
