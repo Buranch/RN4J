@@ -1,6 +1,6 @@
 // @flow
 import React, { Component } from "react";
-import { Image, TouchableOpacity } from "react-native";
+import { ImageBackground, TouchableOpacity } from "react-native";
 
 import { NavigationActions } from "react-navigation";
 import {
@@ -24,7 +24,7 @@ class SideBar extends Component {
     const navigation = this.props.navigation;
     return (
       <Container>
-        <Image
+        <ImageBackground
           source={require("../../../assets/sidebar-transparent.png")}
           style={styles.background}
         >
@@ -155,7 +155,7 @@ class SideBar extends Component {
               </Grid>
             </View>
           </View>
-        </Image>
+        </ImageBackground>
       </Container>
     );
   }

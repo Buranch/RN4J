@@ -52,6 +52,7 @@ exports[`renders correctly 1`] = `
           accessibilityTraits={undefined}
           accessible={true}
           collapsable={undefined}
+          hasTVPreferredFocus={undefined}
           hitSlop={undefined}
           isTVSelectable={true}
           nativeID={undefined}
@@ -96,7 +97,6 @@ exports[`renders correctly 1`] = `
             accessible={true}
             active={true}
             allowFontScaling={false}
-            disabled={false}
             ellipsizeMode="tail"
             style={
               Array [
@@ -142,7 +142,11 @@ exports[`renders correctly 1`] = `
         virtual={undefined}
       >
         <Image
-          source={1}
+          source={
+            Object {
+              "testUri": "../../../assets/header-logo.png",
+            }
+          }
           style={
             Object {
               "height": 25,
@@ -181,18 +185,24 @@ exports[`renders correctly 1`] = `
   >
     <View
       style={
-        Object {
-          "borderBottomWidth": 0.5,
-          "borderColor": "#a7a6ab",
-          "elevation": 3,
-          "flexDirection": "row",
-          "height": 50,
-          "justifyContent": "space-around",
-          "shadowColor": undefined,
-          "shadowOffset": undefined,
-          "shadowOpacity": undefined,
-          "shadowRadius": undefined,
-        }
+        Array [
+          Object {
+            "borderBottomWidth": 0.5,
+            "borderColor": "#a7a6ab",
+            "elevation": 3,
+            "flexDirection": "row",
+            "height": 50,
+            "justifyContent": "space-around",
+            "shadowColor": undefined,
+            "shadowOffset": undefined,
+            "shadowOpacity": undefined,
+            "shadowRadius": undefined,
+          },
+          Object {
+            "backgroundColor": "#F8F8F8",
+          },
+          Object {},
+        ]
       }
       virtual={undefined}
     >
@@ -202,6 +212,7 @@ exports[`renders correctly 1`] = `
         accessibilityTraits={undefined}
         accessible={true}
         collapsable={undefined}
+        hasTVPreferredFocus={undefined}
         hitSlop={undefined}
         isTVSelectable={true}
         nativeID={undefined}
@@ -237,7 +248,6 @@ exports[`renders correctly 1`] = `
           <Text
             accessible={true}
             allowFontScaling={true}
-            disabled={false}
             ellipsizeMode="tail"
             style={
               Object {
@@ -262,6 +272,7 @@ exports[`renders correctly 1`] = `
         accessibilityTraits={undefined}
         accessible={true}
         collapsable={undefined}
+        hasTVPreferredFocus={undefined}
         hitSlop={undefined}
         isTVSelectable={true}
         nativeID={undefined}
@@ -297,7 +308,6 @@ exports[`renders correctly 1`] = `
           <Text
             accessible={true}
             allowFontScaling={true}
-            disabled={false}
             ellipsizeMode="tail"
             style={
               Object {
@@ -321,6 +331,7 @@ exports[`renders correctly 1`] = `
         accessibilityTraits={undefined}
         accessible={true}
         collapsable={undefined}
+        hasTVPreferredFocus={undefined}
         hitSlop={undefined}
         isTVSelectable={true}
         nativeID={undefined}
@@ -356,7 +367,6 @@ exports[`renders correctly 1`] = `
           <Text
             accessible={true}
             allowFontScaling={true}
-            disabled={false}
             ellipsizeMode="tail"
             style={
               Object {
@@ -399,6 +409,7 @@ exports[`renders correctly 1`] = `
       directionalLockEnabled={true}
       horizontal={true}
       keyboardDismissMode="on-drag"
+      keyboardShouldPersistTaps="handled"
       onMomentumScrollBegin={[Function]}
       onMomentumScrollEnd={[Function]}
       onScroll={[Function]}
@@ -438,6 +449,7 @@ exports[`renders correctly 1`] = `
           >
             <RCTScrollView
               automaticallyAdjustContentInsets={false}
+              contentContainerStyle={undefined}
               contentInset={
                 Object {
                   "bottom": 0,
@@ -447,16 +459,25 @@ exports[`renders correctly 1`] = `
               enableResetScrollToCoords={true}
               extraHeight={75}
               extraScrollHeight={0}
+              getScrollResponder={[Function]}
+              handleOnScroll={[Function]}
               keyboardDismissMode="interactive"
               keyboardOpeningTime={250}
+              keyboardShouldPersistTaps="handled"
+              keyboardSpace={0}
               onScroll={[Function]}
+              resetKeyboardSpace={[Function]}
               resetScrollToCoords={
                 Object {
                   "x": 0,
                   "y": 0,
                 }
               }
-              scrollEventThrottle={0}
+              scrollEventThrottle={1}
+              scrollForExtraHeightOnAndroid={[Function]}
+              scrollToEnd={[Function]}
+              scrollToFocusedInput={[Function]}
+              scrollToPosition={[Function]}
               showsVerticalScrollIndicator={false}
               style={
                 Object {
@@ -464,6 +485,7 @@ exports[`renders correctly 1`] = `
                   "flex": 1,
                 }
               }
+              viewIsInsideTabBar={false}
               virtual={undefined}
             >
               <View>
@@ -501,6 +523,7 @@ exports[`renders correctly 1`] = `
                           accessibilityTraits={undefined}
                           accessible={true}
                           collapsable={undefined}
+                          hasTVPreferredFocus={undefined}
                           hitSlop={undefined}
                           isTVSelectable={true}
                           nativeID={undefined}
@@ -519,8 +542,7 @@ exports[`renders correctly 1`] = `
                           testID={undefined}
                           tvParallaxProperties={undefined}
                         >
-                          <Image
-                            source={1}
+                          <View
                             style={
                               Object {
                                 "height": 343.5,
@@ -528,10 +550,32 @@ exports[`renders correctly 1`] = `
                               }
                             }
                           >
+                            <Image
+                              source={
+                                Object {
+                                  "testUri": "../../../assets/NewsIcons/9.jpg",
+                                }
+                              }
+                              style={
+                                Array [
+                                  Object {
+                                    "bottom": 0,
+                                    "left": 0,
+                                    "position": "absolute",
+                                    "right": 0,
+                                    "top": 0,
+                                  },
+                                  Object {
+                                    "height": 343.5,
+                                    "width": 377,
+                                  },
+                                  undefined,
+                                ]
+                              }
+                            />
                             <Text
                               accessible={true}
                               allowFontScaling={true}
-                              disabled={false}
                               ellipsizeMode="tail"
                               style={
                                 Array [
@@ -557,7 +601,7 @@ exports[`renders correctly 1`] = `
                             >
                               FASHION
                             </Text>
-                          </Image>
+                          </View>
                         </View>
                       </View>
                       <View
@@ -574,6 +618,7 @@ exports[`renders correctly 1`] = `
                           accessibilityTraits={undefined}
                           accessible={true}
                           collapsable={undefined}
+                          hasTVPreferredFocus={undefined}
                           hitSlop={undefined}
                           isTVSelectable={true}
                           nativeID={undefined}
@@ -592,8 +637,7 @@ exports[`renders correctly 1`] = `
                           testID={undefined}
                           tvParallaxProperties={undefined}
                         >
-                          <Image
-                            source={1}
+                          <View
                             style={
                               Object {
                                 "height": 343.5,
@@ -601,10 +645,32 @@ exports[`renders correctly 1`] = `
                               }
                             }
                           >
+                            <Image
+                              source={
+                                Object {
+                                  "testUri": "../../../assets/NewsIcons/2.jpg",
+                                }
+                              }
+                              style={
+                                Array [
+                                  Object {
+                                    "bottom": 0,
+                                    "left": 0,
+                                    "position": "absolute",
+                                    "right": 0,
+                                    "top": 0,
+                                  },
+                                  Object {
+                                    "height": 343.5,
+                                    "width": 377,
+                                  },
+                                  undefined,
+                                ]
+                              }
+                            />
                             <Text
                               accessible={true}
                               allowFontScaling={true}
-                              disabled={false}
                               ellipsizeMode="tail"
                               style={
                                 Array [
@@ -630,7 +696,7 @@ exports[`renders correctly 1`] = `
                             >
                               SCIENCE
                             </Text>
-                          </Image>
+                          </View>
                         </View>
                       </View>
                     </View>
@@ -656,6 +722,7 @@ exports[`renders correctly 1`] = `
                           accessibilityTraits={undefined}
                           accessible={true}
                           collapsable={undefined}
+                          hasTVPreferredFocus={undefined}
                           hitSlop={undefined}
                           isTVSelectable={true}
                           nativeID={undefined}
@@ -674,8 +741,7 @@ exports[`renders correctly 1`] = `
                           testID={undefined}
                           tvParallaxProperties={undefined}
                         >
-                          <Image
-                            source={1}
+                          <View
                             style={
                               Object {
                                 "height": 343.5,
@@ -683,10 +749,32 @@ exports[`renders correctly 1`] = `
                               }
                             }
                           >
+                            <Image
+                              source={
+                                Object {
+                                  "testUri": "../../../assets/NewsIcons/8.jpg",
+                                }
+                              }
+                              style={
+                                Array [
+                                  Object {
+                                    "bottom": 0,
+                                    "left": 0,
+                                    "position": "absolute",
+                                    "right": 0,
+                                    "top": 0,
+                                  },
+                                  Object {
+                                    "height": 343.5,
+                                    "width": 377,
+                                  },
+                                  undefined,
+                                ]
+                              }
+                            />
                             <Text
                               accessible={true}
                               allowFontScaling={true}
-                              disabled={false}
                               ellipsizeMode="tail"
                               style={
                                 Array [
@@ -712,7 +800,7 @@ exports[`renders correctly 1`] = `
                             >
                               AUTO
                             </Text>
-                          </Image>
+                          </View>
                         </View>
                       </View>
                       <View
@@ -729,6 +817,7 @@ exports[`renders correctly 1`] = `
                           accessibilityTraits={undefined}
                           accessible={true}
                           collapsable={undefined}
+                          hasTVPreferredFocus={undefined}
                           hitSlop={undefined}
                           isTVSelectable={true}
                           nativeID={undefined}
@@ -747,8 +836,7 @@ exports[`renders correctly 1`] = `
                           testID={undefined}
                           tvParallaxProperties={undefined}
                         >
-                          <Image
-                            source={1}
+                          <View
                             style={
                               Object {
                                 "height": 343.5,
@@ -756,10 +844,32 @@ exports[`renders correctly 1`] = `
                               }
                             }
                           >
+                            <Image
+                              source={
+                                Object {
+                                  "testUri": "../../../assets/NewsIcons/7.jpg",
+                                }
+                              }
+                              style={
+                                Array [
+                                  Object {
+                                    "bottom": 0,
+                                    "left": 0,
+                                    "position": "absolute",
+                                    "right": 0,
+                                    "top": 0,
+                                  },
+                                  Object {
+                                    "height": 343.5,
+                                    "width": 377,
+                                  },
+                                  undefined,
+                                ]
+                              }
+                            />
                             <Text
                               accessible={true}
                               allowFontScaling={true}
-                              disabled={false}
                               ellipsizeMode="tail"
                               style={
                                 Array [
@@ -785,7 +895,7 @@ exports[`renders correctly 1`] = `
                             >
                               TECHNOLOGY
                             </Text>
-                          </Image>
+                          </View>
                         </View>
                       </View>
                     </View>
@@ -811,6 +921,7 @@ exports[`renders correctly 1`] = `
                           accessibilityTraits={undefined}
                           accessible={true}
                           collapsable={undefined}
+                          hasTVPreferredFocus={undefined}
                           hitSlop={undefined}
                           isTVSelectable={true}
                           nativeID={undefined}
@@ -829,8 +940,7 @@ exports[`renders correctly 1`] = `
                           testID={undefined}
                           tvParallaxProperties={undefined}
                         >
-                          <Image
-                            source={1}
+                          <View
                             style={
                               Object {
                                 "height": 343.5,
@@ -838,10 +948,32 @@ exports[`renders correctly 1`] = `
                               }
                             }
                           >
+                            <Image
+                              source={
+                                Object {
+                                  "testUri": "../../../assets/NewsIcons/6.jpg",
+                                }
+                              }
+                              style={
+                                Array [
+                                  Object {
+                                    "bottom": 0,
+                                    "left": 0,
+                                    "position": "absolute",
+                                    "right": 0,
+                                    "top": 0,
+                                  },
+                                  Object {
+                                    "height": 343.5,
+                                    "width": 377,
+                                  },
+                                  undefined,
+                                ]
+                              }
+                            />
                             <Text
                               accessible={true}
                               allowFontScaling={true}
-                              disabled={false}
                               ellipsizeMode="tail"
                               style={
                                 Array [
@@ -867,7 +999,7 @@ exports[`renders correctly 1`] = `
                             >
                               FINANCES
                             </Text>
-                          </Image>
+                          </View>
                         </View>
                       </View>
                       <View
@@ -884,6 +1016,7 @@ exports[`renders correctly 1`] = `
                           accessibilityTraits={undefined}
                           accessible={true}
                           collapsable={undefined}
+                          hasTVPreferredFocus={undefined}
                           hitSlop={undefined}
                           isTVSelectable={true}
                           nativeID={undefined}
@@ -902,8 +1035,7 @@ exports[`renders correctly 1`] = `
                           testID={undefined}
                           tvParallaxProperties={undefined}
                         >
-                          <Image
-                            source={1}
+                          <View
                             style={
                               Object {
                                 "height": 343.5,
@@ -911,10 +1043,32 @@ exports[`renders correctly 1`] = `
                               }
                             }
                           >
+                            <Image
+                              source={
+                                Object {
+                                  "testUri": "../../../assets/NewsIcons/1.jpg",
+                                }
+                              }
+                              style={
+                                Array [
+                                  Object {
+                                    "bottom": 0,
+                                    "left": 0,
+                                    "position": "absolute",
+                                    "right": 0,
+                                    "top": 0,
+                                  },
+                                  Object {
+                                    "height": 343.5,
+                                    "width": 377,
+                                  },
+                                  undefined,
+                                ]
+                              }
+                            />
                             <Text
                               accessible={true}
                               allowFontScaling={true}
-                              disabled={false}
                               ellipsizeMode="tail"
                               style={
                                 Array [
@@ -940,7 +1094,7 @@ exports[`renders correctly 1`] = `
                             >
                               ENVIRONMENT
                             </Text>
-                          </Image>
+                          </View>
                         </View>
                       </View>
                     </View>
@@ -966,6 +1120,7 @@ exports[`renders correctly 1`] = `
                           accessibilityTraits={undefined}
                           accessible={true}
                           collapsable={undefined}
+                          hasTVPreferredFocus={undefined}
                           hitSlop={undefined}
                           isTVSelectable={true}
                           nativeID={undefined}
@@ -984,8 +1139,7 @@ exports[`renders correctly 1`] = `
                           testID={undefined}
                           tvParallaxProperties={undefined}
                         >
-                          <Image
-                            source={1}
+                          <View
                             style={
                               Object {
                                 "height": 343.5,
@@ -993,10 +1147,32 @@ exports[`renders correctly 1`] = `
                               }
                             }
                           >
+                            <Image
+                              source={
+                                Object {
+                                  "testUri": "../../../assets/NewsIcons/11.jpg",
+                                }
+                              }
+                              style={
+                                Array [
+                                  Object {
+                                    "bottom": 0,
+                                    "left": 0,
+                                    "position": "absolute",
+                                    "right": 0,
+                                    "top": 0,
+                                  },
+                                  Object {
+                                    "height": 343.5,
+                                    "width": 377,
+                                  },
+                                  undefined,
+                                ]
+                              }
+                            />
                             <Text
                               accessible={true}
                               allowFontScaling={true}
-                              disabled={false}
                               ellipsizeMode="tail"
                               style={
                                 Array [
@@ -1022,7 +1198,7 @@ exports[`renders correctly 1`] = `
                             >
                               SPORTS
                             </Text>
-                          </Image>
+                          </View>
                         </View>
                       </View>
                       <View
@@ -1039,6 +1215,7 @@ exports[`renders correctly 1`] = `
                           accessibilityTraits={undefined}
                           accessible={true}
                           collapsable={undefined}
+                          hasTVPreferredFocus={undefined}
                           hitSlop={undefined}
                           isTVSelectable={true}
                           nativeID={undefined}
@@ -1057,8 +1234,7 @@ exports[`renders correctly 1`] = `
                           testID={undefined}
                           tvParallaxProperties={undefined}
                         >
-                          <Image
-                            source={1}
+                          <View
                             style={
                               Object {
                                 "height": 343.5,
@@ -1066,10 +1242,32 @@ exports[`renders correctly 1`] = `
                               }
                             }
                           >
+                            <Image
+                              source={
+                                Object {
+                                  "testUri": "../../../assets/NewsIcons/12.jpg",
+                                }
+                              }
+                              style={
+                                Array [
+                                  Object {
+                                    "bottom": 0,
+                                    "left": 0,
+                                    "position": "absolute",
+                                    "right": 0,
+                                    "top": 0,
+                                  },
+                                  Object {
+                                    "height": 343.5,
+                                    "width": 377,
+                                  },
+                                  undefined,
+                                ]
+                              }
+                            />
                             <Text
                               accessible={true}
                               allowFontScaling={true}
-                              disabled={false}
                               ellipsizeMode="tail"
                               style={
                                 Array [
@@ -1095,7 +1293,7 @@ exports[`renders correctly 1`] = `
                             >
                               ART
                             </Text>
-                          </Image>
+                          </View>
                         </View>
                       </View>
                     </View>
@@ -1121,6 +1319,7 @@ exports[`renders correctly 1`] = `
                           accessibilityTraits={undefined}
                           accessible={true}
                           collapsable={undefined}
+                          hasTVPreferredFocus={undefined}
                           hitSlop={undefined}
                           isTVSelectable={true}
                           nativeID={undefined}
@@ -1139,8 +1338,7 @@ exports[`renders correctly 1`] = `
                           testID={undefined}
                           tvParallaxProperties={undefined}
                         >
-                          <Image
-                            source={1}
+                          <View
                             style={
                               Object {
                                 "height": 343.5,
@@ -1148,10 +1346,32 @@ exports[`renders correctly 1`] = `
                               }
                             }
                           >
+                            <Image
+                              source={
+                                Object {
+                                  "testUri": "../../../assets/NewsIcons/10.jpg",
+                                }
+                              }
+                              style={
+                                Array [
+                                  Object {
+                                    "bottom": 0,
+                                    "left": 0,
+                                    "position": "absolute",
+                                    "right": 0,
+                                    "top": 0,
+                                  },
+                                  Object {
+                                    "height": 343.5,
+                                    "width": 377,
+                                  },
+                                  undefined,
+                                ]
+                              }
+                            />
                             <Text
                               accessible={true}
                               allowFontScaling={true}
-                              disabled={false}
                               ellipsizeMode="tail"
                               style={
                                 Array [
@@ -1177,7 +1397,7 @@ exports[`renders correctly 1`] = `
                             >
                               ANIMATION
                             </Text>
-                          </Image>
+                          </View>
                         </View>
                       </View>
                       <View
@@ -1194,6 +1414,7 @@ exports[`renders correctly 1`] = `
                           accessibilityTraits={undefined}
                           accessible={true}
                           collapsable={undefined}
+                          hasTVPreferredFocus={undefined}
                           hitSlop={undefined}
                           isTVSelectable={true}
                           nativeID={undefined}
@@ -1212,8 +1433,7 @@ exports[`renders correctly 1`] = `
                           testID={undefined}
                           tvParallaxProperties={undefined}
                         >
-                          <Image
-                            source={1}
+                          <View
                             style={
                               Object {
                                 "height": 343.5,
@@ -1221,10 +1441,32 @@ exports[`renders correctly 1`] = `
                               }
                             }
                           >
+                            <Image
+                              source={
+                                Object {
+                                  "testUri": "../../../assets/NewsIcons/13.jpg",
+                                }
+                              }
+                              style={
+                                Array [
+                                  Object {
+                                    "bottom": 0,
+                                    "left": 0,
+                                    "position": "absolute",
+                                    "right": 0,
+                                    "top": 0,
+                                  },
+                                  Object {
+                                    "height": 343.5,
+                                    "width": 377,
+                                  },
+                                  undefined,
+                                ]
+                              }
+                            />
                             <Text
                               accessible={true}
                               allowFontScaling={true}
-                              disabled={false}
                               ellipsizeMode="tail"
                               style={
                                 Array [
@@ -1250,7 +1492,7 @@ exports[`renders correctly 1`] = `
                             >
                               EDUCATION
                             </Text>
-                          </Image>
+                          </View>
                         </View>
                       </View>
                     </View>

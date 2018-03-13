@@ -1,6 +1,6 @@
 const React = require("react-native");
 
-const { Dimensions, Platform } = React;
+const {Dimensions, Platform} = React;
 
 const primary = require("../../theme/variables/commonColor").brandPrimary;
 const deviceHeight = Dimensions.get("window").height;
@@ -137,7 +137,7 @@ export default {
   headerTextIcon: {
     fontSize: 28,
     paddingTop: 10,
-    marginTop: Platform.OS === "android" ? -10 : 0
+    marginTop: Platform.OS === "android" ? 7 : 0
   },
   swiperDot: {
     backgroundColor: "rgba(0,0,0,.8)",

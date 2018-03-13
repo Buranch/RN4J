@@ -1,6 +1,6 @@
 // @flow
-import React, { Component } from "react";
-import { Image, TouchableOpacity, ListView } from "react-native";
+import React, {Component} from "react";
+import {Image, ImageBackground, TouchableOpacity, ListView} from "react-native";
 
 import {
   Container,
@@ -13,7 +13,7 @@ import {
   Button,
   Icon
 } from "native-base";
-import { Grid, Col } from "react-native-easy-grid";
+import {Grid, Col} from "react-native-easy-grid";
 import CustomHeader from "../../components/CustomHeader";
 
 import styles from "./styles";
@@ -30,7 +30,7 @@ class Profile extends Component {
   ds: Object;
   constructor(props: Props) {
     super(props);
-    this.ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
+    this.ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
     this.state = {
       listViewData: datas
     };
@@ -40,20 +40,20 @@ class Profile extends Component {
     rowMap[`${secId}${rowId}`].props.closeRow();
     const newData = [...this.state.listViewData];
     newData.splice(rowId, 1);
-    this.setState({ listViewData: newData });
+    this.setState({listViewData: newData});
   }
   render() {
     const navigation = this.props.navigation;
     return (
       <Container>
-        <Image
+        <ImageBackground
           source={require("../../../assets/bg-transparent.png")}
           style={styles.container}
         >
           <CustomHeader hasTabs navigation={navigation} />
 
           <View style={styles.profileInfoContainer}>
-            <View style={{ alignSelf: "center" }}>
+            <View style={{alignSelf: "center"}}>
               <Thumbnail
                 source={require("../../../assets/Contacts/sanket.png")}
                 style={styles.profilePic}
@@ -68,7 +68,7 @@ class Profile extends Component {
           </View>
           <Content
             showsVerticalScrollIndicator={false}
-            style={{ backgroundColor: "#fff" }}
+            style={{backgroundColor: "#fff"}}
           >
             <View style={styles.linkTabs}>
               <Grid>
@@ -139,7 +139,7 @@ class Profile extends Component {
                           <Text numberOfLines={2} style={styles.newsHeader}>
                             {data.headline}
                           </Text>
-                          <Grid style={{ marginTop: 25 }}>
+                          <Grid style={{marginTop: 25}}>
                             <Col>
                               <TouchableOpacity>
                                 <Text style={styles.newsLink}>
@@ -160,12 +160,12 @@ class Profile extends Component {
                     renderLeftHiddenRow={data =>
                       <Button
                         full
-                        style={([styles.swipeBtn], { backgroundColor: "#CCC" })}
+                        style={([styles.swipeBtn], {backgroundColor: "#CCC"})}
                       >
                         <Icon
                           active
                           name="information-circle"
-                          style={{ fontSize: 35 }}
+                          style={{fontSize: 35}}
                         />
                       </Button>}
                     renderRightHiddenRow={(data, secId, rowId, rowMap) =>
@@ -175,14 +175,14 @@ class Profile extends Component {
                         onPress={_ => this.deleteRow(secId, rowId, rowMap)}
                         style={styles.swipeBtn}
                       >
-                        <Icon active name="trash" style={{ fontSize: 35 }} />
+                        <Icon active name="trash" style={{fontSize: 35}} />
                       </Button>}
                     leftOpenValue={100}
                     rightOpenValue={-100}
                   />
                 </View>}
           </Content>
-        </Image>
+        </ImageBackground>
       </Container>
     );
   }

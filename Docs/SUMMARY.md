@@ -1,12 +1,12 @@
 #Summary
 
 * [Introduction](README.md)
-* [What's new in v8.1.0?](./docs/react-native-flat-app-theme/whats-new-in-v8.1.0.md)
+* [What's new in v8.2.0?](./docs/react-native-flat-app-theme/whats-new-in-v8.2.0.md)
 * [Technologies](./docs/common/technologies.md)
 * [Installation](./docs/react-native-flat-app-theme/installation/ReadMe.md)
-  *	[Package Contents](./docs/react-native-flat-app-theme/installation/package-contents.md)
-  *	[React Native App](./docs/react-native-flat-app-theme/installation/react-native-app.md)
-  *	[CRNA App](./docs/react-native-flat-app-theme/installation/crna-app.md)
+  * [Package Contents](./docs/react-native-flat-app-theme/installation/package-contents.md)
+  * [React Native App](./docs/react-native-flat-app-theme/installation/react-native-app.md)
+  * [CRNA App](./docs/react-native-flat-app-theme/installation/crna-app.md)
 * [Guide](./docs/common/guide.md)
   * [Customize](./docs/common/guide/customize.md)
 * [Packages](./docs/react-native-flat-app-theme/packages.md)

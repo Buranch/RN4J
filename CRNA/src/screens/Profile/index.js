@@ -1,6 +1,6 @@
 // @flow
 import React, { Component } from "react";
-import { Image, TouchableOpacity, ListView } from "react-native";
+import { Image,ImageBackground, TouchableOpacity, ListView } from "react-native";
 
 import {
   Container,
@@ -46,7 +46,7 @@ class Profile extends Component {
     const navigation = this.props.navigation;
     return (
       <Container>
-        <Image
+        <ImageBackground
           source={require("../../../assets/bg-transparent.png")}
           style={styles.container}
         >
@@ -182,7 +182,7 @@ class Profile extends Component {
                   />
                 </View>}
           </Content>
-        </Image>
+        </ImageBackground>
       </Container>
     );
   }

@@ -1,6 +1,6 @@
 // @flow
-import React, { Component } from "react";
-import { Image, StatusBar } from "react-native";
+import React, {Component} from "react";
+import {ImageBackground, StatusBar} from "react-native";
 import {
   Container,
   Content,
@@ -15,7 +15,7 @@ import {
   Right,
   Footer
 } from "native-base";
-import { Field, reduxForm } from "redux-form";
+import {Field, reduxForm} from "redux-form";
 
 import styles from "./styles";
 import commonColor from "../../theme/variables/commonColor";
@@ -39,7 +39,7 @@ const alphaNumeric = value =>
 
 class SignUpForm extends Component {
   textInput: any;
-  renderInput({ input, label, type, meta: { touched, error, warning } }) {
+  renderInput({input, label, type, meta: {touched, error, warning}}) {
     return (
       <View>
         <Item error={error && touched} rounded style={styles.inputGrp}>
@@ -50,7 +50,7 @@ class SignUpForm extends Component {
                 ? "person"
                 : input.name === "email" ? "mail" : "unlock"
             }
-            style={{ color: "#fff" }}
+            style={{color: "#fff"}}
           />
           <Input
             ref={c => (this.textInput = c)}
@@ -89,7 +89,7 @@ class SignUpForm extends Component {
         text: "All the fields are compulsory!",
         duration: 2500,
         position: "top",
-        textStyle: { textAlign: "center" }
+        textStyle: {textAlign: "center"}
       });
     }
   }
@@ -101,7 +101,7 @@ class SignUpForm extends Component {
           backgroundColor={commonColor.statusBarColor}
           barStyle="light-content"
         />
-        <Image
+        <ImageBackground
           source={require("../../../assets/bg-signup.png")}
           style={styles.background}
         >
@@ -135,7 +135,7 @@ class SignUpForm extends Component {
                 onPress={() => this.signUp()}
                 style={styles.signupBtn}
               >
-                <Text style={{ color: "#FFF" }}>Continue</Text>
+                <Text style={{color: "#FFF"}}>Continue</Text>
               </Button>
             </View>
           </Content>
@@ -145,12 +145,12 @@ class SignUpForm extends Component {
               paddingRight: 20
             }}
           >
-            <Left style={{ flex: 2 }}>
+            <Left style={{flex: 2}}>
               <Button small transparent>
                 <Text style={styles.helpBtns}>Terms & Conditions</Text>
               </Button>
             </Left>
-            <Right style={{ flex: 1 }}>
+            <Right style={{flex: 1}}>
               <Button
                 small
                 transparent
@@ -160,7 +160,7 @@ class SignUpForm extends Component {
               </Button>
             </Right>
           </Footer>
-        </Image>
+        </ImageBackground>
       </Container>
     );
   }
