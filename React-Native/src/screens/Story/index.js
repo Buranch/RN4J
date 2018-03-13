@@ -56,6 +56,9 @@ class Story extends Component {
   }
 
   render() {
+    let d = Dimensions.get("window");
+    const { height, width } = d;
+
     return (
       <Container>
         <Header
@@ -65,7 +68,14 @@ class Story extends Component {
           ]}
         >
           <Body
-            style={{ flexDirection: "row", justifyContent: "space-around" }}
+            style={{
+              flexDirection: "row",
+              justifyContent: "space-around",
+              marginTop:
+                Platform.OS === "ios" && (height === 812 || width === 812)
+                  ? 20
+                  : 0
+            }}
           >
             <Button transparent onPress={() => this.props.navigation.goBack()}>
               <Icon active name="arrow-back" style={styles.headerIcons} />
