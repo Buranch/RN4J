@@ -53,8 +53,8 @@ You just need to rename [name](https://docs.expo.io/versions/latest/guides/confi
 
 * **React Native**
 
-Renaming any [React Native](https://github.com/facebook/react-native) app is strenous. But Flat App proves its flexibility for this approach.
-Follow below given steps to rename your app.
+  Renaming any [React Native](https://github.com/facebook/react-native) app is strenous. But Flat App proves its flexibility for this approach.
+  Follow below given steps to rename your app.
 
     * Rename the app name in following files.
     
