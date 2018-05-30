@@ -193,10 +193,6 @@ exports[`renders correctly 1`] = `
             "flexDirection": "row",
             "height": 50,
             "justifyContent": "space-around",
-            "shadowColor": undefined,
-            "shadowOffset": undefined,
-            "shadowOpacity": undefined,
-            "shadowRadius": undefined,
           },
           Object {
             "backgroundColor": "#F8F8F8",
