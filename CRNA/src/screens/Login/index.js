@@ -18,7 +18,7 @@ import {
 import {Field, reduxForm} from "redux-form";
 import styles from "./styles";
 
-const bg = require("../../../assets/bg.png");
+const bg = require("../../../assets/bg2.png");
 const logo = require("../../../assets/logo.png");
 
 const required = value => (value ? undefined : "Required");
@@ -130,7 +130,7 @@ class LoginForm extends Component {
 
                 <Button
                   rounded
-                  primary
+                  // primary
                   block
                   large
                   style={styles.loginBtn}
@@ -187,7 +187,7 @@ class LoginForm extends Component {
                         )
                       }
                     >
-                      Skip
+                      Skipp
                     </Text>
                   </Button>
                 </View>
