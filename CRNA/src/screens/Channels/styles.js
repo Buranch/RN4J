@@ -1,5 +1,8 @@
 const React = require("react-native");
-const { Dimensions, Platform } = React;
+const {
+  Dimensions,
+  Platform
+} = React;
 
 const primary = require("../../theme/variables/commonColor").brandPrimary;
 const deviceHeight = Dimensions.get("window").height;
@@ -44,5 +47,29 @@ export default {
     fontWeight: "900",
     marginLeft: 20,
     marginTop: deviceHeight / 4 - 20
+  },
+  infoDiv: {
+    backgroundColor: "#c6fccb87"
+  },
+  infoDivText: {
+    padding: 20,
+    fontWeight: "600",
+    color: primary
+  },
+  cols: {
+    paddingLeft: 15
+  },
+  label: {
+    color: primary,
+    padding: 2,
+    paddingBottom: 0,
+    paddingTop: 10
+  },
+  inputIcon: {
+    color: "#7cb97f",
+    fontSize: 15
+  },
+  input: {
+    color: primary
   }
 };
