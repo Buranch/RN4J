@@ -18,6 +18,7 @@ import Timeline from "./screens/Timeline";
 import Feedback from "./screens/Feedback/";
 import Profile from "./screens/Profile/";
 import Settings from "./screens/Settings";
+import CompanyChoose from "./screens/CompanyChoose";
 
 const Drawer = DrawerNavigator(
   {
@@ -28,16 +29,20 @@ const Drawer = DrawerNavigator(
     Timeline: { screen: Timeline },
     Feedback: { screen: Feedback },
     Profile: { screen: Profile },
-    Settings: { screen: Settings }
+    Settings: { screen: Settings },
+    CompanyChoose: { screen: CompanyChoose}
   },
   {
-    initialRouteName: "Home",
+    // initialRouteName: "Home",
+    initialRouteName: "CompanyChoose",
+
     contentComponent: props => <Sidebar {...props} />
   }
 );
 
 const App = StackNavigator(
   {
+    CompanyChoose: { screen: CompanyChoose},
     Login: { screen: Login },
     SignUp: { screen: SignUp },
     ForgotPassword: { screen: ForgotPassword },
@@ -49,7 +54,8 @@ const App = StackNavigator(
   },
   {
     index: 0,
-    initialRouteName: "Login",
+    // initialRouteName: "Login",
+    initialRouteName: "CompanyChoose",
     headerMode: "none"
   }
 );

@@ -18,10 +18,10 @@
     "android": {
       "package": "io.market.nativebase.geekyants.flatappui"
     },
-    "androidStatusBarColor": "#01cca1",
+    "androidStatusBarColor": "#2572b5",
     "androidStatusBar": {
       "barStyle": "dark-content",
-      "backgroundColor": "#01cca1"
+      "backgroundColor": "#2572b5"
     }
   }
 }

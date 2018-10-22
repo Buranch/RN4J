@@ -14,6 +14,8 @@ import {
   Left,
   Right,
   Body,
+  List,
+  ListItem,
   Toast
 } from "native-base";
 import {Field, reduxForm} from "redux-form";
@@ -40,7 +42,7 @@ const alphaNumeric = value =>
     : undefined;
 
 declare type Any = any;
-class LoginForm extends Component {
+class CompanyChooseForm extends Component {
   textInput: Any;
 
   renderInput({input, label, type, meta: {touched, error, warning}}) {
@@ -108,99 +110,36 @@ class LoginForm extends Component {
   render() {
     const navigation = this.props.navigation;
     return (
-      <Container>
-        <StatusBar barStyle="light-content" />
-        <ImageBackground source={bg} style={styles.background}>
-          <Content contentContainerStyle={{flex: 1}}>
+      <Container style={{backgroundColor: "#0f62aa"}}>
+        <Content contentContainerStyle={{flex: 0}}>
             <View style={styles.container}>
               <Image source={logo} style={styles.logo} />
             </View>
-            <View style={styles.container}>
-              <View style={styles.form}>
-                <Field
-                  name="email"
-                  component={this.renderInput}
-                  type="email"
-                  validate={[email, required]}
-                />
-                <Field
-                  name="password"
-                  component={this.renderInput}
-                  type="password"
-                  validate={[alphaNumeric, minLength8, maxLength15, required]}
-                />
-
-                <Button
-                  rounded
-                  // primary
-                  block
-                  large
-                  style={styles.loginBtn}
-                  onPress={() => this.login()}
-                >
-                  <Text
-                    style={
-                      Platform.OS === "android"
-                        ? {fontSize: 16, textAlign: "center"}
-                        : {fontSize: 16, fontWeight: "900"}
-                    }
-                  >
-                    Login
-                  </Text>
-                </Button>
-                <View style={styles.otherLinksContainer}>
-                  <Body>
-                    <Button
-                      small
-                      transparent
-                      style={{alignSelf: "center"}}
-                      onPress={() => navigation.navigate("Drawer")}
-                    >
-                      <Text style={styles.helpBtns}>Calculate Payment without Login</Text>
-                    </Button>
-                  </Body>
-                  {/* <Right>
-                    <Button
-                      small
-                      transparent
-                      style={{alignSelf: "flex-end"}}
-                      onPress={() => navigation.navigate("ForgotPassword")}
-                    >
-                      <Text style={styles.helpBtns}>Forgot Password</Text>
-                    </Button>
-                  </Right> */}
-                </View>
-                {/* <View style={{flex: 1, alignSelf: "flex-end"}}>
-                  <Button
-                    light
-                    small
-                    transparent
-                    style={styles.skipBtn}
-                    onPress={() => {
-                      this.props.navigation.navigate("Drawer");
-                    }}
-                  >
-                    <Text
-                      style={
-                        (
-                          [styles.helpBtns],
-                          {top: Platform.OS === "ios" ? null : 0}
-                        )
-                      }
-                    >
-                      Calculate payment without login
-                    </Text>
-                  </Button>
-                </View> */}
-              </View>
+            <View>
+                <Text style={styles.pleaseChooseText}>Please choose which company to distribute</Text>
             </View>
-          </Content>
-        </ImageBackground>
+            <View style={{marginTop: 40, flex: 1, alignItems: "center"}}>
+                <List style={{flex: 1, alignItems: "center", backgroundColor: "white", width: 310, 
+                      shadowColor: '#000',
+                    shadowOffset: { width: 0, height: 5 },
+                    shadowOpacity: 0.8,
+                    shadowRadius: 5,
+                    
+                    }}>
+                    <ListItem>
+                    <Text style={styles.listText}>Company One</Text>
+                    </ListItem>
+                    <ListItem>
+                    <Text style={styles.listText}>Company Two</Text>
+                    </ListItem>
+                </List>
+            </View>
+        </Content>
       </Container>
     );
   }
 }
-const Login = reduxForm({
-  form: "login"
-})(LoginForm);
-export default Login;
+const CompanyChoose = reduxForm({
+  form: "company_choose"
+})(CompanyChooseForm);
+export default CompanyChoose;

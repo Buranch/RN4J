@@ -3,6 +3,7 @@ const { Dimensions, Platform } = React;
 const commonColor = require("../../theme/variables/commonColor");
 
 const deviceHeight = Dimensions.get("window").height;
+const deviceWidth = Dimensions.get("window").width;
 
 export default {
   background: {
@@ -18,9 +19,11 @@ export default {
   },
   logo: {
     flex: 1,
-    resizeMode: "contain",
+    resizeMode: "center",
     height: deviceHeight / 4,
-    alignSelf: "center"
+    // width: 150,
+    alignSelf: "center",
+    padding: 100,
   },
   form: {
     flex: 1,
@@ -47,7 +50,7 @@ export default {
   loginBtn: {
     marginTop: 7,
     height: 50,
-    backgroundColor: "#1563a1"
+    backgroundColor: "#087f14"
   },
   otherLinksContainer: {
     paddingTop: deviceHeight < 600 ? 5 : Platform.OS === "android" ? 10 : 15,
@@ -57,7 +60,7 @@ export default {
     opacity: 0.9,
     fontWeight: "bold",
     color: "#fff",
-    fontSize: Platform.OS === "android" ? 12 : 12
+    fontSize: Platform.OS === "android" ? 15 : 15
   },
   inputGrp: {
     flexDirection: "row",
