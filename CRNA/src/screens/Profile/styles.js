@@ -12,7 +12,8 @@ export default {
   },
   profileInfoContainer: {
     backgroundColor: primary,
-    paddingTop: 10
+    paddingTop: 10,
+    paddingBottom: 20
   },
   profileUser: {
     alignSelf: "center",

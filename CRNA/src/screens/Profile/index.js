@@ -1,6 +1,6 @@
 // @flow
 import React, { Component } from "react";
-import { Image,ImageBackground, TouchableOpacity, ListView } from "react-native";
+import { Image,ImageBackground,Switch, TouchableOpacity, ListView } from "react-native";
 
 import {
   Container,
@@ -10,6 +10,9 @@ import {
   View,
   List,
   ListItem,
+  Header,
+  Left,
+  Right,
   Button,
   Icon
 } from "native-base";
@@ -50,8 +53,15 @@ class Profile extends Component {
           source={require("../../../assets/bg-transparent.png")}
           style={styles.container}
         >
-          <CustomHeader hasTabs navigation={navigation} />
-
+          <Header hasTabs={this.props.hasTabs}>
+            <Left>
+              <Button transparent onPress={() => navigation.navigate("DrawerOpen")}>
+                <Icon active name="menu" />
+              <Text style={{padding: 10, paddingTop: 15, fontWeight: "bold"}}>Profile</Text>
+              </Button>
+            </Left>
+            <Right />
+          </Header>
           <View style={styles.profileInfoContainer}>
             <View style={{ alignSelf: "center" }}>
               <Thumbnail
@@ -60,9 +70,14 @@ class Profile extends Component {
               />
             </View>
             <View style={styles.profileInfo}>
-              <Text style={styles.profileUser}>Kumar Sanket</Text>
+              <Text style={styles.profileUser}>Buranch Mikey</Text>
               <Text note style={styles.profileUserInfo}>
-                CEO, GeekyAnts
+                buranchmikey@gmail.com
+              </Text>
+            </View>
+            <View>
+              <Text style={{textAlign: "center", fontSize: 25, fontWeight: "bold"}}>
+                Company Name
               </Text>
             </View>
           </View>
@@ -70,117 +85,13 @@ class Profile extends Component {
             showsVerticalScrollIndicator={false}
             style={{ backgroundColor: "#fff" }}
           >
-            <View style={styles.linkTabs}>
-              <Grid>
-                <Col>
-                  <View style={styles.linkTabs_header}>
-                    <Text style={styles.linkTabs_tabCounts}>13</Text>
-                    <Text note style={styles.linkTabs_tabName}>
-                      Comments
-                    </Text>
-                  </View>
-                </Col>
-                <Col>
-                  <View style={styles.linkTabs_header}>
-                    <Text style={styles.linkTabs_tabCounts}>12</Text>
-                    <Text note style={styles.linkTabs_tabName}>
-                      Channels
-                    </Text>
-                  </View>
-                </Col>
-                <Col>
-                  <View style={styles.linkTabs_header}>
-                    <Text style={styles.linkTabs_tabCounts}>52</Text>
-                    <Text note style={styles.linkTabs_tabName}>
-                      Bookmarks
-                    </Text>
-                  </View>
-                </Col>
-              </Grid>
+            <View style={{alignItems: "center", marginTop: 20, paddingLeft: 20}}>
+              <Button style={{backgroundColor:"#fff"}}><Text style={{color: "#39aa44"}}>Log out</Text></Button>
             </View>
-
-            {this.ds.cloneWithRows(this.state.listViewData).getRowCount() === 0
-              ? <View style={styles.linkTabs}>
-                  <ListItem
-                    style={{
-                      backgroundColor: "#fff",
-                      justifyContent: "center"
-                    }}
-                  >
-                    <Text style={styles.textNote}>Empty List</Text>
-                  </ListItem>
-                </View>
-              : <View>
-                  <View style={styles.linkTabs}>
-                    <ListItem
-                      style={{
-                        backgroundColor: "#fff",
-                        justifyContent: "center"
-                      }}
-                    >
-                      <Text style={styles.textNote}>
-                        Swipe the items to left and right
-                      </Text>
-                    </ListItem>
-                  </View>
-                  <List
-                    dataSource={this.ds.cloneWithRows(this.state.listViewData)}
-                    renderRow={data =>
-                      <ListItem
-                        swipeList
-                        style={{
-                          flexDirection: "row",
-                          backgroundColor: "#FFF"
-                        }}
-                        onPress={() => navigation.navigate("Story")}
-                      >
-                        <Image source={data.url} style={styles.newsImage} />
-                        <View style={styles.newsContent}>
-                          <Text numberOfLines={2} style={styles.newsHeader}>
-                            {data.headline}
-                          </Text>
-                          <Grid style={{ marginTop: 25 }}>
-                            <Col>
-                              <TouchableOpacity>
-                                <Text style={styles.newsLink}>
-                                  {data.link}
-                                </Text>
-                              </TouchableOpacity>
-                            </Col>
-                            <Col>
-                              <TouchableOpacity style={styles.newsTypeView}>
-                                <Text style={styles.newsTypeText}>
-                                  {data.category}
-                                </Text>
-                              </TouchableOpacity>
-                            </Col>
-                          </Grid>
-                        </View>
-                      </ListItem>}
-                    renderLeftHiddenRow={data =>
-                      <Button
-                        full
-                        style={([styles.swipeBtn], { backgroundColor: "#CCC" })}
-                      >
-                        <Icon
-                          active
-                          name="information-circle"
-                          style={{ fontSize: 35 }}
-                        />
-                      </Button>}
-                    renderRightHiddenRow={(data, secId, rowId, rowMap) =>
-                      <Button
-                        full
-                        danger
-                        onPress={_ => this.deleteRow(secId, rowId, rowMap)}
-                        style={styles.swipeBtn}
-                      >
-                        <Icon active name="trash" style={{ fontSize: 35 }} />
-                      </Button>}
-                    leftOpenValue={100}
-                    rightOpenValue={-100}
-                  />
-                </View>}
+            <View style={{flex: 1, flexDirection: "row", padding: 20, justifyContent: 'space-between'}}>
+              <Text style={{color: "#39aa44"}}>Keep me logged</Text>
+              <Switch value />
+            </View>
           </Content>
         </ImageBackground>
       </Container>

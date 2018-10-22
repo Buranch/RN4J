@@ -159,39 +159,7 @@ class LoginForm extends Component {
                       <Text style={styles.helpBtns}>Calculate Payment without Login</Text>
                     </Button>
                   </Body>
-                  {/* <Right>
-                    <Button
-                      small
-                      transparent
-                      style={{alignSelf: "flex-end"}}
-                      onPress={() => navigation.navigate("ForgotPassword")}
-                    >
-                      <Text style={styles.helpBtns}>Forgot Password</Text>
-                    </Button>
-                  </Right> */}
                 </View>
-                {/* <View style={{flex: 1, alignSelf: "flex-end"}}>
-                  <Button
-                    light
-                    small
-                    transparent
-                    style={styles.skipBtn}
-                    onPress={() => {
-                      this.props.navigation.navigate("Drawer");
-                    }}
-                  >
-                    <Text
-                      style={
-                        (
-                          [styles.helpBtns],
-                          {top: Platform.OS === "ios" ? null : 0}
-                        )
-                      }
-                    >
-                      Calculate payment without login
-                    </Text>
-                  </Button>
-                </View> */}
               </View>
             </View>
           </Content>

@@ -2,7 +2,7 @@ import color from "color";
 
 import { Platform, Dimensions, PixelRatio } from "react-native";
 
-const primary = "#2572b5";
+const primary = "#39aa44";
 
 const deviceHeight = Dimensions.get("window").height;
 const deviceWidth = Dimensions.get("window").width;

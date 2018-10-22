@@ -29,23 +29,20 @@ class Channels extends Component {
       <Container>
         <Header hasTabs>
           <Left>
-            <Button
-              transparent
-              onPress={() => this.props.navigation.navigate("DrawerOpen")}
-            >
+            <Button transparent onPress={() => this.props.navigation.navigate("DrawerOpen")}>
               <Icon active name="menu" />
+            <Text style={{padding: 10, paddingTop: 15, fontWeight: "bold"}}>
+            Calculate Payments
+            </Text>
             </Button>
           </Left>
-          <Body>
-            <Image source={headerLogo} style={styles.imageHeader} />
-          </Body>
           <Right />
         </Header>
         <Tabs style={{backgroundColor: "#fff"}}>
           <Tab
             heading={
               <TabHeading>
-                <Text>Following</Text>
+                <Text>By Monthly $ </Text>
               </TabHeading>
             }
           >
@@ -54,13 +51,13 @@ class Channels extends Component {
           <Tab
             heading={
               <TabHeading>
-                <Text>Popular</Text>
+                <Text>By Total $ </Text>
               </TabHeading>
             }
           >
             <TabTwo navigation={this.props.navigation} />
           </Tab>
-          <Tab
+          {/* <Tab
             heading={
               <TabHeading>
                 <Text>Explore</Text>
@@ -68,7 +65,7 @@ class Channels extends Component {
             }
           >
             <TabThree navigation={this.props.navigation} />
-          </Tab>
+          </Tab> */}
         </Tabs>
       </Container>
     );

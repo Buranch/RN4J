@@ -1,7 +1,7 @@
 // @flow
 import React, { Component } from "react";
 import { Image } from "react-native";
-import { Icon, Button, Left, Right, Body, Header } from "native-base";
+import { Icon, Button, Text, Left, Right, Body, Header } from "native-base";
 
 import styles from "./styles";
 
@@ -18,7 +18,8 @@ class CustomHeader extends Component {
           </Button>
         </Left>
         <Body>
-          <Image source={headerLogo} style={styles.imageHeader} />
+          <Text>Profile</Text>
+          {/* <Image source={headerLogo} style={styles.imageHeader} /> */}
         </Body>
         <Right />
       </Header>

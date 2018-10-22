@@ -86,7 +86,7 @@ export default {
         right: 0
     },
     listText: {
-        color: "#4590d1",
+        color: "#017c0d",
         width: 310,
         textAlign: "center"
 

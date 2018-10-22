@@ -110,7 +110,7 @@ class CompanyChooseForm extends Component {
   render() {
     const navigation = this.props.navigation;
     return (
-      <Container style={{backgroundColor: "#0f62aa"}}>
+      <Container style={{backgroundColor: "#017c0d"}}>
         <Content contentContainerStyle={{flex: 0}}>
             <View style={styles.container}>
               <Image source={logo} style={styles.logo} />
