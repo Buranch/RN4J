@@ -1,11 +1,9 @@
 // @flow
 import React, {Component} from "react";
-import {Image} from "react-native";
 import {
   Container,
   Header,
   Left,
-  Body,
   Right,
   Button,
   Icon,
@@ -15,13 +13,10 @@ import {
   TabHeading
 } from "native-base";
 
-import styles from "./styles";
 
 import TabOne from "./tabOne";
 import TabTwo from "./tabTwo";
-import TabThree from "./tabThree";
 
-const headerLogo = require("../../../assets/header-logo.png");
 
 class Channels extends Component {
   render() {
@@ -29,7 +24,10 @@ class Channels extends Component {
       <Container>
         <Header hasTabs>
           <Left>
-            <Button transparent onPress={() => this.props.navigation.navigate("DrawerOpen")}>
+            <Button transparent 
+            // onPress={() => this.props.navigation.navigate("DrawerOpen")
+            onPress={() => this.props.navigation.navigate("DrawerOpen")
+            }>
               <Icon active name="menu" />
             <Text style={{padding: 10, paddingTop: 15, fontWeight: "bold"}}>
             Calculate Payments
@@ -57,15 +55,6 @@ class Channels extends Component {
           >
             <TabTwo navigation={this.props.navigation} />
           </Tab>
-          {/* <Tab
-            heading={
-              <TabHeading>
-                <Text>Explore</Text>
-              </TabHeading>
-            }
-          >
-            <TabThree navigation={this.props.navigation} />
-          </Tab> */}
         </Tabs>
       </Container>
     );

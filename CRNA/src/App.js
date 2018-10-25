@@ -33,9 +33,9 @@ const Drawer = DrawerNavigator(
     CompanyChoose: { screen: CompanyChoose}
   },
   {
-    initialRouteName: "Home",
+    // initialRouteName: "Home",
     // initialRouteName: "Profile",
-
+    initialRouteName: "Channels",
     // initialRouteName: "CompanyChoose",
 
     contentComponent: props => <Sidebar {...props} />
@@ -53,7 +53,7 @@ const App = StackNavigator(
     Comments: { screen: Comments },
     Channel: { screen: Channel },
     Channels: { screen: Channels },
-
+    Home: { screen: Home},
     Drawer: { screen: Drawer },
     Profile: { screen: Profile },
 
@@ -64,8 +64,9 @@ const App = StackNavigator(
     // initialRouteName: "Story",
     // initialRouteName: "CompanyChoose",
     // initialRouteName: "Login",
-    // initialRouteName: "Walkthrough",
-    initialRouteName: "Channels",
+    initialRouteName: "Walkthrough",
+    // initialRouteName: "Channels",
+    // initialRouteName: "Home",
 
     headerMode: "none"
   }
