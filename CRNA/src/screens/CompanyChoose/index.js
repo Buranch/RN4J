@@ -126,10 +126,15 @@ class CompanyChooseForm extends Component {
                     shadowRadius: 5,
                     
                     }}>
-                    <ListItem>
-                    <Text style={styles.listText}>Company One</Text>
+                    <ListItem
+                    onPress={()=> navigation.navigate("Drawer")}
+                    >
+                    <Text
+                    style={styles.listText}>Company One</Text>
                     </ListItem>
-                    <ListItem>
+                    <ListItem
+                    onPress={()=> navigation.navigate("Drawer")}
+                    >
                     <Text style={styles.listText}>Company Two</Text>
                     </ListItem>
                 </List>

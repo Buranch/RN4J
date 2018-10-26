@@ -1,6 +1,6 @@
 // @flow
 import React from "react";
-import { StackNavigator, DrawerNavigator } from "react-navigation";
+import { createDrawerNavigator, createStackNavigator } from "react-navigation";
 import { Root } from "native-base";
 import Login from "./screens/Login/";
 import ForgotPassword from "./screens/ForgotPassword";
@@ -20,38 +20,39 @@ import Profile from "./screens/Profile/";
 import Settings from "./screens/Settings";
 import CompanyChoose from "./screens/CompanyChoose";
 
-const Drawer = DrawerNavigator(
+
+
+const Drawer = createDrawerNavigator(
   {
     Home: { screen: Home },
     Channels: { screen: Channels },
-    Overview: { screen: Overview },
-    Calendar: { screen: Calendar },
-    Timeline: { screen: Timeline },
-    Feedback: { screen: Feedback },
+    // Overview: { screen: Overview },
+    // Calendar: { screen: Calendar },
+    // Timeline: { screen: Timeline },
+    // Feedback: { screen: Feedback },
     Profile: { screen: Profile },
-    Settings: { screen: Settings },
-    CompanyChoose: { screen: CompanyChoose}
+    // Settings: { screen: Settings },
+    // CompanyChoose: { screen: CompanyChoose}
   },
-  {
+  {          
     // initialRouteName: "Home",
     // initialRouteName: "Profile",
     initialRouteName: "Channels",
-    // initialRouteName: "CompanyChoose",
-
+    // initialRouteName: "Home",
     contentComponent: props => <Sidebar {...props} />
   }
 );
 
-const App = StackNavigator(
+const App = createStackNavigator(
   {
     CompanyChoose: { screen: CompanyChoose},
     Login: { screen: Login },
-    SignUp: { screen: SignUp },
-    ForgotPassword: { screen: ForgotPassword },
+    // SignUp: { screen: SignUp },
+    // ForgotPassword: { screen: ForgotPassword },
     Walkthrough: { screen: Walkthrough },
-    Story: { screen: Story },
-    Comments: { screen: Comments },
-    Channel: { screen: Channel },
+    // Story: { screen: Story },
+    // Comments: { screen: Comments },
+    // Channel: { screen: Channel },
     Channels: { screen: Channels },
     Home: { screen: Home},
     Drawer: { screen: Drawer },
@@ -59,14 +60,15 @@ const App = StackNavigator(
 
   },
   {
-    index: 0,
+    // index: 0,
     // initialRouteName: "Profile",
     // initialRouteName: "Story",
     // initialRouteName: "CompanyChoose",
-    // initialRouteName: "Login",
-    initialRouteName: "Walkthrough",
-    // initialRouteName: "Channels",
+    initialRouteName: "Login",
+    // initialRouteName: "Walkthrough",
+    // initialRouteName: "Drawer",
     // initialRouteName: "Home",
+
 
     headerMode: "none"
   }

@@ -26,7 +26,7 @@ class Channels extends Component {
           <Left>
             <Button transparent 
             // onPress={() => this.props.navigation.navigate("DrawerOpen")
-            onPress={() => this.props.navigation.navigate("DrawerOpen")
+            onPress={() => this.props.navigation.openDrawer()
             }>
               <Icon active name="menu" />
             <Text style={{padding: 10, paddingTop: 15, fontWeight: "bold"}}>

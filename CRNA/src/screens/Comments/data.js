@@ -10,7 +10,7 @@ const data = [
     comment: "Life is one time offer! Use it well",
     likes: "13",
     time: "May 24, 11:00 AM",
-    name: "Kumar Sanket",
+    name: "User User",
     image: img1
   },
   {

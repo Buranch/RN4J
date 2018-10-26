@@ -55,7 +55,7 @@ class Profile extends Component {
         >
           <Header hasTabs={this.props.hasTabs}>
             <Left>
-              <Button transparent onPress={() => navigation.navigate("DrawerOpen")}>
+              <Button transparent onPress={() => navigation.openDrawer()}>
                 <Icon active name="menu" />
               <Text style={{padding: 10, paddingTop: 15, fontWeight: "bold"}}>Profile</Text>
               </Button>

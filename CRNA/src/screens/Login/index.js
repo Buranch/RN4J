@@ -78,23 +78,23 @@ class LoginForm extends Component {
     );
   }
   skip() {
-    this.props.navigation.navigate("Walkthrough");
-    return this.props.navigation.dispatch(
-      NavigationActions.reset({
-        index: 0,
-        actions: [NavigationActions.navigate({routeName: "Walkthrough"})]
-      })
-    );
+    this.props.navigation.navigate("CompanyChoose");
+    // return this.props.navigation.dispatch(
+    //   NavigationActions.reset({
+    //     index: 0,
+    //     actions: [NavigationActions.navigate({routeName: "Walkthrough"})]
+    //   })
+    // );
   }
   login() {
     if (this.props.valid) {
-      this.props.navigation.navigate("Walkthrough");
-      return this.props.navigation.dispatch(
-        NavigationActions.reset({
-          index: 0,
-          actions: [NavigationActions.navigate({routeName: "Walkthrough"})]
-        })
-      );
+      this.props.navigation.navigate("CompanyChoose");
+      // return this.props.navigation.dispatch(
+      //   NavigationActions.reset({
+      //     index: 0,
+      //     actions: [NavigationActions.navigate({routeName: "Walkthrough"})]
+      //   })
+      // );
     } else {
       Toast.show({
         text: "Enter Valid Username & password!",
