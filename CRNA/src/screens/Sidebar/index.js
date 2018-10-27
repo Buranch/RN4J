@@ -2,7 +2,6 @@
 import React, { Component } from "react";
 import { ImageBackground, TouchableOpacity } from "react-native";
 
-import { NavigationActions } from "react-navigation";
 import {
   Container,
   Content,
@@ -29,17 +28,6 @@ class SideBar extends Component {
           style={styles.background}
         >
           <Content style={styles.drawerContent}>
-            {/* <ListItem
-              button
-              onPress={() => {
-                navigation.navigate("Home");
-              }}
-              iconLeft
-              style={styles.links}
-            >
-              <Icon name="ios-grid-outline" />
-              <Text style={styles.linkText}>Home</Text>
-            </ListItem> */}
             <ListItem
               button
               onPress={() => {
@@ -51,39 +39,6 @@ class SideBar extends Component {
               <Icon name="ios-keypad-outline" />
               <Text style={styles.linkText}>Home</Text>
             </ListItem>
-            {/* <ListItem
-              button
-              onPress={() => {
-                navigation.navigate("Overview");
-              }}
-              iconLeft
-              style={styles.links}
-            >
-              <Icon name="ios-stats" />
-              <Text style={styles.linkText}> OVERVIEW</Text>
-            </ListItem> */}
-            {/* <ListItem
-              button
-              onPress={() => {
-                navigation.navigate("Calendar");
-              }}
-              iconLeft
-              style={styles.links}
-            >
-              <Icon name="ios-calendar-outline" />
-              <Text style={styles.linkText}>CALENDAR</Text>
-            </ListItem>
-            <ListItem
-              button
-              onPress={() => {
-                navigation.navigate("Timeline");
-              }}
-              iconLeft
-              style={styles.links}
-            >
-              <Icon name="ios-timer-outline" />
-              <Text style={styles.linkText}>TIMELINE</Text>
-            </ListItem> */}
             <ListItem
               button
               onPress={() => {
@@ -95,28 +50,6 @@ class SideBar extends Component {
               <Icon name="ios-person-outline" />
               <Text style={styles.linkText}> PROFILE</Text>
             </ListItem>
-            {/* <ListItem
-              button
-              onPress={() => {
-                navigation.navigate("Settings");
-              }}
-              iconLeft
-              style={styles.links}
-            >
-              <Icon name="ios-settings-outline" />
-              <Text style={styles.linkText}>SETTINGS</Text>
-            </ListItem> */}
-            {/* <ListItem
-              button
-              onPress={() => {
-                navigation.navigate("Feedback");
-              }}
-              iconLeft
-              style={styles.links}
-            >
-              <Icon name="ios-paper-outline" />
-              <Text style={styles.linkText}>FEEDBACK</Text>
-            </ListItem> */}
           </Content>
           <View style={styles.logoutContainer}>
             <View style={styles.logoutbtn} foregroundColor={"white"}>

@@ -3,21 +3,21 @@ import React from "react";
 import { createDrawerNavigator, createStackNavigator } from "react-navigation";
 import { Root } from "native-base";
 import Login from "./screens/Login/";
-import ForgotPassword from "./screens/ForgotPassword";
-import SignUp from "./screens/SignUp/";
+// import ForgotPassword from "./screens/ForgotPassword";
+// import SignUp from "./screens/SignUp/";
 import Walkthrough from "./screens/Walkthrough/";
-import Comments from "./screens/Comments/";
-import Channel from "./screens/Channel";
-import Story from "./screens/Story";
+// import Comments from "./screens/Comments/";
+// import Channel from "./screens/Channel";
+// import Story from "./screens/Story";
 import Home from "./screens/Home/";
 import Channels from "./screens/Channels";
 import Sidebar from "./screens/Sidebar";
-import Overview from "./screens/Overview";
-import Calendar from "./screens/Calendar/";
-import Timeline from "./screens/Timeline";
-import Feedback from "./screens/Feedback/";
+// import Overview from "./screens/Overview";
+// import Calendar from "./screens/Calendar/";
+// import Timeline from "./screens/Timeline";
+// import Feedback from "./screens/Feedback/";
 import Profile from "./screens/Profile/";
-import Settings from "./screens/Settings";
+// import Settings from "./screens/Settings";
 import CompanyChoose from "./screens/CompanyChoose";
 
 
@@ -64,9 +64,9 @@ const App = createStackNavigator(
     // initialRouteName: "Profile",
     // initialRouteName: "Story",
     // initialRouteName: "CompanyChoose",
-    initialRouteName: "Login",
+    // initialRouteName: "Login",
     // initialRouteName: "Walkthrough",
-    // initialRouteName: "Drawer",
+    initialRouteName: "Drawer",
     // initialRouteName: "Home",
 
 

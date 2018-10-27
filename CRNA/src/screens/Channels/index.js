@@ -24,7 +24,8 @@ class Channels extends Component {
       <Container>
         <Header hasTabs>
           <Left>
-            <Button transparent 
+            <Button
+              transparent 
             // onPress={() => this.props.navigation.navigate("DrawerOpen")
             onPress={() => this.props.navigation.openDrawer()
             }>

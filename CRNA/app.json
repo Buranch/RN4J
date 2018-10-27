@@ -5,7 +5,7 @@
     "slug": "belmontfinancedealers",
     "splash": {
       "resizeMode": "cover",
-      "image": "./assets/LaunchImages/splash-screen.png"
+      "image": "./assets/LaunchImages/splashs-screen.png"
     },
     "orientation": "portrait",
     "primaryColor": "#cccccc",

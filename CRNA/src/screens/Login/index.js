@@ -1,6 +1,5 @@
 // @flow
 import React, {Component} from "react";
-import {NavigationActions} from "react-navigation";
 import {Image, ImageBackground, Platform, StatusBar} from "react-native";
 import {
   Container,
@@ -11,8 +10,6 @@ import {
   Button,
   Icon,
   View,
-  Left,
-  Right,
   Body,
   Toast
 } from "native-base";
@@ -42,7 +39,6 @@ const alphaNumeric = value =>
 declare type Any = any;
 class LoginForm extends Component {
   textInput: Any;
-
   renderInput({input, label, type, meta: {touched, error, warning}}) {
     return (
       <View>
@@ -84,7 +80,7 @@ class LoginForm extends Component {
     //     index: 0,
     //     actions: [NavigationActions.navigate({routeName: "Walkthrough"})]
     //   })
-    // );
+    // );                         
   }
   login() {
     if (this.props.valid) {
