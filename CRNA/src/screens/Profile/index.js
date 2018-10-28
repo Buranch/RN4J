@@ -32,6 +32,7 @@ class Profile extends Component {
   props: Props;
   ds: Object;
   constructor(props: Props) {
+    console.log("Alright buddy you are on profile");
     super(props);
     this.ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
     this.state = {
