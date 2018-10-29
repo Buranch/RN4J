@@ -1,8 +1,23 @@
 // @flow
-import React from "react";
+import React, { Component } from "react";
+import * as Expo from "expo";
+import {
+    Container,
+    Content,
+    Text,
+    Item,
+    Input,
+    Button,
+    Icon,
+    View,
+    Body,
+    Toast
+} from "native-base";
 import { createDrawerNavigator, createStackNavigator } from "react-navigation";
 import { Root } from "native-base";
-import Login from "./screens/Login/";
+import { connect} from 'react-redux';
+import { saveUserToken, _storeData, _retrieveData, _removeUserToken} from "./actions/authActions";
+import Login from "./screens/Login/LoginForm";
 // import ForgotPassword from "./screens/ForgotPassword";
 // import SignUp from "./screens/SignUp/";
 import Walkthrough from "./screens/Walkthrough/";
@@ -19,10 +34,9 @@ import Sidebar from "./screens/Sidebar";
 import Profile from "./screens/Profile/";
 // import Settings from "./screens/Settings";
 import CompanyChoose from "./screens/CompanyChoose";
+import InitialScreen from "./screens/InitialScreen";
 
-
-
-const Drawer = createDrawerNavigator(
+export const Drawer = createDrawerNavigator(
   {
     Home: { screen: Home },
     Channels: { screen: Channels },
@@ -34,7 +48,7 @@ const Drawer = createDrawerNavigator(
     // Settings: { screen: Settings },
     // CompanyChoose: { screen: CompanyChoose}
   },
-  {          
+  {
     // initialRouteName: "Home",
     // initialRouteName: "Profile",
     initialRouteName: "Channels",
@@ -57,6 +71,7 @@ const App = createStackNavigator(
     Home: { screen: Home},
     Drawer: { screen: Drawer },
     Profile: { screen: Profile },
+    InitialScreen: { screen : InitialScreen }
 
   },
   {
@@ -64,9 +79,10 @@ const App = createStackNavigator(
     // initialRouteName: "Profile",
     // initialRouteName: "Story",
     // initialRouteName: "CompanyChoose",
-    // initialRouteName: "Login",
+    initialRouteName: "Login",
+    // initialRouteName: "InitialScreen",
     // initialRouteName: "Walkthrough",
-    initialRouteName: "Drawer",
+    // initialRouteName: "Drawer",
     // initialRouteName: "Home",
 
 
@@ -74,7 +90,59 @@ const App = createStackNavigator(
   }
 );
 
-export default () =>
-  <Root>
-    <App />
-  </Root>;
+class Booter extends Component {
+      constructor(props) {
+        super(props);
+        _retrieveData(props.dispatch);
+        // _storeData({email: "birukmisa@gmail.com", password: "password"}, this.props.dispatch);
+
+        _removeUserToken(props.dispatch);
+      }
+
+      render() {
+        const { token, isLoading } = this.props;
+        // let toDrawer = false;
+        console.log("token", token);
+        console.log("isLoading ", isLoading);
+        console.log("typeof", typeof(token));
+        console.log("type of bool", typeof(token) === "object");
+
+        // if()
+
+
+        // const t = JSON.parse(token);
+        if (isLoading) {
+          return <Root><View><Text style={{color: "black"}}>Loading</Text></View></Root>
+        }
+
+        // console.log(t);
+        return (
+            <Root>
+              {
+                (!isLoading && typeof (token) === "object" && Object.keys(token).length === 0)
+                ?
+                (<App />) : (<Drawer />)
+              }
+                {/* <App /> */}
+                {/* <Drawer /> */}
+              </Root>
+        );
+      }
+}
+
+
+const mapStateToProps = state => ({
+  // items: state.homeReducer.items,
+  // hasErrored: state.homeReducer.hasErrored,
+  isLoading: state.token.loading,
+  token: state.token.token
+});
+
+
+const mapDispatchToProps = dispatch => ({
+  dispatch
+});
+
+export default connect(
+  mapStateToProps, mapDispatchToProps
+)(Booter);

@@ -15,7 +15,6 @@
     "react"
   ],
 
-  // Map from global var to bool specifying if it can be redefined
   "globals": {
     "__DEV__": true,
     "__dirname": false,
@@ -26,7 +25,7 @@
     "clearImmediate": true,
     "clearInterval": false,
     "clearTimeout": false,
-    "console": false,
+    "console": 0,
     "document": false,
     "escape": false,
     "Event": false,

@@ -134,12 +134,15 @@ export default {
       width: 0
     },
     marginTop: 130,
-    padding: 50,
+    // padding: 50,
+
     backgroundColor: "white",
     marginLeft: 20,
     marginRight: 20,
     paddingLeft: 0,
-    paddingRight: 0
+    paddingRight: 0,
+    paddingTop: 50,
+    paddingBottom: 50
 
     // height: deviceHeight / 2
   },
