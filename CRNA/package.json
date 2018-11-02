@@ -1,7 +1,7 @@
 {
   "name": "belmontfinancedealers",
   "version": "8.2.0",
-  "private": true,
+  "private": false,
   "devDependencies": {
     "babel-eslint": "7.2.3",
     "eslint": "4.4.1",

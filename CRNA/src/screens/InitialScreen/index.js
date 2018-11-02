@@ -1,47 +1,55 @@
 import React, { Component } from "react";
-import { connect} from 'react-redux';
-import { saveUserToken, _storeData, _retrieveData } from "./../../actions/authActions";
-import Login from './../Login';
+import { AsyncStorage } from "react-native";
+import { connect} from "react-redux";
+import { _storeData, _retrieveData, saveToken } from "./../../actions/authActions";
 
 import {
     Container,
-    Content,
     Text,
-    Item,
-    Input,
-    Button,
-    Icon,
-    View,
-    Body,
-    Toast
-} from "native-base";
+    View} from "native-base";
 
 class Init extends Component {
     constructor(props) {
         super(props);
-        _retrieveData(props.dispatch);
+        // _retrieveData(props.dispatch);
+        this._bootstrapAsync();
+        // this.props.navigation.navigate("Auth");
+
     }
 
-    componentWillMount() {
-        if (!this.props.isLoading) {
-            console.log("Routing to drawer");
-            this.props.navigation.navigate("Drawer");
+    _bootstrapAsync = async () => {
+
+        const value = await AsyncStorage.getItem("userToken");
+        console.log(value);
+        // console.log(JSON.parse(value).email);
+        // this.props.navigation.navigate( value ? "App" : "Auth");
+        if (!value){
+            this.props.navigation.navigate("Auth");
+        } else {
+            this.props.navigation.navigate("App");
+            this.props.dispatch(saveToken(
+                {
+                    email: JSON.parse(value).email,
+                    name: JSON.parse(value).email.substring(0, JSON.parse(value).email.indexOf("@"))
+                }
+            ));
         }
     }
 
+
+
+    
 
     render() {
         const { isLoading, token } = this.props;
         console.log("TOKEN", token);
         console.log("is Loading ", isLoading);
-        // if (!this.props.isLoading) {
-        //     console.log("Routing to drawer");
-        //     this.props.navigation.navigate("Drawer");
-        // }
+
         return (
             <Container>
-                <View>
-                    <Text style={{color: "#000"}}>{isLoading ?  "Loading" : "Should be Login" } </Text>
+                <View style={{flex: 1, alignItems: "center", justifyContent: "space-between"}}>
+                    <Text style={{color: "#000", alignSelf: "center"}}>Loading</Text>
+                   
                 </View>
             </Container>
             // <Login />
@@ -52,8 +60,6 @@ class Init extends Component {
 
 
 const mapStateToProps = state => ({
-    // items: state.homeReducer.items,
-    // hasErrored: state.homeReducer.hasErrored,
     isLoading: state.token.loading,
     token: state.token.token
 });

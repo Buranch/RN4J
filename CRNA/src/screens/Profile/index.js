@@ -1,7 +1,7 @@
 // @flow
 import React, { Component } from "react";
 import { Image,ImageBackground,Switch, TouchableOpacity, ListView } from "react-native";
-
+import { AsyncStorage } from "react-native";
 import {
   Container,
   Content,
@@ -21,6 +21,7 @@ import CustomHeader from "../../components/CustomHeader";
 
 import styles from "./styles";
 import datas from "./data";
+import { connect } from "react-redux";
 
 type Props = {
   navigation: () => void
@@ -38,7 +39,13 @@ class Profile extends Component {
     this.state = {
       listViewData: datas
     };
+    // this._bootstrapUserToken();
   }
+
+  _signOutAsync = async () => {
+    await AsyncStorage.clear();
+    this.props.navigation.navigate("Auth");
+  };
 
   deleteRow(secId: string, rowId: string, rowMap: any) {
     rowMap[`${secId}${rowId}`].props.closeRow();
@@ -71,9 +78,9 @@ class Profile extends Component {
               />
             </View>
             <View style={styles.profileInfo}>
-              <Text style={styles.profileUser}>Buranch Mikey</Text>
+              <Text style={styles.profileUser}>{this.props.user.name || "No name avail"}</Text>
               <Text note style={styles.profileUserInfo}>
-                buranchmikey@gmail.com
+                { this.props.user.email || "No email stored"}
               </Text>
             </View>
             <View>
@@ -87,7 +94,7 @@ class Profile extends Component {
             style={{ backgroundColor: "#fff" }}
           >
             <View style={{alignItems: "center", marginTop: 20, paddingLeft: 20}}>
-              <Button style={{backgroundColor:"#fff"}}><Text style={{color: "#39aa44"}}>Log out</Text></Button>
+              <Button onPress={this._signOutAsync} style={{backgroundColor:"#fff"}}><Text style={{color: "#39aa44"}}>Log out</Text></Button>
             </View>
             <View style={{flex: 1, flexDirection: "row", padding: 20, justifyContent: 'space-between'}}>
               <Text style={{color: "#39aa44"}}>Keep me logged</Text>
@@ -100,4 +107,16 @@ class Profile extends Component {
   }
 }
 
-export default Profile;
+// export default Profile;
+
+const mapStateToProps = state => ({
+  user: state.token.token
+});
+
+
+const mapDispatchToProps = dispatch => ({
+  dispatch
+});
+
+export default connect(
+  mapStateToProps, mapDispatchToProps)(Profile);

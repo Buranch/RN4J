@@ -100,7 +100,7 @@ export const _storeData = async (data, dispatch) => {
         then((d)=>{
             console.log("saved", d);
             dispatch(loading(false));
-            dispatch(saveToken(JSON.stringify(data)));
+            // dispatch(saveToken(JSON.stringify(data)));
         });
     } catch (error) {
         console.log("error");

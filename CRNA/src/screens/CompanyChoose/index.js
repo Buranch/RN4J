@@ -127,13 +127,13 @@ class CompanyChooseForm extends Component {
                     
                     }}>
                     <ListItem
-                    onPress={()=> navigation.navigate("Drawer")}
+                    onPress={()=> navigation.navigate("App")}
                     >
                     <Text
                     style={styles.listText}>Company One</Text>
                     </ListItem>
                     <ListItem
-                    onPress={()=> navigation.navigate("Drawer")}
+                    onPress={()=> navigation.navigate("App")}
                     >
                     <Text style={styles.listText}>Company Two</Text>
                     </ListItem>

@@ -57,7 +57,8 @@ class SideBar extends Component {
                 <Col>
                   <TouchableOpacity
                     onPress={() => {
-                      navigation.dispatch(resetAction);
+                      this.props.navigation.navigate("Auth");
+                      // navigation.dispatch(resetAction);
                     }}
                     style={{
                       alignSelf: "flex-start",

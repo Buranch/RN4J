@@ -13,10 +13,10 @@
       "assetExts": ["ttf"]
     },
     "ios": {
-      "bundleIdentifier": "belmont.finance.dealers"
+      "bundleIdentifier": "com.belmontfinance.dealers"
     },
     "android": {                                  
-      "package": "belmont.finance.dealers"
+      "package": "com.belmontfinance.dealers"
     },
     "androidStatusBarColor": "#39aa44",
     "androidStatusBar": {

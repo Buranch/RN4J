@@ -2,6 +2,7 @@
 import React, {Component} from "react";
 import {Image, ImageBackground, Platform, StatusBar} from "react-native";
 import { connect} from 'react-redux';
+
 import {
   Container,
   Content,
@@ -16,7 +17,7 @@ import {
 } from "native-base";
 import {Field, reduxForm} from "redux-form";
 import styles from "./styles";
-import { saveUserToken, _storeData, _retrieveData } from "./../../actions/authActions";
+import { saveUserToken, _storeData, _retrieveData, saveToken } from "./../../actions/authActions";
 
 
 const bg = require("../../../assets/bg_green.png");
@@ -86,25 +87,7 @@ class LoginForm extends Component {
     // );                         
   }
   login() {
-    console.log('login');
-    // console.log(this.props);
-
-    // if (this.props.valid) {
-    //   this.props.navigation.navigate("CompanyChoose");
-    //   // return this.props.navigation.dispatch(
-    //   //   NavigationActions.reset({
-    //   //     index: 0,
-    //   //     actions: [NavigationActions.navigate({routeName: "Walkthrough"})]
-    //   //   })
-    //   // );
-    // } else {
-    //   Toast.show({
-    //     text: "Enter Valid Username & password!",
-    //     duration: 2500,
-    //     position: "top",
-    //     textStyle: {textAlign: "center"}
-    //   });
-    // }
+    
   }
 
   render() {
@@ -142,11 +125,14 @@ class LoginForm extends Component {
                   onPress={this.props.handleSubmit((value)=> {
                     console.log('logi clicked');
                     console.log(this.props.dispatch);
-                    // saveUserToken(value, this.props.dispatch);
                     _storeData(value, this.props.dispatch);
-                    // this.props.fuck(value);
+                    this.props.dispatch(saveToken({
+                      email: value.email,
+                      name: value.email.substring(0, value.email.indexOf("@"))
+                    }));
+                    this.props.navigation.navigate("CompanyChoose");
+                    // this.props.navigation.navigate("App");
                   })}
-                  // onPress={() => this.login()}
                 >
                   <Text
                     style={
@@ -164,14 +150,9 @@ class LoginForm extends Component {
                       small
                       transparent
                       style={{alignSelf: "center"}}
-                      // onPress={() => navigation.navigate("Drawer")}
                       onPress={() => 
-                        // this.props.handleSubmit((values)=> {
-                        // console.log('im submitting', values);
-                        // _retrieveData(this.props.dispatch);
                         navigation.navigate("Drawer")
-                      // })
-                    }
+                      }
                     >
                       <Text style={styles.helpBtns}>Calculate Payment without Login</Text>
                     </Button>
