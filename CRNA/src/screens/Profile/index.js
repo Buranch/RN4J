@@ -73,7 +73,7 @@ class Profile extends Component {
           <View style={styles.profileInfoContainer}>
             <View style={{ alignSelf: "center" }}>
               <Thumbnail
-                source={require("../../../assets/Contacts/sanket.png")}
+                source={require("../../../assets/Contacts/profile-placeholder.jpg")}
                 style={styles.profilePic}
               />
             </View>

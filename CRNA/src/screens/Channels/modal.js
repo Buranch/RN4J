@@ -6,7 +6,7 @@ import styles from "./styles";
 
 
 
-const Cards = ({amountFinanced, totalPayment, totalSalesPrice, financeCharged}) =>
+const Cards = ({amountFinanced, monthlyPaymentAmount, totalPayment, totalSalesPrice, financeCharged}) =>
   <View>
       <View style={{flex: 0,flexDirection: "row",
               height: 70,
@@ -55,8 +55,8 @@ class ModalResult extends Component {
   render() {
     return (
          <View style={styles.modalView}>
-                <Text style={styles.modalMoney}>${this.props.totalSalesPrice}</Text>
-                <Text style={styles.totalPriceTxt}>Total Price</Text>
+                <Text style={styles.modalMoney}>${!this.props.monthly ? this.props.totalSalesPrice : this.props.monthlyPaymentAmount}</Text>
+                <Text style={styles.totalPriceTxt}>{this.props.monthly ? "Monthly Payment Amount" : "Total Price"}</Text>
                 <TouchableHighlight style={styles.recalculateWrapper}>
                 <Text style={styles.showPaperWorkTxt}
                   onPress={()=> {
@@ -70,6 +70,7 @@ class ModalResult extends Component {
                 {this.state.showPaperWork && <Cards 
                     financeCharged={this.props.financeCharged || 0}
                     amountFinanced={this.props.amountFinanced || 0}
+                    monthlyPaymentAmount={this.props.monthlyPaymentAmount || 0}
                     totalPayment={this.props.totalPayment || 0}
                     totalSalesPrice={this.props.totalSalesPrice || 0}
                   
@@ -78,7 +79,9 @@ class ModalResult extends Component {
                 onPress={this.props.closeModalVisible}>
                 <Text style={styles.doneTxt}>Done</Text></Button>
                 { !this.state.showPaperWork &&
-                <TouchableHighlight style={styles.recalculateWrapper}>
+                <TouchableHighlight style={styles.recalculateWrapper}
+                  onPress={this.props.closeModalVisible}
+                >
                 <Text style={styles.recalculateTxt}>RECALCULATE</Text>
                 </TouchableHighlight>
               }

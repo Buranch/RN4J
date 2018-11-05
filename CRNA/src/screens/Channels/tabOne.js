@@ -118,7 +118,8 @@ class TabOne extends Component {
       totalSalesPrice,
       financeCharged,
       totalPayment,
-      amountFinanced
+      amountFinanced,
+      monthlyPaymentAmount
     });
 
   }
@@ -151,6 +152,8 @@ class TabOne extends Component {
             }} modalVisible={this.state.modalVisible} /> */}
 
             <ModalResult
+              monthly
+              monthlyPaymentAmount={this.state.monthlyPaymentAmount || 0}
               financeCharged={this.state.financeCharged || 0}
               amountFinanced={this.state.amountFinanced || 0}
               totalPayment={this.state.totalPayment || 0}
@@ -244,7 +247,7 @@ class TabOne extends Component {
               <Body>
                 <Text style={styles.label}>Sales Tax</Text>
                  <Field name="salesTax"
-                  validate={[required, Numeric]}
+                  validate={[Numeric]}
                  component={this.renderInput} />
               </Body>
               <Right />
@@ -264,9 +267,9 @@ class TabOne extends Component {
               <Button block 
               onPress={
                 this.props.handleSubmit((value) => {
-                  console.log('vaule ', {...value, term: this.state.term});      
+                console.log('vaule ', {...value,  term: this.state.term});      
 
-                this.doCalculate({...value, term: this.state.term});
+                this.doCalculate({...value, salesTax: value.salesTax || 0,term: this.state.term});
 
                 })                  // this.setState({
                   //   modalVisible: true
@@ -293,7 +296,7 @@ class TabOne extends Component {
 }
 
 export default reduxForm({
-  form: 'test',
+  form: 'tabone',
   // validate
 })(TabOne);
 
