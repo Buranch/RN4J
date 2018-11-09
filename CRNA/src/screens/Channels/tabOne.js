@@ -152,7 +152,6 @@ class TabOne extends Component {
             }} modalVisible={this.state.modalVisible} /> */}
 
             <ModalResult
-              monthly
               monthlyPaymentAmount={this.state.monthlyPaymentAmount || 0}
               financeCharged={this.state.financeCharged || 0}
               amountFinanced={this.state.amountFinanced || 0}
@@ -169,7 +168,8 @@ class TabOne extends Component {
             <Row>
               <Col style={styles.infoDiv}>
                 <Text style={styles.infoDivText}>
-                Enter the information to calculate the monthly payment for a loan.</Text>
+                Enter the information to calculate the total amount of the loan
+                </Text>
               </Col>
 
             </Row>
@@ -192,11 +192,14 @@ class TabOne extends Component {
                       selectedValue={this.state.term}
                       onValueChange={(e)=>this.onValueChange('term', e)}
                     >
-                      <Picker.Item label="36 Months (90 DAYS) " value="36,90" />
-                      <Picker.Item label="12 Months (43 DAYS)" value="12,48" />
-                      <Picker.Item label="24 Months (90 DAYS)" value="24,90" />
-                      <Picker.Item label="42 Months (90 DAYS)" value="42,90" />
-                      <Picker.Item label="6 Months (60 DAYS)" value="6,60" />
+                      <Picker.Item label="12 Months" value="12,90" />
+                      <Picker.Item label="24 Months" value="24,90" />
+                      <Picker.Item label="36 Months" value="36,90" />
+                      <Picker.Item label="48 Months" value="48,90" />
+                      <Picker.Item label="60 Months" value="60,90" />
+                      <Picker.Item label="72 Months" value="72,90" />
+                      <Picker.Item label="84 Months" value="84,90" />
+                      <Picker.Item label="96 Months" value="96,90" />
                     </Picker>
                 </Form>
               </Col>
@@ -232,7 +235,7 @@ class TabOne extends Component {
               <Col style={styles.cols}>
                 <Text style={styles.label}>Trade In</Text>
                  <Field name="tradeIn" 
-                  validate={[required, Numeric]}
+                  validate={[Numeric]}
                  component={this.renderInput} />
               </Col>
               <Col style={styles.cols}>
@@ -269,7 +272,10 @@ class TabOne extends Component {
                 this.props.handleSubmit((value) => {
                 console.log('vaule ', {...value,  term: this.state.term});      
 
-                this.doCalculate({...value, salesTax: value.salesTax || 0,term: this.state.term});
+                this.doCalculate({...value, 
+                  salesTax: value.salesTax || 0, 
+                  tradeIn: value.tradeIn || 0,
+                  term: this.state.term});
 
                 })                  // this.setState({
                   //   modalVisible: true
